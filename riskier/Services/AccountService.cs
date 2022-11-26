@@ -24,11 +24,16 @@ public class AccountService
     return profile;
   }
 
-  internal Account Edit(Account editData, string userEmail)
+  internal Account Edit(Account editData, Account userInfo)
   {
-    Account original = GetProfileByEmail(userEmail);
+    Account original = GetProfileByEmail(userInfo.Email);
     original.Name = editData.Name.Length > 0 ? editData.Name : original.Name;
     original.Picture = editData.Picture.Length > 0 ? editData.Picture : original.Picture;
+    original.TeamName = editData.TeamName ?? original.TeamName;
+    original.TotalCapital = editData.TotalCapital;
+    original.TotalIndustry = editData.TotalIndustry;
+    original.TotalAgriculture = editData.TotalAgriculture;
     return _repo.Edit(original);
   }
 }
+
