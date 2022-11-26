@@ -17,12 +17,13 @@ CREATE TABLE
         id INT NOT NULL PRIMARY KEY,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        ownerId VARCHAR(255) NOT NULL,
         ownedBy VARCHAR(255),
         capital INT NOT NULL,
         industry INT NOT NULL,
         agriculture INT NOT NULL,
-        environment VARCHAR(255) NOT NULL
+        environment VARCHAR(255) NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES accounts(id) ON DELETE CASCADE
     ) default charset utf8;
 
 CREATE TABLE
@@ -49,5 +50,6 @@ CREATE TABLE
         airfield INT,
         navalYard INT,
         warehouse INT,
-        factory INT
+        factory INT,
+        FOREIGN KEY (ownerId) REFERENCES accounts(id) ON DELETE CASCADE
     ) default charset utf8;
