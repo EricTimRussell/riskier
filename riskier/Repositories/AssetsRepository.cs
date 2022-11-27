@@ -62,6 +62,82 @@ public class AssetsRepository : BaseRepository
     newAssets.Id = _db.ExecuteScalar<int>(sql, newAssets);
     return newAssets;
   }
+
+  internal Asset EditAssets(Asset originalAssets)
+  {
+    var sql = @"
+    UPDATE assets SET
+      infantry = @Infantry
+      eliteInfantry = @EliteInfantry
+      mech = @Mech
+      ifv = @Ifv
+      mbt = @Mbt
+      artillery = @Artillery
+      ssArtillery = @SsArtillery
+      antiAircraft = @AntiAircraft
+      fighterAircraft = @FighterAircraft
+      closeAirSupport = @CloseAirSupport
+      carrier = @Carrier
+      cruiser = @Cruiser
+      destroyer = @Destroyer
+      supplyTruck = @SupplyTruck
+      transportAircraft = @TransportAircraft
+      airfield = @Airfield
+      navalYard = @NavalYard
+      warehouse = @Warehouse
+      factory = @Factory
+      WHERE id = @Id LIMIT 1
+    ;";
+    originalAssets.UpdatedAt = DateTime.Now;
+    var rows = _db.Execute(sql, originalAssets);
+    if (rows < 1)
+    {
+      throw new Exception("No changes Made");
+    }
+    if (rows > 1)
+    {
+      throw new Exception("More than one row affected this should not happen");
+    }
+    return originalAssets;
+  }
+
+  internal object GetAssets()
+  {
+    var sql = @"
+    SELECT
+    a.*,
+    ac.*
+    FROM assets a
+    JOIN accounts ac ON ac.id = a.ownerId
+    ;";
+
+    return _db.Query<Asset, Account, Asset>(sql, (a, ac) =>
+    {
+      a.Creator = ac;
+      return a;
+    }).ToList();
+  }
+
+  internal Asset GetAssetsById(int assetId)
+  {
+    var sql = @"
+    SELECT
+    a.*
+    ac.*
+    FROM assets a
+    JOIN accounts ac on ac.id = a.ownerId
+    WHERE a.id = @assetId
+    ;";
+    return _db.Query<Asset, Account, Asset>(sql, (a, ac) =>
+    {
+      a.Creator = ac;
+      return a;
+    }, new { assetId }).FirstOrDefault();
+  }
+
+
+
+
 }
 
 
