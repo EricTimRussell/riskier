@@ -3,6 +3,7 @@ namespace riskier.Models;
 public class Asset : DbItem<int>
 {
   public string OwnerId { get; set; }
+  public Account Creator { get; set; }
   public int Infantry { get; set; }
   public int EliteInfantry { get; set; }
   public int Mech { get; set; }
