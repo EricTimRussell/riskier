@@ -10,7 +10,7 @@ public class RegionTilesRepository : BaseRepository
   {
     var sql = @"
     INSERT INTO regions(
-      creatorId,
+      ownerId,
       ownedBy,
       capital,
       industry,
@@ -18,7 +18,7 @@ public class RegionTilesRepository : BaseRepository
       environment
     )
     VALUES(
-      @CreatorId,
+      @OwnerId,
       @OwnedBy,
       @Capital,
       @Industry,
@@ -40,7 +40,7 @@ public class RegionTilesRepository : BaseRepository
     r.*,
     a.*
     FROM regions r
-    JOIN accounts a ON a.id = r.creatorId
+    JOIN accounts a ON a.id = r.ownerId
     WHERE r.id = @regionTileId
     ;";
     return _db.Query<RegionTile, Account, RegionTile>(sql, (r, a) =>
@@ -57,7 +57,7 @@ public class RegionTilesRepository : BaseRepository
     r.*,
     a.*
     FROM regions r
-    JOIN accounts a ON a.id = r.creatorId
+    JOIN accounts a ON a.id = r.ownerId
     ;";
     return _db.Query<RegionTile, Account, RegionTile>(sql, (r, a) =>
     {
