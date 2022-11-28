@@ -8,7 +8,7 @@ CREATE TABLE
         name varchar(255) COMMENT 'User Name',
         email varchar(255) COMMENT 'User Email',
         picture varchar(255) COMMENT 'User Picture',
-        teamName VARCHAR(255) NOT NULL,
+        teamName VARCHAR(255) DEFAULT 'Team Name',
         totalCapital INT NOT NULL DEFAULT 40,
         totalIndustry INT NOT NULL DEFAULT 40,
         totalAgriculture INT NOT NULL DEFAULT 40
@@ -16,7 +16,7 @@ CREATE TABLE
 
 CREATE TABLE
     IF NOT EXISTS regions(
-        id INT NOT NULL PRIMARY KEY,
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         ownedBy VARCHAR(255),
@@ -31,7 +31,7 @@ CREATE TABLE
 
 CREATE TABLE
     IF NOT EXISTS assets(
-        id VARCHAR(255) NOT NULL primary key,
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         ownerId VARCHAR(255) NOT NULL,
