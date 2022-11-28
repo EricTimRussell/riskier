@@ -1,3 +1,5 @@
+-- Active: 1666715465757@@SG-alive-fang-7766-6843-mysql-master.servers.mongodirector.com@3306@FakeDb
+
 CREATE TABLE
     IF NOT EXISTS accounts(
         id VARCHAR(255) NOT NULL primary key COMMENT 'primary key',
