@@ -15,6 +15,16 @@ public class AssetsService
     return _ar.CreateAssets(newAssets);
   }
 
+  internal void DeleteAssets(int assetId, string userId)
+  {
+    var assets = GetAssetsById(assetId);
+    if (assets.OwnerId != userId)
+    {
+      throw new Exception("These assets do not belong to you");
+    }
+    _ar.DeleteAssets(assetId);
+  }
+
   internal Asset EditAssets(Asset updatedAssets, string userId)
   {
     Asset originalAssets = GetAssetsById(updatedAssets.Id);

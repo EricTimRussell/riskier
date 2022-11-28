@@ -63,6 +63,17 @@ public class AssetsRepository : BaseRepository
     return newAssets;
   }
 
+  internal void DeleteAssets(int assetId)
+  {
+    var sql = @"DELETE FROM assets WHERE id = @assetId LIMIT 1;";
+    var rows = _db.Execute(sql, new { assetId });
+    if (rows != 1)
+    {
+      throw new Exception("Data not deleted Id is bad");
+    }
+    return;
+  }
+
   internal Asset EditAssets(Asset originalAssets)
   {
     var sql = @"

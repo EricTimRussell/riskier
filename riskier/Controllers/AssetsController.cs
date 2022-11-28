@@ -54,8 +54,21 @@ public class AssetsController : ControllerBase
   }
 
   [Authorize]
-  [HttpDelete]
-  // ANCHOR 
+  [HttpDelete("{assetsId}")]
+  public async Task<ActionResult<string>> DeleteAssets(int assetId)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _as.DeleteAssets(assetId, userInfo?.Id);
+      return Ok("Assets Deleted");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
 
 
   [HttpGet]
