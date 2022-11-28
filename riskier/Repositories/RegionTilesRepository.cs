@@ -12,6 +12,7 @@ public class RegionTilesRepository : BaseRepository
     INSERT INTO regions(
       ownerId,
       ownedBy,
+      regionNumber,
       capital,
       industry,
       agriculture,
@@ -20,6 +21,7 @@ public class RegionTilesRepository : BaseRepository
     VALUES(
       @OwnerId,
       @OwnedBy,
+      @RegionNumber,
       @Capital,
       @Industry,
       @Agriculture,
