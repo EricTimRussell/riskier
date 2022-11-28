@@ -20,6 +20,7 @@ CREATE TABLE
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         ownedBy VARCHAR(255),
+        regionNumber INT NOT NULL,
         capital INT NOT NULL,
         industry INT NOT NULL,
         agriculture INT NOT NULL,
