@@ -19,7 +19,7 @@
     </div>
     <div class="form-floating">
       <select v-model="editable.environment" required class="form-select" id="environment"
-        aria-label="Floating label select example">
+        aria-label="Select Region Environment">
         <option selected></option>
         <option value="1">Grassland</option>
         <option value="2">Desert</option>
