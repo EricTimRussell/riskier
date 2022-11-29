@@ -1,7 +1,8 @@
 <template>
   <form @submit.prevent="createRegion()">
     <div class="form-floating mb-3">
-      <input required type="text" maxlength="2" class="form-control" id="regionNumber" placeholder="1,2,3...">
+      <input v-model="editable.regionNumber" required type="text" maxlength="2" class="form-control" id="regionNumber"
+        placeholder="1,2,3...">
       <label for="regionNumber">Region Number...</label>
     </div>
     <div>
@@ -17,7 +18,8 @@
       <input v-model="editable.agriculture" type="range" class="form-range" min="1" max="6" step="1" id="agriculture">
     </div>
     <div class="form-floating">
-      <select required class="form-select" id="environment" aria-label="Floating label select example">
+      <select v-model="editable.environment" required class="form-select" id="environment"
+        aria-label="Floating label select example">
         <option selected></option>
         <option value="1">Grassland</option>
         <option value="2">Desert</option>
