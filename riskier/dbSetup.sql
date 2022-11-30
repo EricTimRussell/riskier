@@ -19,14 +19,13 @@ CREATE TABLE
         id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
         createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
         updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        ownedBy VARCHAR(255),
         regionNumber INT NOT NULL,
         capital INT NOT NULL,
         industry INT NOT NULL,
         agriculture INT NOT NULL,
         environment VARCHAR(255) NOT NULL,
         ownerId VARCHAR(255) NOT NULL,
-        FOREIGN KEY (ownerId) REFERENCES accounts(id) ON DELETE CASCADE
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;
 
 CREATE TABLE
@@ -54,5 +53,5 @@ CREATE TABLE
         navalYard INT,
         warehouse INT,
         factory INT,
-        FOREIGN KEY (ownerId) REFERENCES accounts(id) ON DELETE CASCADE
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;

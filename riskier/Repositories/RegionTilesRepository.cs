@@ -10,8 +10,8 @@ public class RegionTilesRepository : BaseRepository
   {
     var sql = @"
     INSERT INTO regions(
+      id,
       ownerId,
-      ownedBy,
       regionNumber,
       capital,
       industry,
@@ -19,8 +19,8 @@ public class RegionTilesRepository : BaseRepository
       environment
     )
     VALUES(
+      @Id,
       @OwnerId,
-      @OwnedBy,
       @RegionNumber,
       @Capital,
       @Industry,

@@ -3,15 +3,24 @@ namespace riskier.Services;
 public class RegionTilesService
 {
   private readonly RegionTilesRepository _rtr;
+  private readonly AccountsRepository _ar;
 
-  public RegionTilesService(RegionTilesRepository rtr)
+  public RegionTilesService(RegionTilesRepository rtr, AccountsRepository ar)
   {
     _rtr = rtr;
+    _ar = ar;
   }
 
   internal RegionTile CreateRegion(RegionTile newRegion)
   {
-    return _rtr.CreateRegion(newRegion);
+
+    var region = _rtr.CreateRegion(newRegion);
+    var regionOwner = _ar.GetById(newRegion.OwnerId);
+    regionOwner.TotalCapital += region.Capital;
+    regionOwner.TotalIndustry += region.Industry;
+    regionOwner.TotalAgriculture += region.Agriculture;
+    regionOwner = _ar.Edit(regionOwner);
+    return region;
   }
 
   internal RegionTile GetRegionById(int regionTileId)

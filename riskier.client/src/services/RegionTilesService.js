@@ -9,5 +9,8 @@ class RegionTilesService {
     AppState.regions.push(new Region(res.data))
   }
 
+
+
+
 }
 export const regionTilesService = new RegionTilesService()

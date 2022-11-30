@@ -4,7 +4,6 @@ public class RegionTile : DbItem<int>
 {
   public string OwnerId { get; set; }
   public Account Creator { get; set; }
-  public string OwnedBy { get; set; }
   public int RegionNumber { get; set; }
   public int Capital { get; set; }
   public int Industry { get; set; }
