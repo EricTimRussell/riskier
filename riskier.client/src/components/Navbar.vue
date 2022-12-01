@@ -1,24 +1,35 @@
 <template>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-      <!-- Button trigger modal -->
-      <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createRegion">
-        Create Region
-      </button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarText">
-        <Login />
+    <div class="navbar-expand-lg navbar-dark bg-dark px-3 container-fluid">
+      <div class="row">
+        <div class=" d-flex col-md-4">
+          <div>
+            <Login class="navbar-collapse mr" id="navbarText" />
+          </div>
+          <div>
+            <button type="submit" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#createRegion"
+              aria-label="Create Region">
+              Create Region
+            </button>
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12 d-flex justify-content-start text-center">
+          <h2>Capital: {{ account.totalCapital }}</h2>
+          <h2 class="px-3">Industry: {{ account.totalIndustry }}</h2>
+          <h2>Agriculture: {{ account.totalAgriculture }}</h2>
+        </div>
       </div>
-    </nav>
+    </div>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
 
   </body>
 
 
-  <!-- Modal -->
+  <!-- Create Region Modal -->
   <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="Create Region Modal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -35,13 +46,14 @@
 </template>
 
 <script>
+import { computed } from "@vue/reactivity";
+import { AppState } from "../AppState";
 import CreateRegionForm from "./CreateRegionForm.vue";
 import Login from './Login.vue'
 export default {
-  setup() {
-
+  setup(props) {
     return {
-
+      account: computed(() => AppState.account)
     }
   },
   components: { Login, CreateRegionForm }
@@ -49,5 +61,7 @@ export default {
 </script>
 
 <style scoped>
-
+.mr {
+  margin-right: 3rem;
+}
 </style>

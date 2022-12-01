@@ -7,15 +7,15 @@
     </div>
     <div>
       <label for="capital" class="form-label">Capital: {{ editable.capital }}</label>
-      <input v-model="editable.capital" type="range" class="form-range" min="1" max="6" step="1" id="capital">
+      <input v-model="editable.capital" type="range" class="form-range" min="1" max="10" step="1" id="capital">
     </div>
     <div class="my-3">
       <label for="industry" class="form-label">Industry: {{ editable.industry }}</label>
-      <input v-model="editable.industry" type="range" class="form-range" min="1" max="6" step="1" id="industry">
+      <input v-model="editable.industry" type="range" class="form-range" min="1" max="10" step="1" id="industry">
     </div>
     <div class="mb-3">
       <label for="agriculture" class="form-label">Agriculture: {{ editable.agriculture }}</label>
-      <input v-model="editable.agriculture" type="range" class="form-range" min="1" max="6" step="1" id="agriculture">
+      <input v-model="editable.agriculture" type="range" class="form-range" min="1" max="10" step="1" id="agriculture">
     </div>
     <div class="form-floating">
       <select v-model="editable.environment" required class="form-select" id="environment"

@@ -16,10 +16,6 @@ public class RegionTilesRepository : BaseRepository
       capital,
       industry,
       agriculture,
-      smallCity,
-      mediumCity,
-      largeCity,
-      capitalCity,
       environment
     )
     VALUES(
@@ -29,10 +25,6 @@ public class RegionTilesRepository : BaseRepository
       @Capital,
       @Industry,
       @Agriculture,
-      @SmallCity,
-      @MediumCity,
-      @LargeCity,
-      @CapitalCity,
       @Environment
     );
     SELECT LAST_INSERT_ID()

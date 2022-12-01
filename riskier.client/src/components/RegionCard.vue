@@ -20,14 +20,10 @@
 
 <script>
 import { computed } from "@vue/reactivity";
-import { onMounted } from "vue";
 import { AppState } from "../AppState";
 import { Region } from "../models/Region";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
-
-
-
 export default {
   props: {
     regions: { type: Region, required: true },

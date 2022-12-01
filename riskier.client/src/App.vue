@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Navbar />
+    <!-- <Navbar /> -->
   </header>
   <main>
     <router-view />
@@ -16,7 +16,8 @@ import Navbar from "./components/Navbar.vue";
 export default {
   setup() {
     return {
-      appState: computed(() => AppState)
+      appState: computed(() => AppState),
+      account: computed(() => AppState.account)
     };
   },
   components: { Navbar }

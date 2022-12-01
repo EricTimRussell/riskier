@@ -1,9 +1,12 @@
 <template>
+  <header class="sticky-top">
+    <Navbar />
+  </header>
 
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 d-flex justify-content-evenly" v-for="r in regions">
+        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
           <RegionCard :regions="r" :key="r.id" />
         </div>
       </div>
@@ -16,10 +19,9 @@
 </template>
 
 <script>
-import { authSettled, onAuthLoaded } from "@bcwdev/auth0provider-client";
 import { computed } from "@vue/reactivity";
-import { onMounted } from "vue";
 import { AppState } from "../AppState";
+import Navbar from "../components/Navbar.vue";
 import RegionCard from "../components/RegionCard.vue";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
@@ -33,15 +35,12 @@ export default {
         Pop.error(error, "getting all regions")
       }
     }
-    onAuthLoaded(() => {
-      getAllRegions()
-    })
     return {
       regions: computed(() => AppState.regions),
       account: computed(() => AppState.account)
     };
   },
-  components: { RegionCard }
+  components: { RegionCard, Navbar }
 }
 </script>
 
