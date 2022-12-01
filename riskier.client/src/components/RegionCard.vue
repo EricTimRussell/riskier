@@ -8,6 +8,7 @@
         <h3>{{ regions.capital }}-Capital</h3>
         <h3>{{ regions.industry }}-Industry</h3>
         <h3>{{ regions.agriculture }}-Agriculture</h3>
+        <h3>{{ regions.environment }}</h3>
       </div>
       <div class="text-end">
         <span @click="removeRegion()" class="mdi mdi-delete-forever p-1 fs-3 select" title="Delete?"></span>

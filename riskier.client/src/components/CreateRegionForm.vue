@@ -21,13 +21,13 @@
       <select v-model="editable.environment" required class="form-select" id="environment"
         aria-label="Select Region Environment">
         <option selected></option>
-        <option value="1">Grassland</option>
-        <option value="2">Desert</option>
-        <option value="3">Forest</option>
-        <option value="4">Highlands</option>
-        <option value="5">Wetlands</option>
-        <option value="6">Jungle</option>
-        <option value="7">Urban</option>
+        <option value="Grassland">Grassland</option>
+        <option value="Desert">Desert</option>
+        <option value="Forest">Forest</option>
+        <option value="Highlands">Highlands</option>
+        <option value="Wetlands">Wetlands</option>
+        <option value="Jungle">Jungle</option>
+        <option value="Urban">Urban</option>
       </select>
       <label for="environment">Select Region Environment</label>
     </div>
@@ -54,6 +54,7 @@ export default {
         try {
           const formData = editable.value
           await regionTilesService.createRegion(formData)
+          editable.value = {}
           Modal.getOrCreateInstance('#createRegion').hide()
         } catch (error) {
           Pop.error(error, "Creating Region")

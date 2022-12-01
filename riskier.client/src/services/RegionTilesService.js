@@ -28,6 +28,7 @@ class RegionTilesService {
     const res = await api.delete('api/regionTiles/' + id)
     Pop.success("Region Removed")
     AppState.regions = AppState.regions.filter(r => r.id != id)
+    accountService.getAccount()
   }
 }
 export const regionTilesService = new RegionTilesService()
