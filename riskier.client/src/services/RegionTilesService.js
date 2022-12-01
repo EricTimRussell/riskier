@@ -9,8 +9,17 @@ class RegionTilesService {
     AppState.regions.push(new Region(res.data))
   }
 
+  async getRegionsByOwnerId(ownerId) {
+    const res = await api.get('api/regionTiles/' + ownerId)
+    console.log(res.data, "Regions");
+    AppState.regions = res.data.map(r => new Region(r))
+  }
 
-
+  async getAllRegions() {
+    const res = await api.get('api/regionTiles')
+    // console.log(res.data);
+    AppState.regions = res.data.map(r => new Region(r))
+  }
 
 }
 export const regionTilesService = new RegionTilesService()

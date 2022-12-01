@@ -2,6 +2,7 @@ namespace riskier.Controllers;
 
 [ApiController]
 [Route("[controller]")]
+[Authorize]
 public class AccountController : ControllerBase
 {
   private readonly AccountService _accountService;
@@ -14,7 +15,6 @@ public class AccountController : ControllerBase
   }
 
   [HttpGet]
-  [Authorize]
   public async Task<ActionResult<Account>> Get()
   {
     try

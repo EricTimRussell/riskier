@@ -2,7 +2,6 @@ namespace riskier.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-
 public class RegionTilesController : ControllerBase
 {
   private readonly RegionTilesService _rts;
@@ -37,10 +36,12 @@ public class RegionTilesController : ControllerBase
   }
 
   [HttpGet]
-  public ActionResult<List<RegionTile>> GetRegions()
+  [Authorize]
+  public async Task<ActionResult<List<RegionTile>>> GetRegionsAsync()
   {
     try
     {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
       var regions = _rts.GetRegions();
       return Ok(regions);
     }
@@ -50,13 +51,28 @@ public class RegionTilesController : ControllerBase
     }
   }
 
-  [HttpGet("{regionTileId}")]
-  public ActionResult<RegionTile> GetRegionById(int regionTileId)
+  // [HttpGet("{regionTileId}")]
+  // public ActionResult<RegionTile> GetRegionById(int regionTileId)
+  // {
+  //   try
+  //   {
+  //     RegionTile foundRegion = _rts.GetRegionById(regionTileId);
+  //     return Ok(foundRegion);
+  //   }
+  //   catch (Exception e)
+  //   {
+  //     return BadRequest(e.Message);
+  //   }
+  // }
+
+  [HttpGet("{ownerId}")]
+  public async Task<ActionResult<List<RegionTile>>> GetRegionByOwnerId(string ownerId)
   {
     try
     {
-      RegionTile foundRegion = _rts.GetRegionById(regionTileId);
-      return Ok(foundRegion);
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      var regions = _rts.GetRegionByOwnerId(userInfo!.Id);
+      return Ok(regions);
     }
     catch (Exception e)
     {
