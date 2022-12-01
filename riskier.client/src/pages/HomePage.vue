@@ -1,7 +1,4 @@
 <template>
-  <header class="sticky-top">
-    <Navbar />
-  </header>
 
   <body>
     <div class="container-fluid">

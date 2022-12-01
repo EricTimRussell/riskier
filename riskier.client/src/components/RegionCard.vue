@@ -9,7 +9,8 @@
         <h3>{{ regions.industry }}-Industry</h3>
         <h3>{{ regions.agriculture }}-Agriculture</h3>
       </div>
-      <div @click="removeRegion()" class="mdi mdi-delete-forever text-end p-1 fs-3 select" title="Delete?">
+      <div class="text-end">
+        <span @click="removeRegion()" class="mdi mdi-delete-forever p-1 fs-3 select" title="Delete?"></span>
       </div>
     </div>
 

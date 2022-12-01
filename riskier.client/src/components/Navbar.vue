@@ -21,42 +21,25 @@
         </div>
       </div>
     </div>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
 
   </body>
 
 
-  <!-- Create Region Modal -->
-  <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="Create Region Modal" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Create Region</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <CreateRegionForm />
-        </div>
-      </div>
-    </div>
-  </div>
+
 </template>
 
 <script>
 import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
-import CreateRegionForm from "./CreateRegionForm.vue";
+
 import Login from './Login.vue'
 export default {
-  setup(props) {
+  setup() {
     return {
       account: computed(() => AppState.account)
     }
   },
-  components: { Login, CreateRegionForm }
+  components: { Login }
 }
 </script>
 
