@@ -36,7 +36,6 @@ public class RegionTilesController : ControllerBase
   }
 
   [HttpGet]
-  [Authorize]
   public async Task<ActionResult<List<RegionTile>>> GetRegionsAsync()
   {
     try
@@ -81,7 +80,6 @@ public class RegionTilesController : ControllerBase
   }
 
   [HttpDelete("{regionTileId}")]
-  [Authorize]
   public async Task<ActionResult<string>> RemoveRegion(int regionTileId)
   {
     try

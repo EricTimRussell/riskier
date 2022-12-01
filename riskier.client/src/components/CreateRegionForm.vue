@@ -36,6 +36,7 @@
       <button type="submit" class="btn btn-success">Create</button>
     </div>
   </form>
+  <!-- TODO add more form data to factor in cities resources -->
 </template>
 
 

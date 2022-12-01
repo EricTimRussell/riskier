@@ -9,6 +9,8 @@
         <h3>{{ regions.industry }}-Industry</h3>
         <h3>{{ regions.agriculture }}-Agriculture</h3>
       </div>
+      <div @click="removeRegion()" class="mdi mdi-delete-forever text-end p-1 fs-3 select" title="Delete?">
+      </div>
     </div>
 
   </body>
@@ -20,7 +22,6 @@
 import { computed } from "@vue/reactivity";
 import { onMounted } from "vue";
 import { AppState } from "../AppState";
-import { Account } from "../models/Account";
 import { Region } from "../models/Region";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
@@ -32,11 +33,18 @@ export default {
     regions: { type: Region, required: true },
   },
   setup(props) {
-    // onMounted(() => {
-    //   getRegionsByOwnerId()
-    // })
     return {
-      account: computed(() => AppState.account)
+      account: computed(() => AppState.account),
+
+      async removeRegion() {
+        try {
+          if (await Pop.confirm("Remove Region?"))
+            await regionTilesService.removeRegion(props.regions.id)
+        } catch (error) {
+          Pop.error(error, "Removing Region")
+        }
+      }
+
       // async getRegionsByOwnerId() {
       //   try {
       //     await regionTilesService.getRegionsByOwnerId(props.regions.ownerId)
@@ -51,5 +59,8 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.select {
+  cursor: pointer;
+  color: #c10000;
+}
 </style>

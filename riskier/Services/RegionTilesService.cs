@@ -50,6 +50,11 @@ public class RegionTilesService
     {
       throw new Exception("Region does not belong to you");
     }
+    var regionOwner = _ar.GetById(userId);
+    regionOwner.TotalCapital -= region.Capital;
+    regionOwner.TotalIndustry -= region.Industry;
+    regionOwner.TotalAgriculture -= region.Agriculture;
+    regionOwner = _ar.Edit(regionOwner);
     _rtr.RemoveRegion(regionTileId);
   }
 }

@@ -1,5 +1,6 @@
 import { AppState } from "../AppState"
 import { Region } from "../models/Region"
+import Pop from "../utils/Pop"
 import { api } from "./AxiosService"
 
 class RegionTilesService {
@@ -21,5 +22,10 @@ class RegionTilesService {
     AppState.regions = res.data.map(r => new Region(r))
   }
 
+  async removeRegion(id) {
+    const res = await api.delete('api/regionTiles/' + id)
+    Pop.success("Region Removed")
+    AppState.regions = AppState.regions.filter(r => r.id != id)
+  }
 }
 export const regionTilesService = new RegionTilesService()
