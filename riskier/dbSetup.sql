@@ -9,9 +9,9 @@ CREATE TABLE
         email varchar(255) COMMENT 'User Email',
         picture varchar(255) COMMENT 'User Picture',
         teamName VARCHAR(255) DEFAULT 'Team Name',
-        totalCapital INT NOT NULL DEFAULT 40,
-        totalIndustry INT NOT NULL DEFAULT 40,
-        totalAgriculture INT NOT NULL DEFAULT 40
+        totalCapital INT NOT NULL,
+        totalIndustry INT NOT NULL,
+        totalAgriculture INT NOT NULL
     ) default charset utf8 COMMENT '';
 
 CREATE TABLE
