@@ -5,10 +5,10 @@
     <div class="card bg-primary" v-if="regions.ownerId == account.id">
       <div class="card-body">
         <h1>{{ regions.regionNumber }}|| {{ regions.creator.teamName }}</h1>
-        <h3>{{ regions.capital }}-Capital</h3>
-        <h3>{{ regions.industry }}-Industry</h3>
-        <h3>{{ regions.agriculture }}-Agriculture</h3>
-        <h3>{{ regions.environment }}</h3>
+        <h4>Capital:{{ regions.capital }}</h4>
+        <h4>Industry:{{ regions.industry }}</h4>
+        <h4>Agriculture:{{ regions.agriculture }}</h4>
+        <h4>{{ regions.environment }}</h4>
       </div>
       <div class="text-end">
         <span @click="removeRegion()" class="mdi mdi-delete-forever p-1 fs-3 select" title="Delete?"></span>

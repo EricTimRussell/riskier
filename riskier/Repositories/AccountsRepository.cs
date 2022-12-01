@@ -35,8 +35,7 @@ public class AccountsRepository
   internal Account Edit(Account update)
   {
     string sql = @"
-            UPDATE riskierAccounts
-            SET 
+            UPDATE riskierAccounts SET 
               name = @Name,
               picture = @Picture,
               teamName = @TeamName,

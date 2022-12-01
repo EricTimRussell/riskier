@@ -27,12 +27,9 @@ public class AccountService
   internal Account Edit(Account editData, Account userInfo)
   {
     Account original = GetProfileByEmail(userInfo.Email);
-    original.Name = editData.Name;
-    original.Picture = editData.Picture;
-    original.TeamName = editData.TeamName;
-    original.TotalCapital = editData.TotalCapital;
-    original.TotalIndustry = editData.TotalIndustry;
-    original.TotalAgriculture = editData.TotalAgriculture;
+    original.Name = editData.Name ?? original.Name;
+    original.Picture = editData.Picture ?? original.Picture;
+    original.TeamName = editData.TeamName ?? original.TeamName;
     return _repo.Edit(original);
   }
 }
