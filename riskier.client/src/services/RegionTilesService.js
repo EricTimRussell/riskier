@@ -1,6 +1,7 @@
 import { AppState } from "../AppState"
 import { Region } from "../models/Region"
 import Pop from "../utils/Pop"
+import { accountService } from "./AccountService"
 import { api } from "./AxiosService"
 
 class RegionTilesService {
@@ -8,6 +9,7 @@ class RegionTilesService {
   async createRegion(formData) {
     const res = await api.post('api/regionTiles', formData)
     AppState.regions.push(new Region(res.data))
+    accountService.getAccount()
   }
 
   async getRegionsByOwnerId(ownerId) {
