@@ -12,7 +12,9 @@
 
 
 <script>
+import { computed } from "@vue/reactivity";
 import { ref } from "vue";
+import { AppState } from "../AppState";
 import { assetsService } from "../services/AssetsService";
 import Pop from "../utils/Pop";
 

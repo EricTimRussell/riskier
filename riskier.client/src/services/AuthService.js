@@ -3,6 +3,7 @@ import { AppState } from '../AppState'
 import { audience, clientId, domain } from '../env'
 import { router } from '../router'
 import { accountService } from './AccountService'
+import { assetsService } from "./AssetsService"
 import { api } from './AxiosService'
 import { regionTilesService } from "./RegionTilesService"
 import { socketService } from './SocketService'
@@ -27,6 +28,7 @@ AuthService.on(AuthService.AUTH_EVENTS.AUTHENTICATED, async function () {
   AppState.user = AuthService.user
   await accountService.getAccount()
   await regionTilesService.getAllRegions()
+  await assetsService.getAssets()
   socketService.authenticate(AuthService.bearer)
   // NOTE if there is something you want to do once the user is authenticated, place that here
 })

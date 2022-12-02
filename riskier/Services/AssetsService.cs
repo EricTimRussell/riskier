@@ -55,7 +55,7 @@ public class AssetsService
     return _ar.EditAssets(originalAssets);
   }
 
-  internal object GetAssets()
+  internal Asset GetAssets()
   {
     return _ar.GetAssets();
   }

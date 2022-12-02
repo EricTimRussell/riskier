@@ -20,7 +20,7 @@ class RegionTilesService {
 
   async getAllRegions() {
     const res = await api.get('api/regionTiles')
-    // console.log(res.data);
+    console.log(res.data);
     AppState.regions = res.data.map(r => new Region(r))
   }
 

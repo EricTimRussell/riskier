@@ -112,31 +112,31 @@ public class AssetsRepository : BaseRepository
     return originalAssets;
   }
 
-  internal object GetAssets()
+  internal Asset GetAssets()
   {
     var sql = @"
     SELECT
     a.*,
-    ac.*
+    rc.*
     FROM assets a
-    JOIN accounts ac ON ac.id = a.ownerId
+    JOIN riskierAccounts rc ON rc.id = a.ownerId
     ;";
 
     return _db.Query<Asset, Account, Asset>(sql, (a, ac) =>
     {
       a.Creator = ac;
       return a;
-    }).ToList();
+    }, new { }).FirstOrDefault();
   }
 
   internal Asset GetAssetsById(int assetId)
   {
     var sql = @"
     SELECT
-    a.*
-    ac.*
+    a.*,
+    rc.*
     FROM assets a
-    JOIN accounts ac on ac.id = a.ownerId
+    JOIN riskierAccounts rc ON rc.id = a.ownerId
     WHERE a.id = @assetId
     ;";
     return _db.Query<Asset, Account, Asset>(sql, (a, ac) =>

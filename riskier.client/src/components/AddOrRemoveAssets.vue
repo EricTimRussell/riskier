@@ -2,29 +2,31 @@
 
   <body>
 
-    <div class="pl col-4">
-      <h6>Infantry</h6>
+    <div class="d-flex">
+      <div class="pl col-4">
+        <h5>Infantry</h5>
+      </div>
+      <div class="pl col-4">
+        <h5>Elite Inf</h5>
+      </div>
+      <div class="pl col-4">
+        <h5>Mech Inf</h5>
+      </div>
     </div>
-    <div class="pl col-4">
-      <h6>Elite Inf</h6>
-    </div>
-    <div class="pl col-4">
-      <h6>Mech Inf</h6>
-    </div>
-    <div class="col-4 btn-group btn-group-sm" role="group" aria-label="Small button group">
-      <button @click="addInfantry()" class="btn btn-outline-dark">+</button>
+    <div class="col-4 btn-group btn-group-sm px-5" role="group" aria-label="Small button group">
+      <button @click="addInfantry()" class="btn btn-outline-dark mdi mdi-minus fs-4"></button>
       <span class="px-3"> 0 </span>
-      <button type="button" class="btn btn-outline-dark">-</button>
+      <button type="button" class="btn btn-outline-dark mdi mdi-plus fs-4"></button>
     </div>
-    <div class="col-4 btn-group btn-group-sm" role="group" aria-label="Small button group">
-      <button type="button" class="btn btn-outline-dark">+</button>
+    <div class="col-4 btn-group btn-group-sm px-5" role="group" aria-label="Small button group">
+      <button type="button" class="btn btn-outline-dark mdi mdi-minus fs-4"></button>
       <span class="px-3"> 0 </span>
-      <button type="button" class="btn btn-outline-dark">-</button>
+      <button type="button" class="btn btn-outline-dark mdi mdi-plus fs-4"></button>
     </div>
-    <div class="col-4 btn-group btn-group-sm" role="group" aria-label="Small button group">
-      <button type="button" class="btn btn-outline-dark">+</button>
+    <div class="col-4 btn-group btn-group-sm px-5" role="group" aria-label="Small button group">
+      <button type="button" class="btn btn-outline-dark mdi mdi-minus fs-4"></button>
       <span class="px-3"> 0 </span>
-      <button type="button" class="btn btn-outline-dark">-</button>
+      <button type="button" class="btn btn-outline-dark mdi mdi-plus fs-4"></button>
     </div>
 
   </body>
@@ -33,11 +35,16 @@
 
 
 <script>
+import { Asset } from "../models/Asset";
 import { assetsService } from "../services/AssetsService";
 import Pop from "../utils/Pop";
 
 export default {
+  // props: {
+  //   assets: { type: Asset, required: true }
+  // },
   setup() {
+
     return {
       //SECTION Start Asset Add and Remove Functions
       async addInfantry() {
@@ -57,5 +64,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.pl {
+  padding-left: 17.5rem;
+}
 </style>
