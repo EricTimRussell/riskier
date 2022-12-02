@@ -41,7 +41,26 @@ public class AccountsRepository
               teamName = @TeamName,
               totalCapital = @TotalCapital,
               totalIndustry = @TotalIndustry,
-              totalAgriculture = @TotalAgriculture
+              totalAgriculture = @TotalAgriculture,
+              infantry = @Infantry,
+              eliteInfantry = @EliteInfantry,
+              mech = @Mech,
+              ifv = @Ifv,
+              mbt = @Mbt,
+              artillery = @Artillery,
+              ssArtillery = @SsArtillery,
+              antiAircraft = @AntiAircraft,
+              fighterAircraft = @FighterAircraft,
+              closeAirSupport = @CloseAirSupport,
+              carrier = @Carrier,
+              cruiser = @Cruiser,
+              destroyer = @Destroyer,
+              supplyTruck = @SupplyTruck,
+              transportAircraft = @TransportAircraft,
+              airfield = @Airfield,
+              navalYard = @NavalYard,
+              warehouse = @Warehouse,
+              factory = @Factory
             WHERE id = @Id;";
     _db.Execute(sql, update);
     return update;
