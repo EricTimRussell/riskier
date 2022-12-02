@@ -11,29 +11,7 @@ CREATE TABLE
         teamName VARCHAR(255) DEFAULT 'Team Name',
         totalCapital INT NOT NULL,
         totalIndustry INT NOT NULL,
-        totalAgriculture INT NOT NULL
-    ) default charset utf8 COMMENT '';
-
-CREATE TABLE
-    IF NOT EXISTS regions(
-        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        regionNumber INT NOT NULL,
-        capital INT NOT NULL,
-        industry INT NOT NULL,
-        agriculture INT NOT NULL,
-        environment VARCHAR(255) NOT NULL,
-        ownerId VARCHAR(255) NOT NULL,
-        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
-    ) default charset utf8;
-
-CREATE TABLE
-    IF NOT EXISTS assets(
-        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        ownerId VARCHAR(255) NOT NULL,
+        totalAgriculture INT NOT NULL,
         infantry INT,
         eliteInfantry INT,
         MECH INT,
@@ -52,6 +30,247 @@ CREATE TABLE
         airfield INT,
         navalYard INT,
         warehouse INT,
-        factory INT,
+        factory INT
+    ) default charset utf8 COMMENT '';
+
+CREATE TABLE
+    IF NOT EXISTS regions(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        regionNumber INT NOT NULL,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        environment VARCHAR(255) NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS infantry(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS specialForces(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS mech(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS ifv(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS mbt(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS artillery(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS ssArtillery(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS antiAircraft(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS supplyTruck(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS fighterAircraft(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS closeAirSupport(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS transportAircraft(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS airfield(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS navalYard(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS warehouse(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS factory(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS carrier(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS cruiser(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS destroyer(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        capital INT NOT NULL,
+        industry INT NOT NULL,
+        agriculture INT NOT NULL,
+        ownerId VARCHAR(255) NOT NULL,
         FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;
