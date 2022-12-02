@@ -2,6 +2,7 @@ import { AppState } from '../AppState'
 import { Account } from "../models/Account"
 import { logger } from '../utils/Logger'
 import { api } from './AxiosService'
+import { regionTilesService } from "./RegionTilesService"
 
 class AccountService {
   async getAccount() {
@@ -16,6 +17,7 @@ class AccountService {
   async changeTeamName(formData) {
     const res = await api.put('/account', formData)
     AppState.account = new Account(res.data)
+    regionTilesService.getAllRegions()
   }
 }
 

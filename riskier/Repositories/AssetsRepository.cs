@@ -13,46 +13,46 @@ public class AssetsRepository : BaseRepository
       id,
       ownerId,
       infantry,
-      eliteInfantry
-      mech
-      ifv
-      mbt
-      artillery
-      ssArtillery
-      antiAircraft
-      fighterAircraft
-      closeAirSupport
-      carrier
-      cruiser
-      destroyer
-      supplyTruck
-      transportAircraft
-      airfield
-      navalYard
-      warehouse
+      eliteInfantry,
+      mech,
+      ifv,
+      mbt,
+      artillery,
+      ssArtillery,
+      antiAircraft,
+      fighterAircraft,
+      closeAirSupport,
+      carrier,
+      cruiser,
+      destroyer,
+      supplyTruck,
+      transportAircraft,
+      airfield,
+      navalYard,
+      warehouse,
       factory
     )
     VALUES(
-      @Id
-      @OwnerId
+      @Id,
+      @OwnerId,
       @Infantry,
-      @EliteInfantry
-      @Mech
-      @Ifv
-      @Mbt
-      @Artillery
-      @SsArtillery
-      @AntiAircraft
-      @FighterAircraft
-      @CloseAirSupport
-      @Carrier
-      @Cruiser
-      @Destroyer
-      @SupplyTruck
-      @TransportAircraft
-      @Airfield
-      @NavalYard
-      @Warehouse
+      @EliteInfantry,
+      @Mech,
+      @Ifv,
+      @Mbt,
+      @Artillery,
+      @SsArtillery,
+      @AntiAircraft,
+      @FighterAircraft,
+      @CloseAirSupport,
+      @Carrier,
+      @Cruiser,
+      @Destroyer,
+      @SupplyTruck,
+      @TransportAircraft,
+      @Airfield,
+      @NavalYard,
+      @Warehouse,
       @Factory
     );
     SELECT LAST_INSERT_ID()
