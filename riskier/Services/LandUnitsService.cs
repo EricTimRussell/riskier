@@ -13,31 +13,22 @@ public class LandUnitsService
 
   internal void CreateInfantry(string userId)
   {
-    // var newInfantry = _lupo.CreateInfantry(infantry);
     var infantryOwner = _ar.GetById(userId);
     infantryOwner.TotalCapital -= 1;
     infantryOwner.TotalIndustry -= 1;
     infantryOwner.TotalAgriculture -= 3;
     infantryOwner.Infantry++;
     infantryOwner = _ar.Edit(infantryOwner);
-    // return newInfantry;
   }
 
   internal void RemoveInfantry(string userId)
   {
-    // var infantry = GetInfantryById(infantryId);
-    // if (infantry.OwnerId != userId)
-    // {
-    //   throw new Exception("This does not belong to you");
-    // }
     var infantryOwner = _ar.GetById(userId);
     infantryOwner.TotalCapital += 1;
     infantryOwner.TotalIndustry += 1;
     infantryOwner.TotalAgriculture += 3;
     infantryOwner.Infantry--;
     infantryOwner = _ar.Edit(infantryOwner);
-
-    // _lupo.RemoveInfantry(infantryId);
   }
 
   internal void CreateSpecialForces(string userId)
@@ -57,6 +48,26 @@ public class LandUnitsService
     infantryOwner.TotalIndustry += 1;
     infantryOwner.TotalAgriculture += 3;
     infantryOwner.SpecialForces--;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
+
+  internal void CreateMech(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital -= 2;
+    infantryOwner.TotalIndustry -= 2;
+    infantryOwner.TotalAgriculture -= 3;
+    infantryOwner.Mech++;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
+
+  internal void RemoveMech(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital += 2;
+    infantryOwner.TotalIndustry += 2;
+    infantryOwner.TotalAgriculture += 3;
+    infantryOwner.Mech--;
     infantryOwner = _ar.Edit(infantryOwner);
   }
 }

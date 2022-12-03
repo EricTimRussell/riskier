@@ -27,7 +27,7 @@
         <div class="col-6 text-center pt-4">
           <h6>Mech Infantry</h6>
         </div>
-        <div class="col-6 text-center pt-4">
+        <div class="col-6 pt-4 pl-6">
           <h6>IFV</h6>
         </div>
         <div class="px-4">
@@ -71,5 +71,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+.pl-6 {
+  padding-left: 4rem;
+}
 </style>

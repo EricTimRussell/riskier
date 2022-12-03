@@ -33,9 +33,7 @@ import { AppState } from "../AppState";
 
 export default {
   setup() {
-    const editable = ref({})
     return {
-      editable,
       account: computed(() => AppState.account),
       async addInfantry() {
         try {

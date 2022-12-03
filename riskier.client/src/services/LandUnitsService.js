@@ -24,7 +24,15 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  async addMech() {
+    const res = await api.post('api/landunits/mech')
+    accountService.getAccount()
+  }
 
+  async removeMech() {
+    const res = await api.delete('api/landUnits/mech')
+    accountService.getAccount()
+  }
 
 }
 export const landUnitsService = new LandUnitsService()

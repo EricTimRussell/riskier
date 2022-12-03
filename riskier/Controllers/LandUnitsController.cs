@@ -80,4 +80,49 @@ public class LandUnitsController : ControllerBase
   }
 
   #endregion
+
+  // SECTION
+  #region Add/Remove Mech
+  [HttpPost("mech")]
+  public async Task<ActionResult<string>> CreateMech()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateMech(userInfo?.Id);
+      return Ok("Mech Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpDelete("mech")]
+  public async Task<ActionResult<string>> RemoveMech()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveMech(userInfo?.Id);
+      return Ok("Mech Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+
+
+  #endregion
+
+
+
+
+
+
+
+
+
 }
