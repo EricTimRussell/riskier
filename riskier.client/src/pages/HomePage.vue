@@ -54,7 +54,6 @@ import Pop from "../utils/Pop";
 
 export default {
   setup() {
-
     async function getAllRegions() {
       try {
         await regionTilesService.getAllRegions()

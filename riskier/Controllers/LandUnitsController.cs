@@ -14,16 +14,16 @@ public class LandUnitsController : ControllerBase
     _lus = lus;
     _a0 = a0;
   }
-
+  // SECTION
+  #region Infantry Add/Remove
   [HttpPost]
-  public async Task<ActionResult<Infantry>> createInfantry([FromBody] Infantry infantry)
+  public async Task<ActionResult<string>> createInfantry()
   {
     try
     {
-      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
-      infantry.OwnerId = userInfo?.Id;
-      var newInfantry = _lus.CreateInfantry(infantry);
-      return Ok(infantry);
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateInfantry(userInfo.Id);
+      return Ok("Infantry Created");
     }
     catch (Exception e)
     {
@@ -31,6 +31,27 @@ public class LandUnitsController : ControllerBase
     }
   }
 
+  [HttpDelete]
+  public async Task<ActionResult<string>> RemoveInfantry()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveInfantry(userInfo?.Id);
+      return Ok("Infantry Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
+
+  // SECTION
+  #region SpecialForces Add/Remove
 
 
+
+
+  #endregion
 }

@@ -36,6 +36,9 @@ public class Startup
 
     services.AddTransient<RegionTilesService>();
     services.AddTransient<RegionTilesRepository>();
+
+    services.AddTransient<LandUnitsService>();
+    services.AddTransient<LandUnitsRepository>();
   }
 
   private void ConfigureCors(IServiceCollection services)

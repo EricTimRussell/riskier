@@ -11,15 +11,42 @@ public class LandUnitsService
     _ar = ar;
   }
 
-  internal Infantry CreateInfantry(Infantry infantry)
+  internal void CreateInfantry(string userId)
   {
-    var newInfantry = _lupo.CreateInfantry(infantry);
-    var infantryOwner = _ar.GetById(newInfantry.OwnerId);
-    infantryOwner.TotalCapital -= newInfantry.Capital;
-    infantryOwner.TotalIndustry -= newInfantry.Industry;
-    infantryOwner.TotalAgriculture -= newInfantry.Agriculture;
+    // var newInfantry = _lupo.CreateInfantry(infantry);
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital -= 1;
+    infantryOwner.TotalIndustry -= 1;
+    infantryOwner.TotalAgriculture -= 3;
     infantryOwner.Infantry++;
     infantryOwner = _ar.Edit(infantryOwner);
-    return newInfantry;
+    // return newInfantry;
   }
+
+  internal void RemoveInfantry(string userId)
+  {
+    // var infantry = GetInfantryById(infantryId);
+    // if (infantry.OwnerId != userId)
+    // {
+    //   throw new Exception("This does not belong to you");
+    // }
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital += 1;
+    infantryOwner.TotalIndustry += 1;
+    infantryOwner.TotalAgriculture += 3;
+    infantryOwner.Infantry--;
+    infantryOwner = _ar.Edit(infantryOwner);
+
+    // _lupo.RemoveInfantry(infantryId);
+  }
+
+  // internal Infantry GetInfantryById(int id)
+  // {
+  //   var infantry = _lupo.GetInfantryById(id);
+  //   if (infantry == null)
+  //   {
+  //     throw new Exception("Bad infantry id");
+  //   }
+  //   return infantry;
+  // }
 }
