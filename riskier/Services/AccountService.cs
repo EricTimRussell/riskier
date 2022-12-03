@@ -37,7 +37,7 @@ public class AccountService
     original.CloseAirSupport = editData.CloseAirSupport;
     original.Cruiser = editData.Cruiser;
     original.Destroyer = editData.Destroyer;
-    original.EliteInfantry = editData.EliteInfantry;
+    original.SpecialForces = editData.SpecialForces;
     original.Factory = editData.Factory;
     original.FighterAircraft = editData.FighterAircraft;
     original.Ifv = editData.Ifv;

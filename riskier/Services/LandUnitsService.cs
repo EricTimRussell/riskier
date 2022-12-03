@@ -40,13 +40,23 @@ public class LandUnitsService
     // _lupo.RemoveInfantry(infantryId);
   }
 
-  // internal Infantry GetInfantryById(int id)
-  // {
-  //   var infantry = _lupo.GetInfantryById(id);
-  //   if (infantry == null)
-  //   {
-  //     throw new Exception("Bad infantry id");
-  //   }
-  //   return infantry;
-  // }
+  internal void CreateSpecialForces(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital -= 3;
+    infantryOwner.TotalIndustry -= 1;
+    infantryOwner.TotalAgriculture -= 3;
+    infantryOwner.SpecialForces++;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
+
+  internal void RemoveSpecialForces(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital += 3;
+    infantryOwner.TotalIndustry += 1;
+    infantryOwner.TotalAgriculture += 3;
+    infantryOwner.SpecialForces--;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
 }

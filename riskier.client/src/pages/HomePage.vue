@@ -17,8 +17,8 @@
           <div class="col-6 text-center">
             <h6>Infantry</h6>
           </div>
-          <div class="col-6 text-center">
-            <h6>Elite Inf</h6>
+          <div class="col-6 px-4">
+            <h6>Special Forces</h6>
           </div>
         </div>
         <div class="px-4">

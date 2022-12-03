@@ -43,7 +43,7 @@ public class AccountsRepository
               totalIndustry = @TotalIndustry,
               totalAgriculture = @TotalAgriculture,
               infantry = @Infantry,
-              eliteInfantry = @EliteInfantry,
+              specialForces = @SpecialForces,
               mech = @Mech,
               ifv = @Ifv,
               mbt = @Mbt,

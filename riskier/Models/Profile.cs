@@ -9,7 +9,7 @@ public class Profile : DbItem<string>
   public int TotalIndustry { get; set; }
   public int TotalAgriculture { get; set; }
   public int Infantry { get; set; } = 0;
-  public int EliteInfantry { get; set; } = 0;
+  public int SpecialForces { get; set; } = 0;
   public int Mech { get; set; } = 0;
   public int Ifv { get; set; } = 0;
   public int Mbt { get; set; } = 0;

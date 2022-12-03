@@ -13,7 +13,7 @@ CREATE TABLE
         totalIndustry INT NOT NULL,
         totalAgriculture INT NOT NULL,
         infantry INT,
-        eliteInfantry INT,
+        specialForces INT,
         MECH INT,
         IFV INT,
         MBT INT,

@@ -16,8 +16,8 @@ public class LandUnitsController : ControllerBase
   }
   // SECTION
   #region Infantry Add/Remove
-  [HttpPost]
-  public async Task<ActionResult<string>> createInfantry()
+  [HttpPost("infantry")]
+  public async Task<ActionResult<string>> CreateInfantry()
   {
     try
     {
@@ -31,7 +31,7 @@ public class LandUnitsController : ControllerBase
     }
   }
 
-  [HttpDelete]
+  [HttpDelete("infantry")]
   public async Task<ActionResult<string>> RemoveInfantry()
   {
     try
@@ -49,9 +49,35 @@ public class LandUnitsController : ControllerBase
 
   // SECTION
   #region SpecialForces Add/Remove
+  [HttpPost("specialForces")]
+  public async Task<ActionResult<string>> CreateSpecialForces()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateSpecialForces(userInfo?.Id);
+      return Ok("Special Forces Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
-
-
+  [HttpDelete("specialForces")]
+  public async Task<ActionResult<string>> RemoveSpecialForces()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveSpecialForces(userInfo?.Id);
+      return Ok("Special Forces Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
   #endregion
 }

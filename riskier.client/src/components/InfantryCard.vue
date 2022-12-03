@@ -11,9 +11,13 @@
       </div>
     </div>
     <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
-      <button class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
-      <h6 class="px-3"> {{ account.eliteInfantry }} </h6>
-      <button type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <div>
+        <button @click="removeSpecialForces()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      </div>
+      <h6 class="px-3"> {{ account.specialForces }} </h6>
+      <div>
+        <button @click="addSpecialForces()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      </div>
     </div>
   </body>
 
@@ -45,6 +49,20 @@ export default {
           await landUnitsService.removeInfantry()
         } catch (error) {
           Pop.error(error, "Removing Infantry")
+        }
+      },
+      async addSpecialForces() {
+        try {
+          await landUnitsService.addSpecialForces()
+        } catch (error) {
+          Pop.error(error, "Adding SpecialForces")
+        }
+      },
+      async removeSpecialForces() {
+        try {
+          await landUnitsService.removeSpecialForces()
+        } catch (error) {
+          Pop.error(error, "Removing SpecialForces")
         }
       }
     }
