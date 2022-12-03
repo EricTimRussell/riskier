@@ -2,36 +2,57 @@
 
   <body>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
-          <RegionCard :regions="r" :key="r.id" />
+      <div class="row mt-3">
+        <div class="col-6 text-center">
+          <h6>Infantry</h6>
         </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-12 bg-dark">
-          <h1 class="text-center m-3">Assets</h1>
+        <div class="col-6 px-4">
+          <h6>Special Forces</h6>
         </div>
-      </div>
-      <div class="row">
-        <div class="d-flex">
-          <div class="col-6 text-center">
-            <h6>Infantry</h6>
-          </div>
-          <div class="col-6 px-4">
-            <h6>Special Forces</h6>
-          </div>
-        </div>
+
         <div class="px-4">
           <InfantryCard />
         </div>
         <div class="col-6 text-center pt-4">
-          <h6>Mech Infantry</h6>
+          <h6>Mech</h6>
         </div>
         <div class="col-6 pt-4 pl-6">
           <h6>IFV</h6>
         </div>
         <div class="px-4">
           <MechInfantryCard />
+        </div>
+        <div class="col-6 text-center pt-4">
+          <h6>MBT</h6>
+        </div>
+        <div class="col-6 pt-4 pl-6">
+          <h6>Artillery</h6>
+        </div>
+        <div class="px-4">
+          <MbtAndArtCard />
+        </div>
+        <div class="col-6 text-center pt-4">
+          <h6>SsArtillery</h6>
+        </div>
+        <div class="col-6 pt-4 pl-6">
+          <h6>AntiAircraft</h6>
+        </div>
+        <div class="px-4">
+          <SsArtilleryAndAntiAircraft />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 bg-dark">
+          <h1 class="text-center m-3">Owned Regions</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="d-flex">
+          <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
+            <RegionCard :regions="r" :key="r.id" />
+          </div>
         </div>
       </div>
     </div>
@@ -46,9 +67,11 @@
 import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
 import InfantryCard from "../components/InfantryCard.vue";
+import MbtAndArtCard from "../components/MbtAndArtCard.vue";
 import MechInfantryCard from "../components/MechInfantryCard.vue";
 import Navbar from "../components/Navbar.vue";
 import RegionCard from "../components/RegionCard.vue";
+import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
 
@@ -66,7 +89,7 @@ export default {
       account: computed(() => AppState.account),
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft }
 }
 </script>
 

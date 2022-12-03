@@ -43,6 +43,20 @@ export default {
         } catch (error) {
           Pop.error(error, "Removing Mech")
         }
+      },
+      async addIfv() {
+        try {
+          await landUnitsService.addIfv()
+        } catch (error) {
+          Pop.error(error, "Adding Ifv")
+        }
+      },
+      async removeIfv() {
+        try {
+          await landUnitsService.removeIfv()
+        } catch (error) {
+          Pop.error(error, "Removing Ifv")
+        }
       }
     }
   }

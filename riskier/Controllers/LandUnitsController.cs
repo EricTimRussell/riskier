@@ -112,17 +112,171 @@ public class LandUnitsController : ControllerBase
       return BadRequest(e.Message);
     }
   }
-
-
-
   #endregion
 
+  // SECTION 
+  #region Add/Remove Ifv
+  [HttpPost("ifv")]
+  public async Task<ActionResult<string>> CreateIfv()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateIfv(userInfo?.Id);
+      return Ok("Ifv Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
+  [HttpDelete("ifv")]
+  public async Task<ActionResult<string>> RemoveIfv()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveIfv(userInfo?.Id);
+      return Ok("Ifv Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
 
+  // SECTION
+  #region Add/Remove Mbt
+  [HttpPost("mbt")]
+  public async Task<ActionResult<string>> CreateMbt()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateMbt(userInfo?.Id);
+      return Ok("Mbt Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
+  [HttpDelete("mbt")]
+  public async Task<ActionResult<string>> RemoveMbt()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveMbt(userInfo?.Id);
+      return Ok("Mbt Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
 
+  // SECTION
+  #region Add/Remove Artillery
+  [HttpPost("artillery")]
+  public async Task<ActionResult<string>> CreateArtillery()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateArtillery(userInfo?.Id);
+      return Ok("Artillery Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
+  [HttpDelete("artillery")]
+  public async Task<ActionResult<string>> RemoveArtillery()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveArtillery(userInfo?.Id);
+      return Ok("Artillery Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
 
+  // SECTION
+  #region Add/Remove SsArtillery
+  [HttpPost("ssArtillery")]
+  public async Task<ActionResult<string>> CreateSsArtillery()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateSsArtillery(userInfo?.Id);
+      return Ok("SsArtillery Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
 
+  [HttpDelete("ssArtillery")]
+  public async Task<ActionResult<string>> RemoveSsArtillery()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveSsArtillery(userInfo?.Id);
+      return Ok("SsArtillery Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
+
+  // SECTION
+  #region Add/Remove AntiAircraft
+  [HttpPost("antiAircraft")]
+  public async Task<ActionResult<string>> CreateAntiAircraft()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.CreateAntiAircraft(userInfo?.Id);
+      return Ok("AntiAircraft Created");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpDelete("antiAircraft")]
+  public async Task<ActionResult<string>> RemoveAntiAircraft()
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _lus.RemoveAntiAircraft(userInfo?.Id);
+      return Ok("AntiAircraft Removed");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+  #endregion
 
 }
