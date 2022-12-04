@@ -1,7 +1,8 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeMech()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.mech == 0)" @click="removeMech()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.mech }}</h6>
     <div>
@@ -10,7 +11,8 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeIfv()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.ifv == 0)" @click="removeIfv()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.ifv }} </h6>
     <div>

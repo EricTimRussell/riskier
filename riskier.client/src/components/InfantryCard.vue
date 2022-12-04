@@ -3,16 +3,20 @@
   <body>
     <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
       <div>
-        <button @click="removeInfantry()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+        <button :disabled="(account.infantry == 0)" @click="removeInfantry()"
+          class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
-      <h6 class="px-3">{{ account.infantry }}</h6>
+      <div>
+        <h6 class="px-3">{{ account.infantry }}</h6>
+      </div>
       <div>
         <button @click="addInfantry()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
       </div>
     </div>
     <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
       <div>
-        <button @click="removeSpecialForces()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+        <button :disabled="(account.specialForces == 0)" @click="removeSpecialForces()"
+          class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
       <h6 class="px-3"> {{ account.specialForces }} </h6>
       <div>

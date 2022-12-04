@@ -2,7 +2,8 @@
 
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeFighterAircraft()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.fighterAircraft == 0)" @click="removeFighterAircraft()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.fighterAircraft }}</h6>
     <div>
@@ -11,7 +12,8 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeCloseAirSupport()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.closeAirSupport == 0)" @click="removeCloseAirSupport()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.closeAirSupport }} </h6>
     <div>
@@ -21,7 +23,8 @@
   <h6 class="col-6 pt-4 pl-5">Transport</h6>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeTransportAircraft()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.transportAircraft == 0)" @click="removeTransportAircraft()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.transportAircraft }} </h6>
     <div>

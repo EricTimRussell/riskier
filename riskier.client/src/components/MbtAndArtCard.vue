@@ -1,7 +1,8 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeMbt()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.mbt == 0)" @click="removeMbt()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.mbt }}</h6>
     <div>
@@ -10,7 +11,8 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeArtillery()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
+      <button :disabled="(account.artillery == 0)" @click="removeArtillery()"
+        class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.artillery }} </h6>
     <div>
