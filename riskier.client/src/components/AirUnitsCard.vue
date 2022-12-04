@@ -18,7 +18,7 @@
       <button @click="addCloseAirSupport()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
     </div>
   </div>
-  <h6 class="col-6 pt-4 text-center">Transport</h6>
+  <h6 class="col-6 pt-4 pl-5">Transport</h6>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
       <button @click="removeTransportAircraft()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
@@ -91,5 +91,7 @@ export default {
 
 
 <style lang="scss" scoped>
-
+.pl-5 {
+  padding-left: 2.5rem;
+}
 </style>

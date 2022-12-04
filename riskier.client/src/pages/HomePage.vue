@@ -4,9 +4,9 @@
     <div class="container-fluid">
       <div class="row mt-3">
         <div class="col-12 mb-3 text-center">
-          <h1>Ground Forces</h1>
+          <h2>Ground Forces</h2>
         </div>
-        <div class="col-6 text-center">
+        <div class="col-6 pl-65">
           <h6>Infantry</h6>
         </div>
         <div class="col-6 px-4">
@@ -15,7 +15,7 @@
         <div class="px-4">
           <InfantryCard />
         </div>
-        <div class="col-6 text-center pt-4">
+        <div class="col-6 pl-7 pt-4">
           <h6>Mech</h6>
         </div>
         <div class="col-6 pt-4 pl-6">
@@ -24,57 +24,57 @@
         <div class="px-4">
           <MechInfantryCard />
         </div>
-        <div class="col-6 text-center pt-4">
+        <div class="col-6 pl-7 pt-4">
           <h6>MBT</h6>
         </div>
-        <div class="col-6 pt-4 pl-6">
+        <div class="col-6 pt-4 pl-5">
           <h6>Artillery</h6>
         </div>
         <div class="px-4">
           <MbtAndArtCard />
         </div>
-        <div class="col-6 text-center pt-4">
+        <div class="col-6 pl-6 pt-4">
           <h6>SsArtillery</h6>
         </div>
-        <div class="col-6 pt-4 pl-6">
+        <div class="col-6 pt-4 pl-5">
           <h6>AntiAircraft</h6>
         </div>
         <div class="px-4">
           <SsArtilleryAndAntiAircraft />
         </div>
-        <div class="col-6 pt-4 pl-6">
+        <div class="col-6 pt-4 pl-55">
           <h6>Supply Truck</h6>
         </div>
         <div class="px-4">
           <SupplyTruckCard />
         </div>
-        <div class="row">
-          <div class="col-12 text-center mt-4">
-            <h1>AirForce</h1>
-          </div>
-          <div class="col-6 text-center pt-3">
-            <h6>Fighter</h6>
-          </div>
-          <div class="col-6 pt-3 pl-6">
-            <h6>CAS</h6>
-          </div>
-          <div class="px-4">
-            <AirUnitsCard />
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mt-4 text-center bg-dark">
+          <h2>AirForce</h2>
         </div>
-        <div class="row">
-          <div class="col-12 text-center mt-4">
-            <h1>Buildings</h1>
-          </div>
-          <div class="col-6 text-center pt-3">
-            <h6>Airfield</h6>
-          </div>
-          <div class="col-6 pt-3 pl-6">
-            <h6>Naval Yard</h6>
-          </div>
-          <div class="px-4">
-            <BuildingsCard />
-          </div>
+        <div class="col-6 pt-3 pl-65">
+          <h6>Fighter</h6>
+        </div>
+        <div class="col-6 pt-3 pl-6">
+          <h6>CAS</h6>
+        </div>
+        <div class="px-4">
+          <AirUnitsCard />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mt-4 bg-dark">
+          <h2>Buildings</h2>
+        </div>
+        <div class="col-6 pt-3 pl-65">
+          <h6>Airfield</h6>
+        </div>
+        <div class="col-6 pt-3 pl-5">
+          <h6>Naval Yard</h6>
+        </div>
+        <div class="px-4">
+          <BuildingsCard />
         </div>
       </div>
     </div>
@@ -133,7 +133,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.pl-7 {
+  padding-left: 5rem;
+}
+
 .pl-6 {
   padding-left: 4rem;
+}
+
+.pl-65 {
+  padding-left: 4.5rem;
+}
+
+.pl-55 {
+  padding-left: 3rem;
+}
+
+.pl-5 {
+  padding-left: 2.5rem;
 }
 </style>

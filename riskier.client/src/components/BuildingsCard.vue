@@ -18,8 +18,10 @@
       <button @click="addNavalYard()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
     </div>
   </div>
-  <div class="col-12 d-flex justify-content-around pt-3">
+  <div class="col-10 position-warehouse">
     <h6>Warehouse</h6>
+  </div>
+  <div class="col-4 position-factory">
     <h6>Factory</h6>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
@@ -117,5 +119,19 @@ export default {
 
 
 <style lang="scss" scoped>
+.mr {
+  margin-right: 1rem;
+}
 
+.position-factory {
+  position: relative;
+  bottom: .1rem;
+  left: 54.5vw;
+}
+
+.position-warehouse {
+  position: relative;
+  top: 1.6rem;
+  left: 2rem;
+}
 </style>
