@@ -16,6 +16,7 @@ export class Account {
     this.artillery = data.artillery
     this.ssArtillery = data.ssArtillery
     this.antiAircraft = data.antiAircraft
+    this.supplyTruck = data.supplyTruck
     this.fighterAircraft = data.fighterAircraft
     this.closeAirSupport = data.closeAirSupport
     this.carrier = data.carrier

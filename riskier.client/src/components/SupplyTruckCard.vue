@@ -1,0 +1,46 @@
+<template>
+  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+    <div>
+      <button @click="removeSupplyTruck()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+    </div>
+    <h6 class="px-3">{{ account.supplyTruck }}</h6>
+    <div>
+      <button @click="addSupplyTruck()" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+    </div>
+  </div>
+</template>
+
+
+<script>
+import { computed } from "@vue/reactivity";
+import { AppState } from "../AppState";
+import { landUnitsService } from "../services/LandUnitsService";
+import Pop from "../utils/Pop";
+
+export default {
+  setup() {
+    return {
+      account: computed(() => AppState.account),
+      async addSupplyTruck() {
+        try {
+          await landUnitsService.addSupplyTruck()
+        } catch (error) {
+          Pop.error(error, "Adding SupplyTruck")
+        }
+      },
+      async removeSupplyTruck() {
+        try {
+          await landUnitsService.removeSupplyTruck()
+        } catch (error) {
+          Pop.error(error, "Removing SupplyTruck")
+        }
+      }
+    }
+  }
+}
+</script>
+
+
+<style lang="scss" scoped>
+
+</style>

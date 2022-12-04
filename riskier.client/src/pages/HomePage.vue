@@ -40,6 +40,12 @@
         <div class="px-4">
           <SsArtilleryAndAntiAircraft />
         </div>
+        <div class="col-6 pt-4 pl-6">
+          <h6>Supply Truck</h6>
+        </div>
+        <div class="px-4">
+          <SupplyTruckCard />
+        </div>
       </div>
     </div>
     <div class="container-fluid">
@@ -72,6 +78,7 @@ import MechInfantryCard from "../components/MechInfantryCard.vue";
 import Navbar from "../components/Navbar.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
+import SupplyTruckCard from "../components/SupplyTruckCard.vue";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
 
@@ -89,7 +96,7 @@ export default {
       account: computed(() => AppState.account),
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard }
 }
 </script>
 

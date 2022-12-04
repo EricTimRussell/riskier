@@ -84,5 +84,14 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  async addSupplyTruck() {
+    const res = await api.post('api/landunits/supplyTruck')
+    accountService.getAccount()
+  }
+
+  async removeSupplyTruck() {
+    const res = await api.delete('api/landUnits/supplyTruck')
+    accountService.getAccount()
+  }
 }
 export const landUnitsService = new LandUnitsService()

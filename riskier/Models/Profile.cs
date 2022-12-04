@@ -16,12 +16,12 @@ public class Profile : DbItem<string>
   public int Artillery { get; set; } = 0;
   public int SsArtillery { get; set; } = 0;
   public int AntiAircraft { get; set; } = 0;
+  public int SupplyTruck { get; set; } = 0;
   public int FighterAircraft { get; set; } = 0;
   public int CloseAirSupport { get; set; } = 0;
   public int Carrier { get; set; } = 0;
   public int Cruiser { get; set; } = 0;
   public int Destroyer { get; set; } = 0;
-  public int SupplyTruck { get; set; } = 0;
   public int TransportAircraft { get; set; } = 0;
   public int Airfield { get; set; } = 0;
   public int NavalYard { get; set; } = 0;

@@ -170,4 +170,24 @@ public class LandUnitsService
     infantryOwner.AntiAircraft--;
     infantryOwner = _ar.Edit(infantryOwner);
   }
+
+  internal void CreateSupplyTruck(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital -= 1;
+    infantryOwner.TotalIndustry -= 0;
+    infantryOwner.TotalAgriculture -= 1;
+    infantryOwner.SupplyTruck++;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
+
+  internal void RemoveSupplyTruck(string userId)
+  {
+    var infantryOwner = _ar.GetById(userId);
+    infantryOwner.TotalCapital += 1;
+    infantryOwner.TotalIndustry += 0;
+    infantryOwner.TotalAgriculture += 1;
+    infantryOwner.SupplyTruck--;
+    infantryOwner = _ar.Edit(infantryOwner);
+  }
 }
