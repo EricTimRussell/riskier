@@ -2,20 +2,20 @@
 
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeAirfield()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeAirfield()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.airfield }}</h6>
     <div>
-      <button @click="addAirfield()" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addAirfield()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeNavalYard()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeNavalYard()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.navalYard }} </h6>
     <div>
-      <button @click="addNavalYard()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addNavalYard()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-10 position-warehouse">
@@ -26,20 +26,20 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeWarehouse()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeWarehouse()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.warehouse }} </h6>
     <div>
-      <button @click="addWarehouse()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addWarehouse()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeFactory()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeFactory()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.factory }} </h6>
     <div>
-      <button @click="addFactory()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addFactory()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
 
@@ -132,6 +132,6 @@ export default {
 .position-warehouse {
   position: relative;
   top: 1.6rem;
-  left: 2rem;
+  left: 2.2rem;
 }
 </style>

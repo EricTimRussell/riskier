@@ -1,20 +1,20 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeMbt()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeMbt()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.mbt }}</h6>
     <div>
-      <button @click="addMbt()" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addMbt()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeArtillery()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeArtillery()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.artillery }} </h6>
     <div>
-      <button @click="addArtillery()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addArtillery()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
 </template>

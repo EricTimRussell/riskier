@@ -18,7 +18,7 @@
         <div class="col-6 pl-7 pt-4">
           <h6>Mech</h6>
         </div>
-        <div class="col-6 pt-4 pl-6">
+        <div class="col-6 pt-4 pl-65">
           <h6>IFV</h6>
         </div>
         <div class="px-4">
@@ -27,7 +27,7 @@
         <div class="col-6 pl-7 pt-4">
           <h6>MBT</h6>
         </div>
-        <div class="col-6 pt-4 pl-5">
+        <div class="col-6 pt-4 pl-55">
           <h6>Artillery</h6>
         </div>
         <div class="px-4">
@@ -42,7 +42,7 @@
         <div class="px-4">
           <SsArtilleryAndAntiAircraft />
         </div>
-        <div class="col-6 pt-4 pl-55">
+        <div class="col-6 pt-4 pl-6">
           <h6>Supply Truck</h6>
         </div>
         <div class="px-4">
@@ -56,7 +56,7 @@
         <div class="col-6 pt-3 pl-65">
           <h6>Fighter</h6>
         </div>
-        <div class="col-6 pt-3 pl-6">
+        <div class="col-6 pt-3 pl-65">
           <h6>CAS</h6>
         </div>
         <div class="px-4">
@@ -67,7 +67,7 @@
         <div class="col-12 text-center mt-4 bg-dark">
           <h2>Buildings</h2>
         </div>
-        <div class="col-6 pt-3 pl-65">
+        <div class="col-6 pt-3 pl-7">
           <h6>Airfield</h6>
         </div>
         <div class="col-6 pt-3 pl-5">
@@ -81,14 +81,12 @@
     <div class="container-fluid">
       <div class="row justify-content-center mt-5">
         <div class="col-12 bg-dark">
-          <h1 class="text-center m-3">Owned Regions</h1>
+          <h2 class="text-center m-3">Owned Regions</h2>
         </div>
       </div>
       <div class="row">
-        <div class="d-flex">
-          <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
-            <RegionCard :regions="r" :key="r.id" />
-          </div>
+        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
+          <RegionCard :regions="r" :key="r.id" />
         </div>
       </div>
     </div>

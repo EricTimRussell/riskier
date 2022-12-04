@@ -4,11 +4,15 @@
 
     <div class="card bg-primary" v-if="regions.ownerId == account.id">
       <div class="card-body">
-        <h1>{{ regions.regionNumber }}|| {{ regions.creator.teamName }}</h1>
-        <h4>Capital:{{ regions.capital }}</h4>
-        <h4>Industry:{{ regions.industry }}</h4>
-        <h4>Agriculture:{{ regions.agriculture }}</h4>
-        <h4>{{ regions.environment }}</h4>
+        <h3 class="text-center">Region#: {{ regions.regionNumber }}</h3>
+        <h6 class="text-center"><strong>--Resources--</strong></h6>
+        <div class="text-center">
+          <h6>Capital: {{ regions.capital }}</h6>
+          <h6>Industry: {{ regions.industry }}</h6>
+          <h6>Agriculture: {{ regions.agriculture }}</h6>
+        </div>
+        <h6 class="text-center"><strong>--Environment--</strong></h6>
+        <h6 class="text-center">{{ regions.environment }}</h6>
       </div>
       <div class="text-end">
         <span @click="removeRegion()" class="mdi mdi-delete-forever p-1 fs-3 select" title="Delete?"></span>
@@ -60,5 +64,9 @@ export default {
 .select {
   cursor: pointer;
   color: #c10000;
+}
+
+.card {
+  max-height: 50vh;
 }
 </style>

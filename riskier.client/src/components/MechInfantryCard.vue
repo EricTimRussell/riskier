@@ -1,20 +1,20 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeMech()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeMech()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.mech }}</h6>
     <div>
-      <button @click="addMech()" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addMech()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeIfv()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeIfv()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.ifv }} </h6>
     <div>
-      <button @click="addIfv()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addIfv()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
 </template>

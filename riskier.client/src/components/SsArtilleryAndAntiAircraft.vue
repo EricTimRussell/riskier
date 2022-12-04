@@ -1,20 +1,20 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeSsArtillery()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeSsArtillery()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3">{{ account.ssArtillery }}</h6>
     <div>
-      <button @click="addSsArtillery()" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addSsArtillery()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button @click="removeAntiAircraft()" class="btn btn-outline-dark mdi mdi-minus fs-5"></button>
+      <button @click="removeAntiAircraft()" class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <h6 class="px-3"> {{ account.antiAircraft }} </h6>
     <div>
-      <button @click="addAntiAircraft()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-5"></button>
+      <button @click="addAntiAircraft()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
 </template>
