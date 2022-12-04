@@ -49,8 +49,31 @@
           <SupplyTruckCard />
         </div>
         <div class="row">
-          <div class="col-12 mb-3 text-center mt-3">
+          <div class="col-12 text-center mt-4">
             <h1>AirForce</h1>
+          </div>
+          <div class="col-6 text-center pt-3">
+            <h6>Fighter</h6>
+          </div>
+          <div class="col-6 pt-3 pl-6">
+            <h6>CAS</h6>
+          </div>
+          <div class="px-4">
+            <AirUnitsCard />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center mt-4">
+            <h1>Buildings</h1>
+          </div>
+          <div class="col-6 text-center pt-3">
+            <h6>Airfield</h6>
+          </div>
+          <div class="col-6 pt-3 pl-6">
+            <h6>Naval Yard</h6>
+          </div>
+          <div class="px-4">
+            <BuildingsCard />
           </div>
         </div>
       </div>
@@ -79,6 +102,8 @@
 <script>
 import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
+import AirUnitsCard from "../components/AirUnitsCard.vue";
+import BuildingsCard from "../components/BuildingsCard.vue";
 import InfantryCard from "../components/InfantryCard.vue";
 import MbtAndArtCard from "../components/MbtAndArtCard.vue";
 import MechInfantryCard from "../components/MechInfantryCard.vue";
@@ -103,7 +128,7 @@ export default {
       account: computed(() => AppState.account),
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard }
 }
 </script>
 
