@@ -50,8 +50,8 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 mt-4 text-center bg-dark">
-          <h2>AirForce</h2>
+        <div class="col-12 mt-4 text-center bg-green">
+          <h2 class="m-3">AirForce</h2>
         </div>
         <div class="col-6 pt-3 pl-65">
           <h6>Fighter</h6>
@@ -64,8 +64,22 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 text-center mt-4 bg-dark">
-          <h2>Buildings</h2>
+        <div class="col-12 mt-4 text-center bg-green">
+          <h2 class="m-3">Navy</h2>
+        </div>
+        <div class="col-6 pt-3 pl-7">
+          <h6>Carrier</h6>
+        </div>
+        <div class="col-6 pt-3 pl-55">
+          <h6>Cruiser</h6>
+        </div>
+        <div class="px-4">
+          <NavyUnitsCard />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center mt-4 bg-green">
+          <h2 class="m-3">Buildings</h2>
         </div>
         <div class="col-6 pt-3 pl-7">
           <h6>Airfield</h6>
@@ -80,7 +94,7 @@
     </div>
     <div class="container-fluid">
       <div class="row justify-content-center mt-5">
-        <div class="col-12 bg-dark">
+        <div class="col-12 bg-green">
           <h2 class="text-center m-3">Owned Regions</h2>
         </div>
       </div>
@@ -106,6 +120,7 @@ import InfantryCard from "../components/InfantryCard.vue";
 import MbtAndArtCard from "../components/MbtAndArtCard.vue";
 import MechInfantryCard from "../components/MechInfantryCard.vue";
 import Navbar from "../components/Navbar.vue";
+import NavyUnitsCard from "../components/NavyUnitsCard.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import SupplyTruckCard from "../components/SupplyTruckCard.vue";
@@ -126,11 +141,15 @@ export default {
       account: computed(() => AppState.account),
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard }
 }
 </script>
 
 <style scoped lang="scss">
+.bg-green {
+  background-color: #606C38;
+}
+
 .pl-7 {
   padding-left: 5rem;
 }

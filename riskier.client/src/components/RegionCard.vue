@@ -2,7 +2,7 @@
 
   <body>
 
-    <div class="card bg-primary" v-if="regions.ownerId == account.id">
+    <div class="card bg-tan" v-if="regions.ownerId == account.id">
       <div class="card-body">
         <h3 class="text-center">Region#: {{ regions.regionNumber }}</h3>
         <h6 class="text-center"><strong>--Resources--</strong></h6>
@@ -64,6 +64,10 @@ export default {
 .select {
   cursor: pointer;
   color: #c10000;
+}
+
+.bg-tan {
+  background-color: #FFDA96;
 }
 
 .card {

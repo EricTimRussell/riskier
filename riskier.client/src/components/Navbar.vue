@@ -1,14 +1,14 @@
 <template>
 
   <body>
-    <div class="navbar-expand-lg navbar-dark bg-dark px-3 container-fluid">
+    <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid">
       <div class="row">
         <div class=" d-flex col-md-2 order-1">
           <div>
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
           <div>
-            <button type="submit" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#createRegion"
+            <button type="submit" class="btn btn-dark my-2" data-bs-toggle="modal" data-bs-target="#createRegion"
               aria-label="Create Region">
               Create Region
             </button>
@@ -76,6 +76,10 @@ export default {
 
 <style scoped>
 .mr {
-  margin-right: 3rem;
+  margin-right: 5rem;
+}
+
+.bg-green {
+  background-color: #606C38;
 }
 </style>

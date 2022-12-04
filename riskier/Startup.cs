@@ -43,6 +43,8 @@ public class Startup
     services.AddTransient<AirUnitsService>();
 
     services.AddTransient<BuildingsService>();
+
+    services.AddTransient<NavyUnitsService>();
   }
 
   private void ConfigureCors(IServiceCollection services)
