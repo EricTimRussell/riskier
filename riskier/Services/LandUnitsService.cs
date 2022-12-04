@@ -13,181 +13,181 @@ public class LandUnitsService
 
   internal void CreateInfantry(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 1;
-    infantryOwner.TotalIndustry -= 1;
-    infantryOwner.TotalAgriculture -= 3;
-    infantryOwner.Infantry++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 1;
+    owner.TotalIndustry -= 1;
+    owner.TotalAgriculture -= 3;
+    owner.Infantry++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveInfantry(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 1;
-    infantryOwner.TotalIndustry += 1;
-    infantryOwner.TotalAgriculture += 3;
-    infantryOwner.Infantry--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 1;
+    owner.TotalIndustry += 1;
+    owner.TotalAgriculture += 3;
+    owner.Infantry--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateSpecialForces(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 3;
-    infantryOwner.TotalIndustry -= 1;
-    infantryOwner.TotalAgriculture -= 3;
-    infantryOwner.SpecialForces++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 3;
+    owner.TotalIndustry -= 1;
+    owner.TotalAgriculture -= 3;
+    owner.SpecialForces++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveSpecialForces(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 3;
-    infantryOwner.TotalIndustry += 1;
-    infantryOwner.TotalAgriculture += 3;
-    infantryOwner.SpecialForces--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 3;
+    owner.TotalIndustry += 1;
+    owner.TotalAgriculture += 3;
+    owner.SpecialForces--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateMech(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 2;
-    infantryOwner.TotalIndustry -= 2;
-    infantryOwner.TotalAgriculture -= 3;
-    infantryOwner.Mech++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 2;
+    owner.TotalIndustry -= 2;
+    owner.TotalAgriculture -= 3;
+    owner.Mech++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveMech(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 2;
-    infantryOwner.TotalIndustry += 2;
-    infantryOwner.TotalAgriculture += 3;
-    infantryOwner.Mech--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 2;
+    owner.TotalIndustry += 2;
+    owner.TotalAgriculture += 3;
+    owner.Mech--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateIfv(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 3;
-    infantryOwner.TotalIndustry -= 3;
-    infantryOwner.TotalAgriculture -= 1;
-    infantryOwner.Ifv++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 3;
+    owner.TotalIndustry -= 3;
+    owner.TotalAgriculture -= 1;
+    owner.Ifv++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveIfv(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 3;
-    infantryOwner.TotalIndustry += 3;
-    infantryOwner.TotalAgriculture += 1;
-    infantryOwner.Ifv--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 3;
+    owner.TotalIndustry += 3;
+    owner.TotalAgriculture += 1;
+    owner.Ifv--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateMbt(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 4;
-    infantryOwner.TotalIndustry -= 4;
-    infantryOwner.TotalAgriculture -= 1;
-    infantryOwner.Mbt++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 4;
+    owner.TotalIndustry -= 4;
+    owner.TotalAgriculture -= 1;
+    owner.Mbt++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveMbt(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 4;
-    infantryOwner.TotalIndustry += 4;
-    infantryOwner.TotalAgriculture += 1;
-    infantryOwner.Mbt--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 4;
+    owner.TotalIndustry += 4;
+    owner.TotalAgriculture += 1;
+    owner.Mbt--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateArtillery(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 1;
-    infantryOwner.TotalIndustry -= 3;
-    infantryOwner.TotalAgriculture -= 0;
-    infantryOwner.Artillery++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 1;
+    owner.TotalIndustry -= 3;
+    owner.TotalAgriculture -= 0;
+    owner.Artillery++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveArtillery(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 1;
-    infantryOwner.TotalIndustry += 3;
-    infantryOwner.TotalAgriculture += 0;
-    infantryOwner.Artillery--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 1;
+    owner.TotalIndustry += 3;
+    owner.TotalAgriculture += 0;
+    owner.Artillery--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateSsArtillery(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 1;
-    infantryOwner.TotalIndustry -= 4;
-    infantryOwner.TotalAgriculture -= 0;
-    infantryOwner.SsArtillery++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 1;
+    owner.TotalIndustry -= 4;
+    owner.TotalAgriculture -= 0;
+    owner.SsArtillery++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveSsArtillery(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 1;
-    infantryOwner.TotalIndustry += 4;
-    infantryOwner.TotalAgriculture += 0;
-    infantryOwner.SsArtillery--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 1;
+    owner.TotalIndustry += 4;
+    owner.TotalAgriculture += 0;
+    owner.SsArtillery--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateAntiAircraft(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 3;
-    infantryOwner.TotalIndustry -= 1;
-    infantryOwner.TotalAgriculture -= 0;
-    infantryOwner.AntiAircraft++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 3;
+    owner.TotalIndustry -= 1;
+    owner.TotalAgriculture -= 0;
+    owner.AntiAircraft++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveAntiAircraft(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 3;
-    infantryOwner.TotalIndustry += 1;
-    infantryOwner.TotalAgriculture += 0;
-    infantryOwner.AntiAircraft--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 3;
+    owner.TotalIndustry += 1;
+    owner.TotalAgriculture += 0;
+    owner.AntiAircraft--;
+    owner = _ar.Edit(owner);
   }
 
   internal void CreateSupplyTruck(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital -= 1;
-    infantryOwner.TotalIndustry -= 0;
-    infantryOwner.TotalAgriculture -= 1;
-    infantryOwner.SupplyTruck++;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital -= 1;
+    owner.TotalIndustry -= 0;
+    owner.TotalAgriculture -= 1;
+    owner.SupplyTruck++;
+    owner = _ar.Edit(owner);
   }
 
   internal void RemoveSupplyTruck(string userId)
   {
-    var infantryOwner = _ar.GetById(userId);
-    infantryOwner.TotalCapital += 1;
-    infantryOwner.TotalIndustry += 0;
-    infantryOwner.TotalAgriculture += 1;
-    infantryOwner.SupplyTruck--;
-    infantryOwner = _ar.Edit(infantryOwner);
+    var owner = _ar.GetById(userId);
+    owner.TotalCapital += 1;
+    owner.TotalIndustry += 0;
+    owner.TotalAgriculture += 1;
+    owner.SupplyTruck--;
+    owner = _ar.Edit(owner);
   }
 }

@@ -3,13 +3,15 @@
   <body>
     <div class="container-fluid">
       <div class="row mt-3">
+        <div class="col-12 mb-3 text-center">
+          <h1>Ground Forces</h1>
+        </div>
         <div class="col-6 text-center">
           <h6>Infantry</h6>
         </div>
         <div class="col-6 px-4">
           <h6>Special Forces</h6>
         </div>
-
         <div class="px-4">
           <InfantryCard />
         </div>
@@ -45,6 +47,11 @@
         </div>
         <div class="px-4">
           <SupplyTruckCard />
+        </div>
+        <div class="row">
+          <div class="col-12 mb-3 text-center mt-3">
+            <h1>AirForce</h1>
+          </div>
         </div>
       </div>
     </div>
