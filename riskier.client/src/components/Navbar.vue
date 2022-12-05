@@ -1,7 +1,7 @@
 <template>
 
   <body>
-    <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid">
+    <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b">
       <div class="row">
         <div class=" d-flex col-md-2 order-1">
           <div>
@@ -22,7 +22,7 @@
         <div class="col-md-8 col-sm-2 text-center order-2">
           <div class="dropdown-center dropdown"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              {{ account.teamName }}</span>
+              <strong>{{ account.teamName }}</strong></span>
             <ul class="dropdown-menu">
               <li>
                 <div class="input-group p-2">
@@ -75,6 +75,10 @@ export default {
 </script>
 
 <style scoped>
+.border-b {
+  border-bottom: 3px solid black;
+}
+
 .mr {
   margin-right: 5rem;
 }

@@ -2,7 +2,7 @@
 
   <body>
     <div class="container-fluid">
-      <div class="row mt-3">
+      <div class="row">
         <div class="col-12 mb-3 text-center">
           <h2>Ground Forces</h2>
         </div>
@@ -146,6 +146,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)), url(../assets/img/TopoMap2.jpg);
+  background-attachment: fixed;
+  background-position: center right;
+  color: #1d1d1d;
+  text-shadow: #000000 3px 3px 2px;
+  color: white;
+}
+
 .bg-green {
   background-color: #606C38;
 }

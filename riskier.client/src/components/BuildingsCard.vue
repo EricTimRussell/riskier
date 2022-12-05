@@ -123,6 +123,14 @@ export default {
 
 
 <style lang="scss" scoped>
+button {
+  background-color: #FFDA96;
+}
+
+button:disabled {
+  background-color: #FFDA96;
+}
+
 .mr {
   margin-right: 1rem;
 }

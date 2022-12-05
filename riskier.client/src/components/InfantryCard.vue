@@ -31,7 +31,6 @@
 <script>
 import Pop from "../utils/Pop";
 import { landUnitsService } from "../services/LandUnitsService"
-import { ref } from "vue";
 import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
 
@@ -74,5 +73,11 @@ export default {
 
 
 <style lang="scss" scoped>
+button {
+  background-color: #FFDA96;
+}
 
+button:disabled {
+  background-color: #FFDA96;
+}
 </style>

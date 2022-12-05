@@ -43,5 +43,11 @@ export default {
 
 
 <style lang="scss" scoped>
+button {
+  background-color: #FFDA96;
+}
 
+button:disabled {
+  background-color: #FFDA96;
+}
 </style>
