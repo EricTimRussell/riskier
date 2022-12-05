@@ -3,7 +3,7 @@
   <body>
 
     <div class="card bg-tan" v-if="regions.ownerId == account.id">
-      <div class="card-body">
+      <div class="card-body l-spacing">
         <h3 class="text-center">Region#: {{ regions.regionNumber }}</h3>
         <h6 class="text-center"><strong>--Resources--</strong></h6>
         <div class="text-center">
@@ -46,14 +46,6 @@ export default {
           Pop.error(error, "Removing Region")
         }
       }
-
-      // async getRegionsByOwnerId() {
-      //   try {
-      //     await regionTilesService.getRegionsByOwnerId(props.regions.ownerId)
-      //   } catch (error) {
-      //     Pop.error(error, "Getting regions by ownerId")
-      //   }
-      // }
     }
   }
 }
@@ -61,6 +53,12 @@ export default {
 
 
 <style lang="scss" scoped>
+.l-spacing {
+  letter-spacing: 2px;
+  color: black;
+  text-shadow: white 2px 2px 2px;
+}
+
 .select {
   cursor: pointer;
   color: #c10000;

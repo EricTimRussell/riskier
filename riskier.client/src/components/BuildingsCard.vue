@@ -5,7 +5,7 @@
       <button :disabled="(account.airfield == 0)" @click="removeAirfield()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3">{{ account.airfield }}</h6>
+    <h6 class="px-3"><strong>{{ account.airfield }}</strong></h6>
     <div>
       <button @click="addAirfield()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -15,7 +15,7 @@
       <button :disabled="(account.navalYard == 0)" @click="removeNavalYard()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> {{ account.navalYard }} </h6>
+    <h6 class="px-3"><strong>{{ account.navalYard }}</strong></h6>
     <div>
       <button @click="addNavalYard()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -31,7 +31,7 @@
       <button :disabled="(account.warehouse == 0)" @click="removeWarehouse()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> {{ account.warehouse }} </h6>
+    <h6 class="px-3"><strong>{{ account.warehouse }}</strong></h6>
     <div>
       <button @click="addWarehouse()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -41,7 +41,7 @@
       <button :disabled="(account.factory == 0)" @click="removeFactory()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> {{ account.factory }} </h6>
+    <h6 class="px-3"><strong> {{ account.factory }} </strong></h6>
     <div>
       <button @click="addFactory()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>

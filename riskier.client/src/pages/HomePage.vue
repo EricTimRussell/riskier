@@ -153,7 +153,8 @@ body {
   background-position: center right;
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
-  color: white;
+  color: whitesmoke;
+
 }
 
 .bg-green {

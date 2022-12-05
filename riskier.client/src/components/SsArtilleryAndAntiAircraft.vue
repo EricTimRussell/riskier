@@ -4,7 +4,7 @@
       <button :disabled="(account.ssArtillery == 0)" @click="removeSsArtillery()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3">{{ account.ssArtillery }}</h6>
+    <h6 class="px-3"><strong>{{ account.ssArtillery }}</strong></h6>
     <div>
       <button @click="addSsArtillery()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -14,7 +14,7 @@
       <button :disabled="(account.antiAircraft == 0)" @click="removeAntiAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> {{ account.antiAircraft }} </h6>
+    <h6 class="px-3"><strong>{{ account.antiAircraft }}</strong></h6>
     <div>
       <button @click="addAntiAircraft()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>

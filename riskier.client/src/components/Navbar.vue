@@ -8,8 +8,8 @@
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
           <div>
-            <button type="submit" class="btn btn-dark my-2" data-bs-toggle="modal" data-bs-target="#createRegion"
-              aria-label="Create Region">
+            <button type="submit" class="btn btn-dark my-2 text-dark" data-bs-toggle="modal"
+              data-bs-target="#createRegion" aria-label="Create Region">
               Create Region
             </button>
           </div>
@@ -75,6 +75,10 @@ export default {
 </script>
 
 <style scoped>
+button {
+  background-color: #FFDA96;
+}
+
 .border-b {
   border-bottom: 3px solid black;
 }

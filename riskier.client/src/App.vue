@@ -1,10 +1,13 @@
 <template>
-  <header class="sticky-top">
-    <Navbar />
-  </header>
-  <main>
-    <router-view />
-  </main>
+
+  <body>
+    <header class="sticky-top">
+      <Navbar />
+    </header>
+    <main>
+      <router-view />
+    </main>
+  </body>
 
   <!-- Create Region Modal -->
   <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -44,5 +47,10 @@ export default {
 
 :root {
   --main-height: calc(100vh - 32px - 64px);
+}
+
+body {
+  font-family: Impact, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 1px;
 }
 </style>

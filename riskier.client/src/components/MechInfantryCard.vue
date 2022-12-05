@@ -4,7 +4,7 @@
       <button :disabled="(account.mech == 0)" @click="removeMech()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3">{{ account.mech }}</h6>
+    <h6 class="px-3"><strong>{{ account.mech }}</strong></h6>
     <div>
       <button @click="addMech()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -14,7 +14,7 @@
       <button :disabled="(account.ifv == 0)" @click="removeIfv()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> {{ account.ifv }} </h6>
+    <h6 class="px-3"><strong>{{ account.ifv }} </strong></h6>
     <div>
       <button @click="addIfv()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
