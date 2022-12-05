@@ -91,6 +91,9 @@
             </p>
             <br>
             <h2>Unit Types & General Rules</h2>
+            <div class="text-center">
+              <h3>--Land Units--</h3>
+            </div>
             <p>
               --All units have a set amount of movement points and offensive points. Movement points are the number of
               times a unit can move on the combat board per turn. Offensive points are the number of times a unit can
@@ -132,6 +135,62 @@
               adjacent tiles so long as there are no fortifications present on that tile. Artillery cannot fire into
               tiles with fortifications.
               <br>
+              <strong>--SS-Artillery</strong> is a very effective form of artillery but is limited on its ammunition and
+              the enemies ability to shoot down surface-to-surface missiles. They do not have any defensive
+              ability. Missile artillery are not used on the combat board. They have a range of 2 tiles on the main
+              board. SS-Artillery needs to be re-supplied after each shot.
+              <br>
+              <strong>--Supply Truck</strong> moves supplies from warehouses to your units on the battlefield as well as
+              to naval yards to supply your navy. Has no offensive or defensive ability and can move 1 tile per turn on
+              the MB. Supply trucks are not used on the CB.
+            </p>
+            <div class="text-center">
+              <h3>Air Units</h3>
+            </div>
+            <p>
+              <strong>--Fighter Aircraft</strong> provide more flexable AA cover for ground units with a limited ability
+              to strike ground targets. Fighter aircraft have 4 movement points, 1 offensive point, and a range
+              of 2 on the combat board. They can move 3 tiles on the main board per turn. Fighter aircraft must
+              stay within 3 tiles of an
+              airfield. Once a fighter aircraft has used its 1 offensive point (on either the CB board or the main
+              board) the player will immediately return it to
+              an airfield within range. Fighters can only attack once and then have to return to an airfield before they
+              can attack again. Fighters also have the ability to attack on the main board wherever they want so long as
+              they are within 3 tiles of an owned airfield.
+              <br>
+              <strong>--Close Air Support (CAS)</strong> aircraft are very effective at destroying ground targets and
+              provide some air cover against other CAS aircraft. However, they cannot target fighter aircraft and only
+              have a small chance to evade fighter attacks. CAS have 3 movement points, 2 offensive points, and a range
+              of 1 on the combat board. CAS cannot attack on the main board.
+              <br>
+              <strong>--Supply Aircraft</strong> can deliver supplies by air to ground units and transport units
+              from airfield to airfield. They can also be used to deploy special
+              forces units and infantry by air as paratroopers. They have no offensive or defensive ability. Supply
+              aircraft are not used on the combat board. They can move 2 tiles per turn on the main board.
+            </p>
+            <div class="text-center">
+              <h3>Navy Units</h3>
+            </div>
+            <p>
+              <strong>--Carriers</strong> have the ability to carry up to 8 fighter aircraft and CAS. They are durable
+              ships and rely on their aircraft for offensive and defensive capabilities. Carriers have point defense
+              systems that let
+              them target incoming missiles and aircraft. Carriers also have the ability to transport and land up to 6
+              ground units. Carriers have 1 movement point and no offensive points, however they can deploy 2 aircraft
+              per turn. Carriers point defense has a range of 1 on the mainboard and the combat board.
+              <br>
+              <strong>--Cruisers</strong> are much more versatile than destroyers, but are not as durable or nimble.
+              They have the ability to deploy 3 surface-to-surface missiles and have infinite AA missiles. They
+              have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points and
+              1 offensive point. On the combat board and the main board cruisers AA has a range of 1 and their SS
+              missiles have a range of 3. The cannon has a range of 1. A cruisers cannon cannot fire at land targets.
+              <br>
+              <strong>--Destroyers</strong> are heavy combat vessels with large guns and heavy armor giving them the
+              ability to absorb hits. They are smaller and more nimble than most naval vessals and are great at
+              destroying other naval vessels. They have no AA ability. Destroyers have 2 movement points and 2 offensive
+              points with a range of 1. Destroyers have the ability to provide fire support to land battles so long as
+              they are adjacent to the tile where the battle is taking place. They can only fire when there is a special
+              forces unit with a laser designator directing its fire.
             </p>
           </div>
           <div class="modal-footer">
