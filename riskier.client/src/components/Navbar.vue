@@ -8,19 +8,19 @@
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
           <div>
-            <button type="submit" class="btn btn-dark my-2 text-dark" data-bs-toggle="modal"
+            <button type="submit" class="btn btn-dark my-2 text-dark create-region-button" data-bs-toggle="modal"
               data-bs-target="#createRegion" aria-label="Create Region">
               Create Region
             </button>
           </div>
         </div>
-        <div class="col-12 d-flex justify-content-center text-center order-3">
+        <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow">
           <h2>Capital: {{ account.totalCapital }}</h2>
           <h2 class="px-3">Industry: {{ account.totalIndustry }}</h2>
           <h2>Agriculture: {{ account.totalAgriculture }}</h2>
         </div>
         <div class="col-md-8 col-sm-2 text-center order-2">
-          <div class="dropdown-center dropdown"><span class="dropdown-toggle fs-2" type="button"
+          <div class="dropdown-center dropdown text-shadow"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <strong>{{ account.teamName }}</strong></span>
             <ul class="dropdown-menu">
@@ -75,6 +75,14 @@ export default {
 </script>
 
 <style scoped>
+.create-region-button {
+  box-shadow: black 5px 5px;
+}
+
+.text-shadow {
+  text-shadow: #e7e7e7 2px 2px;
+}
+
 button {
   background-color: #FFDA96;
 }
