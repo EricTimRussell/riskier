@@ -287,13 +287,64 @@
               <br>
               --When a player takes territory from another player they must hold that territory for 1 turn before they
               can claim it. Once claimed they can then roll for resources and draw a card from the item deck.
+              <br>
             </p>
             <div class="text-center">
-              <h3>Item Rules</h3>
+              <h3>Item Card Rules</h3>
             </div>
             <p>
-
+              --Items are cards that are drawn from a pile every time a player takes a territory including territory not
+              owned by another player. Players can have as many item cards as they want. Once they are used shuffle them
+              back into item deck.
+              <br>
+              --Item cards are placed face up in front of the player when using an item card at the combat board.
+              <br>
+              <strong>--Exsplosive Reactive Armor:</strong> This can be used before a battle begins to increase MBT's
+              odds of surving a hit. When an MBT takes a hit roll a D12 to determine if the reactive armor deflects the
+              shot 1-5 is successful.
+              <br>
+              <strong>--Laser Designator:</strong> This item can be used beofre a battle to increase the odds of
+              artillery hitting its target. Special forces units are required to use the laser designator item. Enemy
+              units next to a special forces unit can be lased and give artillery a better chance of hitting their
+              target so long as the artillery is within range. Lasing a target does not use up the special forces
+              offensive point.
+              <br>
+              <strong>--Cruise Missile:</strong> This item can be used during a players 3rd phase before or after a
+              battle. It cannot be used during a battle. Cruise missiles can be launched from any of the players
+              aircraft or cruisers to hit targets as far away as 4 tiles on the MB. Cruise missile hits are determined
+              by a D12 (1-10), and they can only be intercepted using the Point Defense item, carrier, or AA. If the
+              cruise missile flies over a hostile tile with AA (not including cities) or a carrier the player that owns
+              that tile should roll a D12 to try and intercept the missile.
+              <br>
+              <strong>Point Defense:</strong> The point defense item can be used by a defending player before a battle
+              to provide better AA and anti-missile protection. If used on an aircraft D12 1-9 is a hit. Point defense
+              can only target 1 unit and is discarded after use regardless of outcome. Defending players can use as many
+              point defense cards as they want but will need to declare how many cards they are going to deploy before
+              the battle. Item cannot be used during naval battles.
+              <br>
+              <strong>Aircraft Stealth:</strong> The stealth card can be applied before a battle. This will reverse
+              attack
+              order of AA and aircraft meaning the aircraft will fire first and then the AA will fire second and also
+              reduces the AA hit chance to D12 (1-6). If the AA is destroyed by an aircrafts first shot the AA does not
+              get to fire.
+              <br>
+              <strong>Surplus Fuel:</strong> This item can be used before a battle begins to upgrade mechanized units
+              movement. When used mechanized units can now move 3 spaces on the battlefield but can still only attack
+              once per turn.
+              <br>
+              <strong>Paratroopers:</strong> This item card can be used before combat by the offensive player. The
+              offensive player can place up to 3 infantry units behind the defending player during the combat board
+              set-up phase. This requires the offensive player to have infantry or SF infantry present when the attack
+              is initiated. If AA is present then each infantry unit being deployed as paratroopers will have to survive
+              one AA attack roll. The AA only gets to shoot once at each paratrooper.
+              <br>
+              <strong>Javelin Missiles</strong> : This item card equips infantry units (not SF) with effective anti-tank
+              weapons. A roll of can be added to all infantry attacks vs MBT's bringing the odds up to 64% chance to
+              hit. Does not apply to defense rolls.
             </p>
+            <div class="text-center">
+              <h3>Event Card Rules</h3>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
