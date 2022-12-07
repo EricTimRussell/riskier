@@ -345,6 +345,89 @@
             <div class="text-center">
               <h3>Event Card Rules</h3>
             </div>
+            <p>
+              --Event cards are cards that are drawn at the end of the 4th players turn. The 4th player draws the card
+              and proceeds to resolve whatever event the card presents. Players cannot decline any event unless the card
+              says otherwise.
+              <br>
+              --The player(s) affected by the event card is determined by a D4 dice roll or based on whatever is written
+              on the card (it may affect all players). The 4th player rolls the D4 and each number represents a player
+              based on their team color. Player 1 is green, player 2 is tan, player 3 is brown, and player 4 is blue.
+            </p>
+            <div class="text-center">
+              <h3>Structure Rules</h3>
+            </div>
+            <p>
+              --Only one structure can occupy any one tile.
+              <br>
+              --Players capitals act as airfields. Players do not need to build an airfield by their capital.
+              <br>
+              --Capitals and medium cities produce 1 ammo per turn and can store ammo in warehouses when built in
+              adjacent tiles.
+              <br>
+              --Airfields can only be built within the adjacent tiles of medium and large sized cities. Airfileds cannot
+              be built next to small cities.
+              <br>
+              --Aircraft can only be built in cities with an adjacent airfield.
+              <br>
+              --Airfields can also be used to transport units around the board from one airfield to another airfield.
+              Moving a unit via airfield uses that units 1 movement point and requires 1 available movement point.
+              <br>
+              --Fortifications can be built anywhere. One Fortification placed on the game board represents 3
+              Fortifications on the combat board.
+              <br>
+              --Only Infantry and special forces can use fortifications and it gives provides immunity to artillery. It
+              also gives the occupying unit an extra hitpoint. A successfull hits on a fortification destroys it, but
+              not the unit occupying it.
+              <br>
+              --Naval Yards can be built on any tile that is next to a water tile. Each naval yard can build up to three
+              ships at a time. This is tracked on the unit construction sheet. The player must own the tile the naval
+              yard is built from.
+              <br>
+              --Naval yards can store up to 6 total supply pegs.
+              <br>
+              --Naval yards take 6 hits to destroy. This damage will be tracked using the peg holes that represent the
+              number of supplies stored at the naval yard. When a naval yard is damaged each hit reduces the number of
+              supplies a naval yard can store by 1.
+              <br>
+              --Naval yards can rearm or repair a max of 2 cruisers/destroyers and 1 carrier at one time. The peg holes
+              in the naval yard piece represents the amount of supplies stored there. It requires 1 supply to repair a
+              carrier/destroyer. It requires 1 supply to supply 1 missile to a cruiser, meaning it takes 3 supplies to
+              completely rearm a cruiser.
+              <br>
+              --Factories can be built adjacent to any city and will produce 1 supply per turn. Factories can be
+              destroyed in one successfull hit.
+              <br>
+              --Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
+              Warehouses can be destroyed in one successfull hit.
+            </p>
+            <div class="text-center">
+              <h3>Army/Division Rules</h3>
+            </div>
+            <p>
+              --Army and Division pieces are a way to consolidate large groups of units. Armies are groups of 9 units
+              and Divisions are groups of 6. Each unit piece has holes that represent each unit within the division or
+              army. Division pieces have 10 peg holes and army pieces have 13 peg holes. The group of 4 peg holes
+              represent the supplies the army/division has total.
+              <br>
+              --All the units within these groups share supplies. If the unit is involved in a battle it only costs 1
+              supply peg making them more efficient than individual units.
+              <br>
+              --Units contained within these groups will be tracked on paper or the companion app. If a unit is
+              destroyed it will be erased from the resource sheet or removed on the app. And the player will place a red
+              peg into one of the holes representing a destroyed unit.
+              <br>
+              --Units that are not within a division or army can join these groups to replace destroyed units.
+              <br>
+              --If more than half of a division or army group is destroyed, and the player does not have any extra
+              units within range to immediately replace the lost units then the division or army is disbanded and
+              replaced with the remaining individual units. Each individual unit will be given 1 supply peg.
+              <br>
+              --Divisions and army groups can only move if all units within the group have not already moved. For
+              example if a unit traveled 1 space to join the group the entire group cannot move until next turn.
+              <br>
+              --Divisions and Army groups can instantly capture unnoccupied tiles.
+            </p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

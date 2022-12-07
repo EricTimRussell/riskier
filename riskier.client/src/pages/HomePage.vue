@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO need to create a component for tracking army/division pieces -->
 
   <body>
     <div class="container-fluid">
