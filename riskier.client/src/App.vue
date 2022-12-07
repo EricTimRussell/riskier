@@ -152,10 +152,13 @@
               to strike ground targets. Fighter aircraft have 4 movement points, 1 offensive point, and a range
               of 2 on the combat board. They can move 3 tiles on the main board per turn. Fighter aircraft must
               stay within 3 tiles of an
-              airfield. Once a fighter aircraft has used its 1 offensive point (on either the CB board or the main
+              airfield. Once a fighter aircraft has used its 1 offensive point (on the main
               board) the player will immediately return it to
-              an airfield within range. Fighters can only attack once and then have to return to an airfield before they
-              can attack again. Fighters also have the ability to attack on the main board wherever they want so long as
+              an airfield within range. Fighters on the combat board can remain for the duration of the battle but once
+              they are taken off the combat board or the battle ends they will be immediately moved to a airfield within
+              range. Fighters can only attack once and then have to return to an airfield before they
+              can attack again on the main board. Fighters also have the ability to attack on the main board wherever
+              they want so long as
               they are within 3 tiles of an owned airfield.
               <br>
               <strong>--Close Air Support (CAS)</strong> aircraft are very effective at destroying ground targets and
@@ -191,6 +194,105 @@
               points with a range of 1. Destroyers have the ability to provide fire support to land battles so long as
               they are adjacent to the tile where the battle is taking place. They can only fire when there is a special
               forces unit with a laser designator directing its fire.
+            </p>
+            <div class="text-center">
+              <h3>Combat Rules</h3>
+            </div>
+            <p>
+              --Before combat begins be sure to place any item cards face up in front of the player at the combat board
+              when being used.
+              <br>
+              --The defending player places their units first on the board and then the offensive player places theirs.
+              There is a maximum of 12 ground units each for both sides on the board at one time. There is no limit on
+              aircraft. A maximum of 2 ground units can share the same tile, however there is no limit on aircraft. If
+              there are more than 12 defending units involved the defending player can decide to retreat the extra units
+              or keep them as reserves to be used in combat later. Offense can only deploy a max of 12 units at one time
+              as well, but does not get to use reserves. The defending player will place their 3 bunkers (only infantry
+              or Special forces can use bunkers) and all their units involved and place them in the middle of the combat
+              board. The defending player cannot place units on first row of tiles closest to them.
+              <br>
+              --Infantry/Special forces that occupy fortifications take 2 hits to destroy. If a player only lands 1
+              successful hit then the fortification is destroyed and removed from play but the infantry remains. Tiles
+              with fortifications can only have 1 unit at a time on that tile.
+              <br>
+              -- The defending player must deploy all their units possible up to the maximum of 12. For example the
+              defending player cannot deploy 2 units and have the other 10 retreat. If they wish to try and retreat they
+              need to follow the retreat rules.
+              <br>
+              --The offensive player will place their units as close to the defending player as they wish. However, they
+              cannot place their units behind the defending player unless they are using the paratroopers item.
+              <br>
+              --During combat if the defending player loses units they can deploy reserves and they will enter the
+              combat board in the row closest to the defending player. When reserve are placed they cannot move until
+              the next turn.
+              <br>
+              --During combat every unit is subject to their environmental rules to determine their probabilities of
+              hitting and missing attacks.
+              <br>
+              --Fighters and CAS can be deployed immediately or they can be set to the side and called up when players
+              wish to use them. When aircraft are deployed they will be placed on the 1st row closest to the player
+              deploying the aircraft. Fighter aircraft can move and attack immediately. CAS can move immediately but
+              they cannot attack until the players next turn.
+              <br>
+              --Any action an aircraft takes when they are within AA range the AA gets to fire 1 shot at the aircraft.
+              This applies to all AA that is in range. For example if a player moves their aircraft into AA range the AA
+              get to fire at them first before the aircraft can do anything else. During that same turn if that aircraft
+              moves onto another tile and is still within AA range the AA gets to fire again. This can occur as many
+              times as the aircraft moves within AA range.
+              <br>
+              <strong>--Example:</strong> An IFV unit attacks an enemy unit on the space next to it. The attacking unit
+              fails to destroy the defending unit. The attacking player still has 3 movement points left but cannot
+              attack with that unit again during this turn. If the attacking unit was successfull they would move into
+              the space they captured and this would count as 1 movement point. The player can still move the unit 2
+              more space but cannot attack anymore. If the attacking unit were an MBT it can attack twice in one turn as
+              well as move twice.
+              <br>
+              --Once a unit is locked into combat that unit cannot move until they destroy the enemy or are relieved by
+              another unit.
+              <br>
+              <strong> Example:</strong> A mechanized unit is attacking an infantry unit. They both roll successfull
+              hits and neither of them are destroyed, however the mech unit cannot attack again since it only has 1
+              attack point. And since the mech unit was unsuccessfull at destroying the infantry the mech is now locked
+              in combat with the infantry and cannot move even though it still has 2 movement points left. If during
+              that same turn another unit comes along and destroys the infantry they are no longer locked in combat and
+              can now move if they wish. If the mech unit was not relieved at the end of the players turn the other
+              player can now go on the offensive against the mech unit.
+            </p>
+            <div class="text-center">
+              <h3>Retreat Rules</h3>
+            </div>
+            <p>
+              --The defending/offensive players can retreat by moving there units to first row of tiles closest to
+              them and declaring the unit is retreating. They have to remain on that tile for 1 turn in order to retreat
+              and be will removed from the board. If the combat board is not being used the retreating player declares
+              that they are retreating and the retreating unit will have to survive 1 turn before moving the unit in the
+              opposite direction where combat is taking place. Once it is declared that a unit is retreating this cannot
+              be undone and the unit will be removed after 1 turn unless it is destroyed.
+              <br>
+              --Once a unit has retreated the player will move that unit in the opposite direction from where the attack
+              came from on the main board. If the opposite tile is water or hostile territory the unit will move to the
+              nearest safe tile. If there are no safe tiles the unit cannot retreat.
+              <br>
+              --Fighter Aircraft can retreat instantly and will be returned to any airfield within range.
+              <br>
+              --Combat is resolved once all of a players units are destroyed or the attacker/defender retreats from the
+              battlefield.
+              <br>
+              --If both players declare that they want to end combat before all units have been destroyed/retreated then
+              combat immediately ends.
+              <br>
+              --Players involved should keep track of units lost and territory lost during combat and then update their
+              economies immediately after the combat phase ends. This means adding and subtracting your resources to
+              reflect your casualties and territory lost.
+              <br>
+              --When a player takes territory from another player they must hold that territory for 1 turn before they
+              can claim it. Once claimed they can then roll for resources and draw a card from the item deck.
+            </p>
+            <div class="text-center">
+              <h3>Item Rules</h3>
+            </div>
+            <p>
+
             </p>
           </div>
           <div class="modal-footer">
