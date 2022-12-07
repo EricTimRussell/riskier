@@ -70,7 +70,6 @@
               --Players cannot own any of the water on the outside of the board. Only the physical water tiles can be
               owned.
             </p>
-            <br>
             <h2>Supplies</h2>
             <p>--Supplies are a citical component that players will need to manage to ensure their armies are
               prepared.
@@ -88,6 +87,22 @@
               involved in a battle use up 1 supply.
               <br>
               --Black pegs on the board represent supplies. One peg is considered one supply point.
+            </p>
+            <h2>Peg Pieces & Main Board Pieces</h2>
+            <p>
+              --There are 4 types of peg pieces used to track different elements of the game. The red peg tracks damage
+              to naval units and division/army unit pieces. Black pegs are supplies and are used to track the ammount of
+              supplies a unit has left. Blue and white pegs are to track the kinds of aircraft on an aircraft carrier.
+              Blue being fighter and white being CAS.
+              <br>
+              --Land units on the main board are represented by pieces that roughly resemble NATO military map symbols.
+              Each symbol represents a certain kind of unit. Guide to what these symbols mean are included with with the
+              instructions of the game.
+              <br>
+              --Each of these main board pieces have peg holes on them to represent the amount of supplies that unit has
+              left. If a unit runs out of supplies they cannot participate in offensive or defensive operations. If a
+              unit is attacked that no longer has any supplies left they are forced to retreat and will need to follow
+              the rules for retreating on the main board.
             </p>
             <br>
             <h2>Unit Types & General Rules</h2>
@@ -181,30 +196,46 @@
               capabilities, but have limited ammo. Destroyers are fast durable ships with heavy guns to destroy other
               ships as well as barrage land targets.
               <br>
+              --Carriers take 3 turns to construct. Cruisers and destroyers take 2 turns to construct. The construction
+              times are tracked on the construction sheet.
+              <br>
               <strong>--Carriers</strong> have the ability to carry up to 8 fighter aircraft and CAS. They are durable
               ships and rely on their aircraft for offensive and defensive capabilities. Carriers have point defense
-              systems that let
-              them target incoming missiles and aircraft. Carriers also have the ability to transport and land up to 6
-              ground units. Carriers have 1 movement point and no offensive points, however they can deploy 2 aircraft
-              per turn. Carriers point defense has a range of 1 on the mainboard and the combat board.
+              systems that let them target incoming missiles and aircraft. Carriers also have the ability to transport
+              and land up to 6 ground units. The carrier game piece has 8 holes on the front of the ship and 3 in the
+              middle. When the carrier is hit a red peg is placed into one of the 3 holes in the center of the ship to
+              track damage. The 8 holes on the front represent the carriers cargo and aircraft. Blue pegs represent a
+              single fighter and white represent CAS. Black pegs can also be stored on carriers as well for extra
+              supplies however they occupy an aircraft spot. Carriers have 1 movement point, 4 hit points, and no
+              offensive points, however they can deploy 2 aircraft per turn. Carriers point defense has a range of 1 on
+              the mainboard and the combat board.
+              <br>
+              --If a carrier is destroyed all the aircraft on the ship are destroyed as well unless they are within
+              range of another carrier that has available space or an airfield. However, the aircraft that
+              are in the air can continue to fight until the battle is over then they are immediately moved to another
+              airfield within range or are destroyed.
               <br>
               <strong>--Cruisers</strong> are much more versatile than destroyers, but are not as durable or nimble.
               They have the ability to deploy 3 surface-to-surface missiles and have infinite AA missiles. They
-              have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points and
-              1 offensive point. On the combat board and the main board cruisers AA has a range of 1 and their SS
-              missiles have a range of 3. The cannon has a range of 1. A cruisers cannon cannot fire at land targets.
+              have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points, 1
+              hit point, and 1 offensive point. On the combat board and the main board cruisers AA has a range of 1 and
+              their SS missiles have a range of 3. The cannon has a range of 1. A cruisers cannon cannot fire at land
+              targets.
               <br>
               <strong>--Destroyers</strong> are heavy combat vessels with large guns and heavy armor giving them the
               ability to absorb hits. They are smaller and more nimble than most naval vessals and are great at
-              destroying other naval vessels. They have no AA ability. Destroyers have 2 movement points and 2 offensive
-              points with a range of 1. Destroyers have the ability to provide fire support to land battles so long as
-              they are adjacent to the tile where the battle is taking place. They can only fire when there is a special
-              forces unit with a laser designator directing its fire.
+              destroying other naval vessels. They have no AA ability. Destroyers have 1 peg hole to keep track of
+              damage. Destroyers have 2 movement points, 2 hit points, and 2 offensive points with a range of 1.
+              Destroyers have the ability to provide fire support to land battles so long as they are adjacent to the
+              tile where the battle is taking place. They can only fire when there is a special forces unit with a laser
+              designator directing its fire.
             </p>
             <div class="text-center">
               <h3>Combat Rules</h3>
             </div>
             <p>
+              --Land battles take place on a seperate board from the main board.
+              <br>
               --Before combat begins be sure to place any item cards face up in front of the player at the combat board
               when being used.
               <br>
@@ -269,11 +300,16 @@
             </div>
             <p>
               --The defending/offensive players can retreat by moving there units to first row of tiles closest to
-              them and declaring the unit is retreating. They have to remain on that tile for 1 turn in order to retreat
-              and be will removed from the board. If the combat board is not being used the retreating player declares
-              that they are retreating and the retreating unit will have to survive 1 turn before moving the unit in the
-              opposite direction where combat is taking place. Once it is declared that a unit is retreating this cannot
-              be undone and the unit will be removed after 1 turn unless it is destroyed.
+              them on the combat board and declaring that the unit is retreating. They have to remain on that tile for 1
+              turn in order to retreat and be will removed from the board. If the combat board is not being used the
+              retreating player declares that they are retreating and the retreating unit will have to survive 1 turn
+              before moving the unit in the opposite direction where combat is taking place. Once it is declared that a
+              unit is retreating this cannot be undone and the unit will be removed after 1 turn unless it is destroyed.
+              <br>
+              <strong>--Retreating when a unit has no supplies: </strong> In the event a unit or group of units have no
+              supplies left to defend themselves from an attack they must all retreat. A dice roll for each unit
+              retreating will be used determine a successfull escape or not. See Unit odds for each units escape
+              chances.
               <br>
               --Once a unit has retreated the player will move that unit in the opposite direction from where the attack
               came from on the main board. If the opposite tile is water or hostile territory the unit will move to the
@@ -294,6 +330,30 @@
               --When a player takes territory from another player they must hold that territory for 1 turn before they
               can claim it. Once claimed they can then roll for resources and draw a card from the item deck.
               <br>
+            </p>
+            <div class="text-center">
+              <h3>Navy Combat Rules</h3>
+            </div>
+            <p>
+              --Naval units do not need to occupy the same MB tile to all be included in a naval battle. All adjacent
+              naval units to the tile where combat is initiated will be included on the combat board. A max of 3 ships
+              can occupy a tile at one time.
+              <br>
+              --Their is a combat board for naval battles as well and is largely identical to the combat board for land
+              battles. The difference however is that the defending player can only place their units on the 2nd and 3rd
+              row closest to them. The attacking player can place their units on the first 3 rows closest to them.
+              <br>
+              --Any action an aircraft takes when they are within AA range the AA gets to fire 1 shot at the aircraft.
+              This applies to all AA that is in range. For example if a player moves their aircraft into AA range the AA
+              get to fire at them first before the aircraft can do anything else (unless the aircraft is using the
+              stealth item). During that same turn if that aircraft moves onto another tile and is still within AA range
+              the AA gets to fire again. This can occur as many times as the aircraft moves within AA range.
+              <br>
+              --Cruisers carry 3 total missiles represented by 3 black pegs in the ship piece. They can fire 1 SS
+              missile per turn, but as many AA missiles as they want per turn. However a cruiser can only carry 3
+              missiles total. Cruisers cannot be resupplied by carriers during combat.
+              <br>
+              --Destroyers have heavy armor giving them a chance to absorb any incoming hits.
             </p>
             <div class="text-center">
               <h3>Item Card Rules</h3>
