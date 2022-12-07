@@ -175,6 +175,12 @@
               <h3>Navy Units</h3>
             </div>
             <p>
+              --There are 3 types of naval units, Aircraft carrier, Cruiser, and Destroyer. Each unit has peg holes in
+              them to track damage, ammunition, and aircraft. The carrier has up to 8 fighters/CAS and has a point
+              defense system that can intercept missiles and aircraft. Cruisers carry AA and SS missiles with long range
+              capabilities, but have limited ammo. Destroyers are fast durable ships with heavy guns to destroy other
+              ships as well as barrage land targets.
+              <br>
               <strong>--Carriers</strong> have the ability to carry up to 8 fighter aircraft and CAS. They are durable
               ships and rely on their aircraft for offensive and defensive capabilities. Carriers have point defense
               systems that let
@@ -428,6 +434,9 @@
               <br>
               --Divisions and Army groups can instantly capture unnoccupied tiles.
             </p>
+            <div class="text-center">
+              <h3>Naval Unit Rules</h3>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
