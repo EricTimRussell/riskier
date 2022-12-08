@@ -1,38 +1,5 @@
 <template>
-
-  <body>
-    <header class="sticky-top">
-      <Navbar />
-    </header>
-    <main>
-      <router-view />
-    </main>
-    <footer class="sticky-bottom bg-green text-end px-3">
-      <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"></i>
-    </footer>
-    <RulesModal />
-  </body>
-
-  <!-- Create Region Modal -->
   <section>
-    <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Create Region</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <CreateRegionForm />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rule Book Modal -->
-  <!-- <section>
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
@@ -45,19 +12,17 @@
             </div>
           </div>
           <div class="modal-body">
+            <!-- SECTION Resources -->
             <div class="text-center">
               <h3>Resources</h3>
             </div>
-            <p>--Resources are determined by the roll of a D6 for each tile
-              captured, except for the
-              tiles with cities
-              on them. Each tile contains capital, industry, and agriculture and a D6 should be rolled to determine the
-              amount of each for every tile captured.
+            <p>--Resources are determined by the roll of a D6 for each tile captured, except for the
+              tiles with cities on them. Each tile contains capital, industry, and agriculture and a D6 should be rolled
+              to determine the amount of each for every tile captured.
               <br>
               --Cities are worth a pre-deterimed amount based on their size or importance. A players
               capital is worth 15 of each resource. A captured capital is worth 10 of each. A medium sized city is worth
-              6 of each
-              resources. A small city is worth 4 of each resource.
+              6 of each resources. A small city is worth 4 of each resource.
               <br>
               --City size can be determined by the number of buildings present on the board piece. 5 buildings is a
               capital size. 4 is a medium city and 3 is a small city.
@@ -73,6 +38,7 @@
               --Players cannot own any of the water on the outside of the board. Only the physical water tiles can be
               owned.
             </p>
+            <!-- SECTION Supplies -->
             <div class="text-center">
               <h3>Supplies</h3>
             </div>
@@ -93,6 +59,7 @@
               <br>
               --Black pegs on the board represent supplies. One peg is considered one supply point.
             </p>
+            <!-- SECTION Peg Pieces & Main Board Pieces -->
             <div class="text-center">
               <h3>Peg Pieces & Main Board Pieces</h3>
             </div>
@@ -111,6 +78,7 @@
               unit is attacked that no longer has any supplies left they are forced to retreat and will need to follow
               the rules for retreating on the main board.
             </p>
+            <!-- SECTION Land Units -->
             <div class="text-center">
               <h3>Land Units</h3>
             </div>
@@ -164,6 +132,7 @@
               to naval yards to supply your navy. Has no offensive or defensive ability and can move 1 tile per turn on
               the MB. Supply trucks are not used on the CB.
             </p>
+            <!-- SECTION Air Units -->
             <div class="text-center">
               <h3>Air Units</h3>
             </div>
@@ -191,6 +160,7 @@
               forces units and infantry by air as paratroopers. They have no offensive or defensive ability. Supply
               aircraft are not used on the combat board. They can move 2 tiles per turn on the main board.
             </p>
+            <!-- SECTION Navy Units -->
             <div class="text-center">
               <h3>Navy Units</h3>
             </div>
@@ -235,6 +205,7 @@
               tile where the battle is taking place. They can only fire when there is a special forces unit with a laser
               designator directing its fire.
             </p>
+            <!-- SECTION Combat Rules -->
             <div class="text-center">
               <h3>Combat Rules</h3>
             </div>
@@ -304,6 +275,7 @@
               can now move if they wish. If the mech unit was not relieved at the end of the players turn the other
               player can now go on the offensive against the mech unit.
             </p>
+            <!-- SECTION Retreat Rules -->
             <div class="text-center">
               <h3>Retreat Rules</h3>
             </div>
@@ -340,6 +312,7 @@
               chances. If a unit successfully escapes the player can choose which adjacent tile to place each unit. If
               there are no safe tiles to retreat to then all units are destroyed.
             </p>
+            <!-- SECTION Navy Combat Rules -->
             <div class="text-center">
               <h3>Navy Combat Rules</h3>
             </div>
@@ -364,6 +337,7 @@
               <br>
               --Destroyers have heavy armor giving them a chance to absorb any incoming hits.
             </p>
+            <!-- SECTION Item Card Rules -->
             <div class="text-center">
               <h3>Item Card Rules</h3>
             </div>
@@ -417,6 +391,7 @@
               weapons. A roll of can be added to all infantry attacks vs MBT's bringing the odds up to 64% chance to
               hit. Does not apply to defense rolls.
             </p>
+            <!-- SECTION Event Card Rules -->
             <div class="text-center">
               <h3>Event Card Rules</h3>
             </div>
@@ -429,6 +404,7 @@
               on the card (it may affect all players). The 4th player rolls the D4 and each number represents a player
               based on their team color. Player 1 is green, player 2 is tan, player 3 is brown, and player 4 is blue.
             </p>
+            <!-- SECTION Structure Rules -->
             <div class="text-center">
               <h3>Structure Rules</h3>
             </div>
@@ -476,6 +452,7 @@
               --Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
               Warehouses can be destroyed in one successfull hit.
             </p>
+            <!-- SECTION Army/Division Rules -->
             <div class="text-center">
               <h3>Army/Division Rules</h3>
             </div>
@@ -503,9 +480,6 @@
               <br>
               --Divisions and Army groups can instantly capture unnoccupied tiles.
             </p>
-            <div class="text-center">
-              <h3>Naval Unit Rules</h3>
-            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -513,45 +487,19 @@
         </div>
       </div>
     </div>
-  </section> -->
-
+  </section>
 </template>
 
+
 <script>
-import { computed } from 'vue'
-import { AppState } from './AppState'
-import CreateRegionForm from "./components/CreateRegionForm.vue";
-import Navbar from "./components/Navbar.vue";
-import RulesModal from "./components/RulesModal.vue";
-
-
 export default {
   setup() {
-    return {
-      appState: computed(() => AppState),
-    };
-  },
-  components: { Navbar, CreateRegionForm, RulesModal }
+    return {}
+  }
 }
 </script>
-<style lang="scss">
-@import "./assets/scss/main.scss";
 
-:root {
-  --main-height: calc(100vh - 32px - 64px);
-}
 
-body {
-  font-family: Impact, 'Arial Narrow Bold', sans-serif;
-  letter-spacing: 1px;
-  background-color: #606C38;
-}
+<style lang="scss" scoped>
 
-button {
-  box-shadow: black 4px 4px;
-}
-
-.bg-green {
-  background-color: #606c3800;
-}
 </style>

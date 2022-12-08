@@ -1,6 +1,6 @@
 <template>
   <!-- TODO need to create a component for tracking army/division pieces -->
-  <!-- TODO need add costs for each unit -->
+  <!-- TODO need to add costs for each unit -->
 
   <body>
     <div class="container-fluid">
