@@ -2,6 +2,8 @@ namespace riskier.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+
+
 public class RegionTilesController : ControllerBase
 {
   private readonly RegionTilesService _rts;
@@ -36,13 +38,26 @@ public class RegionTilesController : ControllerBase
   }
 
   [HttpGet]
-  public async Task<ActionResult<List<RegionTile>>> GetRegionsAsync()
+  public async Task<ActionResult<List<RegionTile>>> GetRegions()
   {
     try
     {
       Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
       var regions = _rts.GetRegions();
       return Ok(regions);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpGet("hello")]
+  public ActionResult<string> Hello()
+  {
+    try
+    {
+      return Ok("Hello");
     }
     catch (Exception e)
     {
