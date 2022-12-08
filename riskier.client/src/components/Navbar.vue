@@ -7,19 +7,19 @@
           <div>
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
-          <div v-if="!account.id">
+          <div v-if="account.id">
             <button type="submit" class="btn btn-dark my-2 text-dark create-region-button" data-bs-toggle="modal"
               data-bs-target="#createRegion" aria-label="Create Region">
               Create Region
             </button>
           </div>
         </div>
-        <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="!account.id">
+        <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="account.id">
           <h2>Capital: {{ account.totalCapital }}</h2>
           <h2 class="px-3">Industry: {{ account.totalIndustry }}</h2>
           <h2>Agriculture: {{ account.totalAgriculture }}</h2>
         </div>
-        <div class="col-md-8 col-sm-2 text-center order-2" v-if="!account.id">
+        <div class="col-md-8 col-sm-2 text-center order-2" v-if="account.id">
           <div class="dropdown-center dropdown text-shadow"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <strong>{{ account.teamName }}</strong></span>
