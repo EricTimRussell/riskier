@@ -3,7 +3,7 @@
   <!-- TODO need to add costs for each unit -->
 
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" v-if="!account.id">
       <div class="row">
         <div class="col-12 mb-3 text-center">
           <h2>Ground Forces</h2>
@@ -94,7 +94,14 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" v-else>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1>Select Login to Get Started</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" v-if="!account.id">
       <div class="row justify-content-center mt-5">
         <div class="col-12 bg-green">
           <h2 class="text-center m-3">Owned Regions</h2>
