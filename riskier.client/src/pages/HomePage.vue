@@ -1,6 +1,5 @@
 <template>
   <!-- TODO need to create a component for tracking army/division pieces -->
-  <!-- TODO need to add costs for each unit -->
 
   <body>
     <div class="container-fluid" v-if="account.id">
@@ -45,7 +44,7 @@
           <SsArtilleryAndAntiAircraft />
         </div>
         <div class="col-6 pt-4 pl-6">
-          <h6>Supply Truck</h6>
+          <h6>SupplyTruck</h6>
         </div>
         <div class="px-4">
           <SupplyTruckCard />
@@ -160,6 +159,7 @@ body {
       rgba(0, 0, 0, 0.3)), url(../assets/img/TopoMap2.jpg);
   background-attachment: fixed;
   background-position: center right;
+  background-repeat: none;
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;

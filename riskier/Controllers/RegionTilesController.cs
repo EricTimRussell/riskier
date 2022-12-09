@@ -52,33 +52,6 @@ public class RegionTilesController : ControllerBase
     }
   }
 
-  [HttpGet("hello")]
-  public ActionResult<string> Hello()
-  {
-    try
-    {
-      return Ok("Hello");
-    }
-    catch (Exception e)
-    {
-      return BadRequest(e.Message);
-    }
-  }
-
-  // [HttpGet("{regionTileId}")]
-  // public ActionResult<RegionTile> GetRegionById(int regionTileId)
-  // {
-  //   try
-  //   {
-  //     RegionTile foundRegion = _rts.GetRegionById(regionTileId);
-  //     return Ok(foundRegion);
-  //   }
-  //   catch (Exception e)
-  //   {
-  //     return BadRequest(e.Message);
-  //   }
-  // }
-
   [HttpGet("{ownerId}")]
   public async Task<ActionResult<List<RegionTile>>> GetRegionByOwnerId(string ownerId)
   {

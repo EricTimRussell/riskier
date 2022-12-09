@@ -1,17 +1,17 @@
 <template>
   <section>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="rulesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="rulesModal" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Rule Book:</h1>
-            <div class="input-group length">
-              <input type="text" class="form-control" placeholder="Search..." aria-label="Search"
+            <h1 class="modal-title" id="rulesModal">Rule Book</h1>
+            <!-- <div class="input-group length">
+              <input type="text" id="ruleBook" class="form-control" placeholder="Search..." aria-label="Search"
                 aria-describedby="basic-addon1">
-            </div>
+            </div> -->
           </div>
-          <div class="modal-body">
+          <div class="modal-body" id="rules">
             <!-- SECTION Resources -->
             <div class="text-center">
               <h3>Resources</h3>
@@ -481,8 +481,8 @@
               --Divisions and Army groups can instantly capture unnoccupied tiles.
             </p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="modal-footer text-end sticky-bottom no-border">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -492,14 +492,21 @@
 
 
 <script>
+
 export default {
   setup() {
-    return {}
+    return {
+      find() {
+        windows.find()
+      }
+    }
   }
 }
 </script>
 
 
 <style lang="scss" scoped>
-
+.no-border {
+  border: none;
+}
 </style>
