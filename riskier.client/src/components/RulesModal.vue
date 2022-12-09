@@ -496,9 +496,7 @@
 export default {
   setup() {
     return {
-      find() {
-        windows.find()
-      }
+
     }
   }
 }
