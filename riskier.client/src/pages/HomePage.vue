@@ -100,6 +100,31 @@
         </div>
       </div>
     </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-flex flex-column align-items-center bg-green gap-2 mt-4">
+          <h2>Armies & Divisions</h2>
+          <button data-bs-toggle="modal" data-bs-target="#formDivision" aria-label="Form Division">Form
+            Division</button>
+          <button class="mb-3">Form Army</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-3 my-2">
+          <div class="card bg-dark text-center p-1">
+            <h2>Division #1</h2>
+            <div class="card-body">
+              <h6>Infantry</h6>
+              <h6>IFV</h6>
+              <h6>Special Forces</h6>
+              <h6>MBT</h6>
+              <h6>Mech</h6>
+              <h6>AntiAircraft</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid" v-if="account.id">
       <div class="row justify-content-center mt-5">
         <div class="col-12 bg-green">

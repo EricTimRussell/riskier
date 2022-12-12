@@ -45,6 +45,10 @@ public class Startup
     services.AddTransient<BuildingsService>();
 
     services.AddTransient<NavyUnitsService>();
+
+    services.AddTransient<ArmiesDivisionsService>();
+    services.AddTransient<ArmiesDivisionsRepository>();
+
   }
 
   private void ConfigureCors(IServiceCollection services)

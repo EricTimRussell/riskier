@@ -21,6 +21,7 @@ public class ArmiesDivisionsService
     {
       throw new Exception("This division does not belong to you");
     }
+    originalDivision.DivisionNumber = division.DivisionNumber;
     originalDivision.UnitSlot1 = division.UnitSlot1;
     originalDivision.UnitSlot2 = division.UnitSlot2;
     originalDivision.UnitSlot3 = division.UnitSlot3;

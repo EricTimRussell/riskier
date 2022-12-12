@@ -2,7 +2,7 @@
 
   <body>
 
-    <div class="card bg-tan" v-if="regions.ownerId == account.id">
+    <div class="card card-size bg-tan" v-if="regions.ownerId == account.id">
       <div class="card-body l-spacing">
         <h3 class="text-center">Region# {{ regions.regionNumber }}</h3>
         <h6 class="text-center"><strong>-Resources-</strong></h6>
@@ -68,7 +68,7 @@ export default {
   background-color: #FFDA96;
 }
 
-.card {
+.card-size {
   max-height: 53vh;
 }
 </style>

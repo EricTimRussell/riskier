@@ -32,6 +32,24 @@
     </div>
   </section>
 
+  <!-- Form Division Modal -->
+  <section>
+    <div class="modal fade" id="formDivision" tabindex="-1" aria-labelledby="formDivision" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="formDivision">Form Division</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
+              title="close modal"></button>
+          </div>
+          <div class="modal-body">
+            <CreateDivisionForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Unit Odds Modal -->
   <section>
     <div class="modal fade" id="unitOdds" tabindex="-1" aria-labelledby="UnitOddsModal" aria-hidden="true">
@@ -73,6 +91,7 @@
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
+import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
 import Navbar from "./components/Navbar.vue";
 import RulesModal from "./components/RulesModal.vue";
@@ -86,7 +105,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal }
+  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm }
 }
 </script>
 <style lang="scss">

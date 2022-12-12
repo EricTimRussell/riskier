@@ -11,6 +11,7 @@ public class ArmiesDivisionsRepository : BaseRepository
     var sql = @"
     INSERT INTO divisions(
       id,
+      divisionNumber,
       ownerId,
       unitSlot1,
       unitSlot2,
@@ -21,6 +22,7 @@ public class ArmiesDivisionsRepository : BaseRepository
     )
     VALUES(
       @Id,
+      @DivisionNumber,
       @OwnerId,
       @UnitSlot1,
       @UnitSlot2,
