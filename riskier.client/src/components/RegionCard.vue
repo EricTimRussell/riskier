@@ -15,7 +15,8 @@
         <h6 class="text-center">{{ regions.environment }}</h6>
       </div>
       <div class="text-end">
-        <span @click="removeRegion()" class="mdi mdi-delete-forever p-1 fs-3 select" title="Delete?"></span>
+        <button @click="removeRegion()" class=" btn mdi mdi-delete-forever fs-3 select no-shadow"
+          title="Delete?"></button>
       </div>
     </div>
 
@@ -70,5 +71,10 @@ export default {
 
 .card-size {
   max-height: 53vh;
+}
+
+.no-shadow {
+  box-shadow: none;
+  text-shadow: white 1px 1px;
 }
 </style>

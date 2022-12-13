@@ -28,15 +28,13 @@
               data-bs-toggle="dropdown" aria-expanded="false">
               <strong>{{ account.teamName }}</strong></span>
             <ul class="dropdown-menu">
-              <li>
-                <div class="input-group p-2">
-                  <form class="d-flex" @submit.prevent="changeTeamName()">
-                    <input type="text" class="form-control" placeholder="Change Name" maxlength="18"
-                      aria-label="Team Name" aria-describedby="button-addon2" v-model="editable.teamName">
-                    <button class="btn btn-outline-secondary" type="submit" id="button-addon2">+</button>
-                  </form>
-                </div>
-              </li>
+              <div class="input-group p-2">
+                <form class="d-flex" @submit.prevent="changeTeamName()">
+                  <input type="text" class="form-control" placeholder="Change Name" maxlength="18"
+                    aria-label="Team Name" aria-describedby="button-addon2" v-model="editable.teamName">
+                  <button class="btn btn-outline-secondary" type="submit" id="button-addon2">+</button>
+                </form>
+              </div>
             </ul>
           </div>
         </div>

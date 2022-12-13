@@ -104,24 +104,23 @@
       <div class="row">
         <div class="col-12 d-flex flex-column align-items-center bg-green gap-2 mt-4">
           <h2>Armies & Divisions</h2>
-          <button data-bs-toggle="modal" data-bs-target="#formDivision" aria-label="Form Division">Form
-            Division</button>
-          <button class="mb-3">Form Army</button>
+          <div>
+            <button class="mx-3 p-2 rounded" data-bs-toggle="modal" data-bs-target="#formDivision"
+              aria-label="Form Division">Form
+              Division</button>
+            <button class="mx-3 py-2 px-3 my-3 rounded" data-bs-toggle="modal" data-bs-target="#formArmy"
+              aria-label="Form Army">Form Army</button>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-6 col-md-3 my-2">
-          <div class="card bg-dark text-center p-1">
-            <h2>Division #1</h2>
-            <div class="card-body">
-              <h6>Infantry</h6>
-              <h6>IFV</h6>
-              <h6>Special Forces</h6>
-              <h6>MBT</h6>
-              <h6>Mech</h6>
-              <h6>AntiAircraft</h6>
-            </div>
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-6 my-2" v-for="d in divisions">
+          <DivisionsCard :divisions="d" :key="d.id" />
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-6 my-2" v-for="a in armies">
+          <ArmyCard :armies="a" :key="a.id" />
         </div>
       </div>
     </div>
@@ -137,9 +136,10 @@
         </div>
       </div>
     </div>
-
-
-
+    <footer class="sticky-bottom text-end px-3">
+      <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
+        data-bs-target="#rulesModal"></i>
+    </footer>
   </body>
 
 </template>
@@ -148,7 +148,9 @@
 import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
 import AirUnitsCard from "../components/AirUnitsCard.vue";
+import ArmyCard from "../components/ArmyCard.vue";
 import BuildingsCard from "../components/BuildingsCard.vue";
+import DivisionsCard from "../components/DivisionsCard.vue";
 import InfantryCard from "../components/InfantryCard.vue";
 import MbtAndArtCard from "../components/MbtAndArtCard.vue";
 import MechInfantryCard from "../components/MechInfantryCard.vue";
@@ -157,6 +159,7 @@ import NavyUnitsCard from "../components/NavyUnitsCard.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import SupplyTruckCard from "../components/SupplyTruckCard.vue";
+import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
 
@@ -169,12 +172,28 @@ export default {
         Pop.error(error, "getting all regions")
       }
     }
+    async function getAllDivisions() {
+      try {
+        await armiesDivisionsService.getAllDivisions()
+      } catch (error) {
+        Pop.error(error, "Getting all Divisions")
+      }
+    }
+    async function getAllArmies() {
+      try {
+        await armiesDivisionsService.getAllArmies()
+      } catch (error) {
+        Pop.error(error, "Getting all Armies")
+      }
+    }
     return {
       regions: computed(() => AppState.regions),
       account: computed(() => AppState.account),
+      divisions: computed(() => AppState.divisions),
+      armies: computed(() => AppState.armies)
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard }
 }
 </script>
 
@@ -188,6 +207,10 @@ body {
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;
+}
+
+button {
+  background-color: #FFDA96;
 }
 
 .bg-green {

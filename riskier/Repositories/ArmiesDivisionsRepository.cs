@@ -102,5 +102,108 @@ public class ArmiesDivisionsRepository : BaseRepository
     return;
   }
 
+  internal Army CreateArmy(Army newArmy)
+  {
+    var sql = @"
+    INSERT INTO armies(
+      id,
+      armyNumber,
+      ownerId,
+      unitSlot1,
+      unitSlot2,
+      unitSlot3,
+      unitSlot4,
+      unitSlot5,
+      unitSlot6,
+      unitSlot7,
+      unitSlot8,
+      unitSlot9
+    )
+    VALUES(
+      @id,
+      @armyNumber,
+      @ownerId,
+      @unitSlot1,
+      @unitSlot2,
+      @unitSlot3,
+      @unitSlot4,
+      @unitSlot5,
+      @unitSlot6,
+      @unitSlot7,
+      @unitSlot8,
+      @unitSlot9
+    );
+    SELECT LAST_INSERT_ID()
+    ;";
+    newArmy.CreatedAt = DateTime.Now;
+    newArmy.UpdatedAt = DateTime.Now;
+    newArmy.Id = _db.ExecuteScalar<int>(sql, newArmy);
+    return newArmy;
+  }
 
+  internal Army UpdateArmy(Army originalArmy)
+  {
+    var sql = @"
+    UPDATE armies SET
+      unitSlot1 = @UnitSlot1,
+      unitSlot2 = @UnitSlot2,
+      unitSlot3 = @UnitSlot3,
+      unitSlot4 = @UnitSlot4,
+      unitSlot5 = @UnitSlot5,
+      unitSlot6 = @UnitSlot6,
+      unitSlot7 = @UnitSlot7,
+      unitSlot8 = @UnitSlot8,
+      unitSlot9 = @UnitSlot9
+    WHERE id = @Id LIMIT 1
+    ;";
+    originalArmy.UpdatedAt = DateTime.Now;
+    _db.Execute(sql, originalArmy);
+    return originalArmy;
+  }
+
+  internal Army GetArmyById(int armyId)
+  {
+    var sql = @"
+    SELECT
+     a.*,
+     ra.*
+    FROM armies a
+    JOIN riskierAccounts ra ON ra.id = a.ownerId
+    WHERE a.id = @armyId
+    ;";
+
+    return _db.Query<Army, Account, Army>(sql, (a, ra) =>
+    {
+      a.Creator = ra;
+      return a;
+    }, new { armyId }).FirstOrDefault();
+  }
+
+  internal object GetArmies()
+  {
+    var sql = @"
+    SELECT
+      a.*,
+      ra.*
+    FROM armies a
+    JOIN riskierAccounts ra ON ra.id = a.ownerId
+    ;";
+
+    return _db.Query<Army, Account, Army>(sql, (a, ra) =>
+    {
+      a.Creator = ra;
+      return a;
+    }).ToList();
+  }
+
+  internal void DeleteArmy(int armyId)
+  {
+    var sql = "DELETE FROM armies WHERE id = @ArmyId LIMIT 1";
+    var rows = _db.Execute(sql, new { armyId });
+    if (rows != 1)
+    {
+      throw new Exception("data was not deleted Id may be bad or data is bad");
+    }
+    return;
+  }
 }

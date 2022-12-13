@@ -7,10 +7,7 @@
     <main>
       <router-view />
     </main>
-    <footer class="sticky-bottom bg-green text-end px-3">
-      <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
-        data-bs-target="#rulesModal"></i>
-    </footer>
+
   </body>
   <RulesModal />
 
@@ -44,6 +41,24 @@
           </div>
           <div class="modal-body">
             <CreateDivisionForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Army Modal -->
+  <section>
+    <div class="modal fade" id="formArmy" tabindex="-1" aria-labelledby="formArmy" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="formArmy">Form Army</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
+              title="close modal"></button>
+          </div>
+          <div class="modal-body">
+            <CreateArmyForm />
           </div>
         </div>
       </div>
@@ -91,6 +106,7 @@
 <script>
 import { computed } from 'vue'
 import { AppState } from './AppState'
+import CreateArmyForm from "./components/CreateArmyForm.vue";
 import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
 import Navbar from "./components/Navbar.vue";
@@ -102,10 +118,10 @@ import UnitOddsRules from "./components/UnitOddsRules.vue";
 export default {
   setup() {
     return {
-      appState: computed(() => AppState),
+      appState: computed(() => AppState)
     };
   },
-  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm }
+  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm }
 }
 </script>
 <style lang="scss">

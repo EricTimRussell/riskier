@@ -38,7 +38,7 @@ public class ArmiesDivisionsController : ControllerBase
     }
   }
 
-  [HttpPut("{divisionId}")]
+  [HttpPut("division/{divisionId}")]
   public async Task<ActionResult<Division>> UpdateDivision([FromBody] Division division, int divisionId)
   {
     try
@@ -72,7 +72,7 @@ public class ArmiesDivisionsController : ControllerBase
     }
   }
 
-  [HttpDelete("{divisionId}")]
+  [HttpDelete("division/{divisionId}")]
   public async Task<ActionResult<string>> DeleteDivision(int divisionId)
   {
     try
@@ -86,6 +86,80 @@ public class ArmiesDivisionsController : ControllerBase
       return BadRequest(e.Message);
     }
   }
+  #endregion
+
+  // SECTION 
+  #region Armies Functions
+  [HttpPost("army")]
+  public async Task<ActionResult<Army>> CreateArmy([FromBody] Army newArmy)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      if (userInfo == null || userInfo.Id == null)
+      {
+        throw new Exception("Bad user or authToken invalid");
+      }
+      newArmy.OwnerId = userInfo.Id;
+      Army createdArmy = _ads.CreateArmy(newArmy);
+      createdArmy.Creator = userInfo;
+      return Ok(createdArmy);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpPut("army/{armyId}")]
+  public async Task<ActionResult<Army>> UpdateArmy([FromBody] Army army, int armyId)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      if (userInfo == null || userInfo.Id == null)
+      {
+        throw new Exception("Bad user or authToken invalid");
+      }
+      army.Id = armyId;
+      Army newArmy = _ads.UpdateArmy(army, userInfo?.Id);
+      return Ok(newArmy);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpGet("army")]
+  public ActionResult<List<Army>> GetArmies()
+  {
+    try
+    {
+      var armies = _ads.GetArmies();
+      return Ok(armies);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpDelete("army/{armyId}")]
+  public async Task<ActionResult<string>> DeleteArmy(int armyId)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _ads.DeleteArmy(armyId, userInfo.Id);
+      return Ok("Army Deleted");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
   #endregion
 
 }

@@ -1,9 +1,9 @@
 <template>
-  <form @submit.prevent="formDivision()">
+  <form @submit.prevent="formArmy()">
     <div class="form-floating mb-3">
-      <input v-model="editable.divisionNumber" required type="text" maxlength="2" class="form-control"
-        id="divisionNumber" placeholder="1,2,3...">
-      <label for="divisionNumber">Division Number...</label>
+      <input v-model="editable.armyNumber" required type="text" maxlength="2" class="form-control" id="armyNumber"
+        placeholder="1,2,3...">
+      <label for="armyNumber">Army Number...</label>
     </div>
     <div class="form-floating">
       <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
@@ -95,9 +95,54 @@
       </select>
       <label for="unitSlot6">Select Unit Type</label>
     </div>
+    <div class="form-floating my-3">
+      <select v-model="editable.unitSlot7" required class="form-select" id="unitSlot7"
+        aria-label="Select Unit for Slot">
+        <option selected></option>
+        <option value="EmptySlot">EmptySlot</option>
+        <option value="Infantry">Infantry</option>
+        <option value="Special Forces">Special Forces</option>
+        <option value="Mech">Mech</option>
+        <option value="IFV">IFV</option>
+        <option value="MBT">MBT</option>
+        <option value="Artillery">Artillery</option>
+        <option value="Anti-Aircraft">Anti-Aircraft</option>
+      </select>
+      <label for="unitSlot7">Select Unit Type</label>
+    </div>
+    <div class="form-floating my-3">
+      <select v-model="editable.unitSlot8" required class="form-select" id="unitSlot8"
+        aria-label="Select Unit for Slot">
+        <option selected></option>
+        <option value="EmptySlot">EmptySlot</option>
+        <option value="Infantry">Infantry</option>
+        <option value="Special Forces">Special Forces</option>
+        <option value="Mech">Mech</option>
+        <option value="IFV">IFV</option>
+        <option value="MBT">MBT</option>
+        <option value="Artillery">Artillery</option>
+        <option value="Anti-Aircraft">Anti-Aircraft</option>
+      </select>
+      <label for="unitSlot8">Select Unit Type</label>
+    </div>
+    <div class="form-floating my-3">
+      <select v-model="editable.unitSlot9" required class="form-select" id="unitSlot9"
+        aria-label="Select Unit for Slot">
+        <option selected></option>
+        <option value="EmptySlot">EmptySlot</option>
+        <option value="Infantry">Infantry</option>
+        <option value="Special Forces">Special Forces</option>
+        <option value="Mech">Mech</option>
+        <option value="IFV">IFV</option>
+        <option value="MBT">MBT</option>
+        <option value="Artillery">Artillery</option>
+        <option value="Anti-Aircraft">Anti-Aircraft</option>
+      </select>
+      <label for="unitSlot9">Select Unit Type</label>
+    </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      <button type="submit" class="btn btn-success">Form Division</button>
+      <button type="submit" class="btn btn-success">Form Army</button>
     </div>
   </form>
 
@@ -115,14 +160,14 @@ export default {
     const editable = ref({})
     return {
       editable,
-      async formDivision() {
+      async formArmy() {
         try {
           const formData = editable.value
-          await armiesDivisionsService.formDivision(formData)
-          Modal.getOrCreateInstance('#formDivision').hide()
+          await armiesDivisionsService.formArmy(formData)
+          Modal.getOrCreateInstance('#formArmy').hide()
           editable.value = {}
         } catch (error) {
-          Pop.error(error, "Creating Division")
+          Pop.error(error, "Creating Army")
         }
       }
     }
