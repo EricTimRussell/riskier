@@ -42,9 +42,9 @@ public class ArmiesDivisionsService
     return foundDivision;
   }
 
-  internal List<Division> GetDivisions()
+  internal List<Division> GetDivisionsByOwnerId(string ownerId)
   {
-    return _adr.GetDivisions();
+    return _adr.GetDivisionsByOwnerId(ownerId);
   }
 
   internal void DeleteDivision(int divisionId, string userId)
@@ -93,9 +93,9 @@ public class ArmiesDivisionsService
     return foundArmy;
   }
 
-  internal object GetArmies()
+  internal List<Army> GetArmiesByOwnerId(string ownerId)
   {
-    return _adr.GetArmies();
+    return _adr.GetArmiesByOwnerId(ownerId);
   }
 
   internal void DeleteArmy(int armyId, string userId)
@@ -107,4 +107,6 @@ public class ArmiesDivisionsService
     }
     _adr.DeleteArmy(armyId);
   }
+
+
 }

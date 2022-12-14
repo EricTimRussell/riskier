@@ -38,7 +38,6 @@ export default {
   setup(props) {
     return {
       account: computed(() => AppState.account),
-
       async removeRegion() {
         try {
           if (await Pop.confirm("Remove Region?"))
@@ -55,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .l-spacing {
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: black;
   text-shadow: white 2px 2px 2px;
 }
@@ -70,7 +69,8 @@ export default {
 }
 
 .card-size {
-  max-height: 53vh;
+  max-height: 40vh;
+  min-height: 40vh;
 }
 
 .no-shadow {

@@ -17,8 +17,8 @@ class ArmiesDivisionsService {
     AppState.divisions = new Division(res.data)
   }
 
-  async getAllDivisions() {
-    const res = await api.get('api/armiesDivisions/division')
+  async getDivisionByOwnerId(ownerId) {
+    const res = await api.get(`api/armiesDivisions/division/${ownerId}`)
     // console.log(res.data)
     AppState.divisions = res.data.map(d => new Division(d))
   }
@@ -39,8 +39,8 @@ class ArmiesDivisionsService {
     AppState.armies = new Army(res.data)
   }
 
-  async getAllArmies() {
-    const res = await api.get('api/armiesDivisions/army')
+  async getArmyByOwnerId(ownerId) {
+    const res = await api.get(`api/armiesDivisions/army/${ownerId}`)
     AppState.armies = res.data.map(a => new Army(a))
   }
 

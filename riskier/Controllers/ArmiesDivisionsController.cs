@@ -58,12 +58,12 @@ public class ArmiesDivisionsController : ControllerBase
     }
   }
 
-  [HttpGet("division")]
-  public ActionResult<List<Division>> GetDivisions()
+  [HttpGet("division/{ownerId}")]
+  public ActionResult<List<Division>> GetDivisionsByOwnerId(string ownerId)
   {
     try
     {
-      var divisions = _ads.GetDivisions();
+      var divisions = _ads.GetDivisionsByOwnerId(ownerId);
       return Ok(divisions);
     }
     catch (Exception e)
@@ -131,12 +131,12 @@ public class ArmiesDivisionsController : ControllerBase
     }
   }
 
-  [HttpGet("army")]
-  public ActionResult<List<Army>> GetArmies()
+  [HttpGet("army/{ownerId}")]
+  public ActionResult<List<Army>> GetArmiesByOwnerId(string ownerId)
   {
     try
     {
-      var armies = _ads.GetArmies();
+      var armies = _ads.GetArmiesByOwnerId(ownerId);
       return Ok(armies);
     }
     catch (Exception e)

@@ -52,21 +52,16 @@ public class RegionTilesRepository : BaseRepository
     }, new { regionTileId }).FirstOrDefault();
   }
 
-  internal List<RegionTile> GetRegionByOwnerId(string userId)
+  internal List<RegionTile> GetRegionByOwnerId(string ownerId)
   {
     var sql = @"
     SELECT
-    r.*,
-    a.*
-    FROM regions r
-    JOIN riskierAccounts a ON a.id = r.ownerId
-    WHERE a.id = @ownerId
+    *
+    FROM regions
+    WHERE ownerId = @ownerId
     ;";
-    return _db.Query<RegionTile, Account, RegionTile>(sql, (rt, a) =>
-    {
-      rt.Creator = a;
-      return rt;
-    }, new { userId }).ToList();
+
+    return _db.Query<RegionTile>(sql, new { ownerId }).ToList();
   }
 
   internal List<RegionTile> GetRegions()

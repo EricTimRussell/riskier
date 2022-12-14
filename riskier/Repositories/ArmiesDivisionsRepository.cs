@@ -74,21 +74,16 @@ public class ArmiesDivisionsRepository : BaseRepository
     }, new { divisionId }).FirstOrDefault();
   }
 
-  internal List<Division> GetDivisions()
+  internal List<Division> GetDivisionsByOwnerId(string ownerId)
   {
     var sql = @"
     SELECT
-      d.*,
-      ra.*
-    FROM divisions d
-    JOIN riskierAccounts ra ON ra.id = d.ownerId
+    *
+    FROM divisions
+    WHERE ownerId = @ownerId
     ;";
 
-    return _db.Query<Division, Account, Division>(sql, (d, a) =>
-    {
-      d.Creator = a;
-      return d;
-    }).ToList();
+    return _db.Query<Division>(sql, new { ownerId }).ToList();
   }
 
   internal void DeleteDivision(int divisionId)
@@ -179,21 +174,16 @@ public class ArmiesDivisionsRepository : BaseRepository
     }, new { armyId }).FirstOrDefault();
   }
 
-  internal object GetArmies()
+  internal List<Army> GetArmiesByOwnerId(string ownerId)
   {
     var sql = @"
     SELECT
-      a.*,
-      ra.*
-    FROM armies a
-    JOIN riskierAccounts ra ON ra.id = a.ownerId
+    *
+    FROM armies
+    WHERE ownerId = @ownerId
     ;";
 
-    return _db.Query<Army, Account, Army>(sql, (a, ra) =>
-    {
-      a.Creator = ra;
-      return a;
-    }).ToList();
+    return _db.Query<Army>(sql, new { ownerId }).ToList();
   }
 
   internal void DeleteArmy(int armyId)

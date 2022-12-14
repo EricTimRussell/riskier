@@ -33,9 +33,9 @@ public class RegionTilesService
     return foundRegion;
   }
 
-  internal List<RegionTile> GetRegionByOwnerId(string userId)
+  internal List<RegionTile> GetRegionByOwnerId(string ownerId)
   {
-    return _rtr.GetRegionByOwnerId(userId);
+    return _rtr.GetRegionByOwnerId(ownerId);
   }
 
   internal List<RegionTile> GetRegions()
