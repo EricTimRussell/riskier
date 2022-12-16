@@ -139,6 +139,7 @@
 <script>
 import { onAuthLoaded } from "@bcwdev/auth0provider-client";
 import { computed } from "@vue/reactivity";
+import { VueElement } from "vue";
 import { useRoute } from "vue-router";
 import { AppState } from "../AppState";
 import AirUnitsCard from "../components/AirUnitsCard.vue";
@@ -156,6 +157,7 @@ import SupplyTruckCard from "../components/SupplyTruckCard.vue";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
+import VueTour from 'vue-tour'
 
 export default {
   setup() {
@@ -191,7 +193,7 @@ export default {
       regions: computed(() => AppState.regions),
       account: computed(() => AppState.account),
       divisions: computed(() => AppState.divisions),
-      armies: computed(() => AppState.armies)
+      armies: computed(() => AppState.armies),
     };
   },
   components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard }

@@ -6,18 +6,18 @@
       <div class="row">
         <div class="col-12 d-flex flex-column align-items-center">
           <h1>Welcome to Riskier!</h1>
-          <p class="px-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ex fugiat sunt. Commodi
-            perferendisd consectetur architecto vel dolorem id, omnis sunt, nesciunt recusandae deserunt esse ducimus
-            perspiciatis eius voluptates voluptate.</p>
+          <p class="px-3">&nbsp;&nbsp;&nbsp;Log in or create an account to get started. You do not need to use a real
+            email to create an
+            account. Once you have logged in or created an account press "Get Started" to begin. It may be necessary to
+            refresh the page in order for the "Get Started" button to appear.</p>
         </div>
       </div>
-
+      <div class="col-12 sticky-bottom py-3 d-flex justify-content-center">
+        <router-link v-if="account.id" :to="{ name: 'Game', params: { id: account.id } }">
+          <button class="btn">Get Started</button>
+        </router-link>
+      </div>
     </main>
-    <footer class="col-12 sticky-bottom py-3 d-flex justify-content-center">
-      <router-link v-if="account.id" :to="{ name: 'Game', params: { id: account.id } }">
-        <button class="btn">Get Started</button>
-      </router-link>
-    </footer>
   </body>
 
 </template>
@@ -61,6 +61,7 @@ body {
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;
+  min-height: 80vh;
 }
 
 button {

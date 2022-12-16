@@ -69,8 +69,8 @@ export default {
 }
 
 .card-size {
-  max-height: 40vh;
-  min-height: 40vh;
+  max-height: 44vh;
+  min-height: 44vh;
 }
 
 .no-shadow {
