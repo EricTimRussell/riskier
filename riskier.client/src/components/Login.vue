@@ -1,6 +1,6 @@
 <template>
   <span class="navbar-text">
-    <button class="btn selectable text-success lighten-30 text-uppercase my-2 my-lg-0" @click="login"
+    <button class="btn selectable text-shadow lighten-30 text-uppercase my-2 my-lg-0" @click="login"
       v-if="!user.isAuthenticated">
       Login
     </button>
@@ -51,5 +51,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+button {
+  background-color: #FFDA96;
+}
 
+.text-shadow {
+  color: whitesmoke;
+  text-shadow: #000000 2px 2px;
+  letter-spacing: 1px;
+}
 </style>

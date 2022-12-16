@@ -6,6 +6,10 @@
     </header>
     <main>
       <router-view />
+      <div class="sticky-bottom text-end px-3">
+        <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
+          data-bs-target="#rulesModal"></i>
+      </div>
     </main>
 
   </body>
@@ -104,6 +108,7 @@
 </template>
 
 <script>
+import { on } from "events";
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import CreateArmyForm from "./components/CreateArmyForm.vue";
@@ -113,21 +118,11 @@ import Navbar from "./components/Navbar.vue";
 import RulesModal from "./components/RulesModal.vue";
 import UnitCostModal from "./components/UnitCostModal.vue";
 import UnitOddsRules from "./components/UnitOddsRules.vue";
-import { accountService } from "./services/AccountService";
-import Pop from "./utils/Pop";
-
 
 export default {
   setup() {
     return {
       appState: computed(() => AppState),
-      async resetGame() {
-        try {
-          await accountService.resetGame()
-        } catch (error) {
-          Pop.error(error, "reset game")
-        }
-      }
     };
   },
   components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm }

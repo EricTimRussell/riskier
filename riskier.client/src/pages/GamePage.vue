@@ -134,10 +134,6 @@
         </div>
       </div>
     </div>
-    <div class="col-12 sticky-bottom text-end px-3">
-      <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
-        data-bs-target="#rulesModal"></i>
-    </div>
   </body>
 
 </template>
