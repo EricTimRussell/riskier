@@ -8,14 +8,14 @@
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
           <div v-if="account.id" class="my-2">
-            <button type="submit" class="rounded pad" data-bs-toggle="modal" data-bs-target="#createRegion"
-              aria-label="Create Region">
+            <button type="submit" class="rounded pad text-shadow-dark" data-bs-toggle="modal"
+              data-bs-target="#createRegion" aria-label="Create Region">
               Claim Region
             </button>
-            <button class="mdi mdi-dice-multiple-outline fs-3 mx-4 rounded" data-bs-toggle="modal"
+            <button class="mdi mdi-dice-multiple-outline fs-3 mx-4 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
-            <button class="mdi mdi-currency-usd fs-3 rounded" data-bs-toggle="modal" data-bs-target="#unitCost"
-              aria-label="Unit Cost" title="Unit Cost"></button>
+            <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
+              data-bs-target="#unitCost" aria-label="Unit Cost" title="Unit Cost"></button>
           </div>
         </div>
         <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="account.id">
@@ -90,6 +90,12 @@ export default {
 .text-shadow {
   color: whitesmoke;
   text-shadow: #000000 2px 2px;
+  letter-spacing: 1px;
+}
+
+.text-shadow-dark {
+  color: #1d1d1d;
+  text-shadow: whitesmoke 2px 2px;
   letter-spacing: 1px;
 }
 

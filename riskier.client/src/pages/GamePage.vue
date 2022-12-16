@@ -97,11 +97,11 @@
         <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 elevation-5" v-if="account.id">
           <h2>Armies & Divisions</h2>
           <div>
-            <button class="mx-3 p-2 rounded" data-bs-toggle="modal" data-bs-target="#formDivision"
+            <button class="mx-3 p-2 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
               aria-label="Form Division">Form
               Division</button>
-            <button class="mx-3 py-2 px-3 my-3 rounded" data-bs-toggle="modal" data-bs-target="#formArmy"
-              aria-label="Form Army">Form Army</button>
+            <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal"
+              data-bs-target="#formArmy" aria-label="Form Army">Form Army</button>
           </div>
         </div>
       </div>
@@ -205,6 +205,12 @@ body {
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;
+}
+
+.text-shadow-dark {
+  color: #1d1d1d;
+  text-shadow: whitesmoke 2px 2px;
+  letter-spacing: 1px;
 }
 
 .reset {
