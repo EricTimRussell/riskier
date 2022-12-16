@@ -3,7 +3,7 @@
   <body>
     <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5">
       <div class="row">
-        <div class=" d-flex col-md-6 col-sm-8 col-12 order-1 vh">
+        <div class=" d-flex col-md-8 col-sm-8 col-12 order-1 vh">
           <div>
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
@@ -33,7 +33,7 @@
             </h2>
           </div>
         </div>
-        <div class="col-md-6 col-sm-4 text-center order-2" v-if="account.id">
+        <div class="col-md-4 col-sm-4 text-center order-2" v-if="account.id">
           <div class="dropdown-center dropdown text-shadow mt-3"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               {{ account.teamName }}</span>
