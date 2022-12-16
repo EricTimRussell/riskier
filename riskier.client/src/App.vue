@@ -113,12 +113,21 @@ import Navbar from "./components/Navbar.vue";
 import RulesModal from "./components/RulesModal.vue";
 import UnitCostModal from "./components/UnitCostModal.vue";
 import UnitOddsRules from "./components/UnitOddsRules.vue";
+import { accountService } from "./services/AccountService";
+import Pop from "./utils/Pop";
 
 
 export default {
   setup() {
     return {
-      appState: computed(() => AppState)
+      appState: computed(() => AppState),
+      async resetGame() {
+        try {
+          await accountService.resetGame()
+        } catch (error) {
+          Pop.error(error, "reset game")
+        }
+      }
     };
   },
   components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm }
@@ -135,6 +144,11 @@ body {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 1px;
   background-color: #606C38;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)), url(../src/assets/img/TopoMap2.jpg);
+  background-attachment: fixed;
+  background-position: center right;
+  background-repeat: none;
 }
 
 button {

@@ -53,11 +53,6 @@ export default {
 
 <style scoped lang="scss">
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)), url(../assets/img/TopoMap2.jpg);
-  background-attachment: fixed;
-  background-position: center right;
-  background-repeat: none;
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;

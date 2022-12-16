@@ -110,10 +110,13 @@
           <DivisionsCard :divisions="d" :key="d.id" />
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" v-if="armies.length > 0 && divisions.length > 0">
         <div class="col-10 col-md-6 my-2" v-for="a in armies">
           <ArmyCard :armies="a" :key="a.id" />
         </div>
+      </div>
+      <div v-else class="text-center pt-3">
+        <h6>You currently have no armies or divisions.</h6>
       </div>
     </div>
     <div class="container-fluid" v-if="account.id">
@@ -123,15 +126,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-for="r in regions">
+        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-if="regions.length > 0" v-for="r in regions">
           <RegionCard :regions="r" :key="r.id" />
+        </div>
+        <div v-else class="text-center pt-3">
+          <h6>Press "Claim Region" to add regions to your owned regions.</h6>
         </div>
       </div>
     </div>
-    <footer class="sticky-bottom text-end px-3">
+    <div class="col-12 sticky-bottom text-end px-3">
       <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
         data-bs-target="#rulesModal"></i>
-    </footer>
+    </div>
   </body>
 
 </template>
@@ -139,7 +145,6 @@
 <script>
 import { onAuthLoaded } from "@bcwdev/auth0provider-client";
 import { computed } from "@vue/reactivity";
-import { VueElement } from "vue";
 import { useRoute } from "vue-router";
 import { AppState } from "../AppState";
 import AirUnitsCard from "../components/AirUnitsCard.vue";
@@ -157,7 +162,6 @@ import SupplyTruckCard from "../components/SupplyTruckCard.vue";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
-import VueTour from 'vue-tour'
 
 export default {
   setup() {
@@ -202,14 +206,13 @@ export default {
 
 <style scoped lang="scss">
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)), url(../assets/img/TopoMap2.jpg);
-  background-attachment: fixed;
-  background-position: center right;
-  background-repeat: none;
   color: #1d1d1d;
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;
+}
+
+.reset {
+  background-color: red;
 }
 
 button {

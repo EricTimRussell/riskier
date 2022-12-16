@@ -19,6 +19,7 @@ class AccountService {
     AppState.account = new Account(res.data)
     regionTilesService.getAllRegions()
   }
+
 }
 
 export const accountService = new AccountService()
