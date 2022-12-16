@@ -2,7 +2,7 @@
 
   <body>
 
-    <div class="card p-1 bg-tan l-spacing" v-if="divisions.ownerId == account.id">
+    <div class="card p-1 bg-tan l-spacing elevation-5" v-if="divisions.ownerId == account.id">
       <div class="text-center">
         <h2>Division #{{ divisions.divisionNumber }}</h2>
         <h3>Units</h3>

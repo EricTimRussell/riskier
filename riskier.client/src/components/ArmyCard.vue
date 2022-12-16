@@ -2,7 +2,7 @@
 
   <body>
 
-    <div class="card p-1 bg-tan l-spacing" v-if="armies.ownerId == account.id">
+    <div class="card p-1 bg-tan l-spacing elevation-5" v-if="armies.ownerId == account.id">
       <div class="text-center">
         <h2>Army #{{ armies.armyNumber }}</h2>
         <h3>Units</h3>

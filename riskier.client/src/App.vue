@@ -75,7 +75,7 @@
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body no-pad">
             <UnitOddsRules />
           </div>
         </div>
@@ -93,7 +93,7 @@
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body no-pad">
             <UnitCostModal />
           </div>
         </div>
@@ -143,5 +143,9 @@ button {
 
 .bg-green {
   background-color: #606c3800;
+}
+
+.no-pad {
+  padding: 0%;
 }
 </style>

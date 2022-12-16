@@ -3,7 +3,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 my-3 text-center">
+        <div class="col-12 my-3 text-center bg-green py-3 elevation-5">
           <h2>Ground Forces</h2>
         </div>
         <div class="col-6 pl-65">
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 mt-4 text-center bg-green">
+        <div class="col-12 mt-4 text-center bg-green elevation-5">
           <h2 class="m-3">AirForce</h2>
         </div>
         <div class="col-6 pt-3 pl-65">
@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 mt-4 text-center bg-green">
+        <div class="col-12 mt-4 text-center bg-green elevation-5">
           <h2 class="m-3">Navy</h2>
         </div>
         <div class="col-6 pt-3 pl-7">
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 text-center mt-4 bg-green">
+        <div class="col-12 text-center mt-4 bg-green elevation-5">
           <h2 class="m-3">Buildings</h2>
         </div>
         <div class="col-6 pt-3 pl-7">
@@ -94,7 +94,7 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 d-flex flex-column align-items-center bg-green gap-2 mt-4" v-if="account.id">
+        <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 elevation-5" v-if="account.id">
           <h2>Armies & Divisions</h2>
           <div>
             <button class="mx-3 p-2 rounded" data-bs-toggle="modal" data-bs-target="#formDivision"
@@ -118,7 +118,7 @@
     </div>
     <div class="container-fluid" v-if="account.id">
       <div class="row justify-content-center mt-5">
-        <div class="col-12 bg-green">
+        <div class="col-12 bg-green elevation-5">
           <h2 class="text-center m-3">Owned Regions</h2>
         </div>
       </div>
