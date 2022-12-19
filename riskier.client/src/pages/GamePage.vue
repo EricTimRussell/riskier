@@ -106,12 +106,12 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-10 col-md-6 my-2" v-for="d in divisions">
+        <div class="col-6 col-md-4 my-3" v-for="d in divisions">
           <DivisionsCard :divisions="d" :key="d.id" />
         </div>
       </div>
-      <div class="row justify-content-center" v-if="armies.length > 0 && divisions.length > 0">
-        <div class="col-10 col-md-6 my-2" v-for="a in armies">
+      <div class="row justify-content-center" v-if="armies.length > 0 || divisions.length > 0">
+        <div class="col-6 col-md-4 my-3" v-for="a in armies">
           <ArmyCard :armies="a" :key="a.id" />
         </div>
       </div>
@@ -126,7 +126,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6 col-md-3 d-flex justify-content-evenly my-2" v-if="regions.length > 0" v-for="r in regions">
+        <div class="col-6 col-md-4 d-flex justify-content-evenly my-3" v-if="regions.length > 0" v-for="r in regions">
           <RegionCard :regions="r" :key="r.id" />
         </div>
         <div v-else class="text-center pt-3">

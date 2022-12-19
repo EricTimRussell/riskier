@@ -108,7 +108,6 @@
 </template>
 
 <script>
-import { on } from "events";
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import CreateArmyForm from "./components/CreateArmyForm.vue";
