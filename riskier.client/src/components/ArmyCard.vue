@@ -225,7 +225,7 @@ export default {
 }
 
 .bg-tan {
-  background-color: #FFDA96;
+  background: linear-gradient(#FFDA96, #dda15e);
 }
 
 .l-spacing {

@@ -217,12 +217,8 @@ body {
   background-color: red;
 }
 
-button {
-  background-color: #FFDA96;
-}
-
 .bg-green {
-  background-color: #606C38;
+  background: linear-gradient(#606c38, #283618)
 }
 
 .pl-7 {

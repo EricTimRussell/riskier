@@ -100,7 +100,7 @@ export default {
 }
 
 button {
-  background-color: #FFDA96;
+  background: linear-gradient(#FFDA96, #dda15e);
 }
 
 .border-b {
@@ -112,7 +112,7 @@ button {
 }
 
 .bg-green {
-  background-color: #606C38;
+  background: linear-gradient(#606c38, #283618)
 }
 
 .vh {
