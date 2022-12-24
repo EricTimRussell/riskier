@@ -120,9 +120,15 @@
       </div>
     </div>
     <div class="container-fluid" v-if="account.id">
-      <div class="row justify-content-center mt-5">
-        <div class="col-12 bg-green elevation-5">
+      <div class="row justify-content-center bg-green elevation-5 mt-5">
+        <div class="col-12">
           <h2 class="text-center m-3">Owned Regions</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center mb-3">
+          <button type="submit" class="rounded pad text-shadow-dark p-2" data-bs-toggle="modal"
+            data-bs-target="#createRegion" aria-label="Create Region">
+            Claim Region
+          </button>
         </div>
       </div>
       <div class="row">
@@ -134,14 +140,6 @@
         </div>
       </div>
     </div>
-    <footer class="container-fluid sticky-bottom">
-      <div class="row">
-        <div class="col-12 text-start px-3">
-            <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
-              data-bs-target="#rulesModal"></i>
-        </div>
-      </div>
-    </footer>
   </body>
 
 </template>

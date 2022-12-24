@@ -8,10 +8,8 @@
             <Login class="navbar-collapse mr" id="navbarText" />
           </div>
           <div v-if="account.id" class="my-2">
-            <button type="submit" class="rounded pad text-shadow-dark" data-bs-toggle="modal"
-              data-bs-target="#createRegion" aria-label="Create Region">
-              Claim Region
-            </button>
+            <button class="mdi mdi-book-open-variant fs-3 rounded text-shadow-dark" title="Rule Book" data-bs-toggle="modal"
+              data-bs-target="#rulesModal"></button>
             <button class="mdi mdi-dice-multiple-outline fs-3 mx-4 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
             <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
