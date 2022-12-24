@@ -210,6 +210,7 @@ body {
 .text-shadow-dark {
   color: #1d1d1d;
   text-shadow: whitesmoke 2px 2px;
+  background: linear-gradient(#FFDA96, #dda15e);
   letter-spacing: 1px;
 }
 

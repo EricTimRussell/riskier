@@ -6,6 +6,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title" id="rulesModal">Rule Book</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
+              title="close modal"></button>
             <!-- <div class="input-group length">
               <input type="text" id="ruleBook" class="form-control" placeholder="Search..." aria-label="Search"
                 aria-describedby="basic-addon1">
