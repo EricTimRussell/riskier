@@ -6,10 +6,7 @@
     </header>
     <main>
       <router-view />
-      <div class="sticky-bottom text-end px-3">
-        <i class="mdi mdi-book-open-variant fs-1 text-light selectable" title="Rule Book" data-bs-toggle="modal"
-          data-bs-target="#rulesModal"></i>
-      </div>
+
     </main>
 
   </body>

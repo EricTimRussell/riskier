@@ -35,6 +35,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5">Edit Army {{ armies.armyNumber }}</h1>
+              <h6 class="text-center">*Make a selection for all fields</h6>
               <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
                 title="close modal"></button>
             </div>

@@ -33,7 +33,7 @@
             </h2>
           </div>
         </div>
-        <div class="col-12 text-center order-2" v-if="account.id">
+        <!-- <div class="col-12 text-center order-2" v-if="account.id">
           <div class="dropdown-center dropdown text-shadow mt-3"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               {{ account.teamName }}</span>
@@ -47,7 +47,7 @@
               </div>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
