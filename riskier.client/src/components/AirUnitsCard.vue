@@ -5,7 +5,9 @@
       <button :disabled="(account.fighterAircraft == 0)" @click="removeFighterAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.fighterAircraft }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.fighterAircraft }}</strong></h6>
+    </div>
     <div>
       <button @click="addFighterAircraft()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -15,7 +17,9 @@
       <button :disabled="(account.closeAirSupport == 0)" @click="removeCloseAirSupport()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.closeAirSupport }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.closeAirSupport }}</strong></h6>
+    </div>
     <div>
       <button @click="addCloseAirSupport()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -26,7 +30,9 @@
       <button :disabled="(account.transportAircraft == 0)" @click="removeTransportAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.transportAircraft }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.transportAircraft }}</strong></h6>
+    </div>
     <div>
       <button @click="addTransportAircraft()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>

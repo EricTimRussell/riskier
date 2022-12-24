@@ -4,7 +4,9 @@
       <button :disabled="(account.carrier == 0)" @click="removeCarrier()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.carrier }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.carrier }}</strong></h6>
+    </div>
     <div>
       <button @click="addCarrier()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -14,7 +16,9 @@
       <button :disabled="(account.cruiser == 0)" @click="removeCruiser()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong> {{ account.cruiser }} </strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong> {{ account.cruiser }} </strong></h6>
+    </div>
     <div>
       <button @click="addCruiser()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -25,7 +29,9 @@
       <button :disabled="(account.destroyer == 0)" @click="removeDestroyer()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.destroyer }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.destroyer }}</strong></h6>
+    </div>
     <div>
       <button @click="addDestroyer()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>

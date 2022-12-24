@@ -6,8 +6,8 @@
         <button :disabled="(account.infantry == 0)" @click="removeInfantry()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
-      <div>
-        <h6 class="px-3"><strong>{{ account.infantry }}</strong></h6>
+      <div class="d-flex align-items-center">
+        <h6 class="px-3 fs-4"><strong>{{ account.infantry }}</strong></h6>
       </div>
       <div>
         <button @click="addInfantry()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
@@ -18,7 +18,9 @@
         <button :disabled="(account.specialForces == 0)" @click="removeSpecialForces()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
-      <h6 class="px-3"><strong>{{ account.specialForces }}</strong></h6>
+      <div class="d-flex align-items-center">
+        <h6 class="px-3 fs-4"><strong>{{ account.specialForces }}</strong></h6>
+      </div>
       <div>
         <button @click="addSpecialForces()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
       </div>

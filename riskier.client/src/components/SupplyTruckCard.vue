@@ -4,7 +4,9 @@
       <button :disabled="(account.supplyTruck == 0)" @click="removeSupplyTruck()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.supplyTruck }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.supplyTruck }}</strong></h6>
+    </div>
     <div>
       <button @click="addSupplyTruck()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>

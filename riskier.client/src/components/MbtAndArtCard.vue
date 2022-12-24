@@ -4,7 +4,9 @@
       <button :disabled="(account.mbt == 0)" @click="removeMbt()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"><strong>{{ account.mbt }}</strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"><strong>{{ account.mbt }}</strong></h6>
+    </div>
     <div>
       <button @click="addMbt()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
@@ -14,7 +16,9 @@
       <button :disabled="(account.artillery == 0)" @click="removeArtillery()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <h6 class="px-3"> <strong>{{ account.artillery }} </strong></h6>
+    <div class="d-flex align-items-center">
+      <h6 class="px-3 fs-4"> <strong>{{ account.artillery }} </strong></h6>
+    </div>
     <div>
       <button @click="addArtillery()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
