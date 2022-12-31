@@ -2,7 +2,7 @@
   <form @submit.prevent="formDivision()">
     <div class="form-floating mb-3">
       <input v-model="editable.divisionNumber" required type="text" maxlength="2" class="form-control"
-        id="divisionNumber" placeholder="1,2,3...">
+        id="divisionNumber" placeholder="1,2,3..." autocomplete="off">
       <label for="divisionNumber">Division Number...</label>
     </div>
     <div class="form-floating">

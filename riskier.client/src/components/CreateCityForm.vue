@@ -2,7 +2,7 @@
   <form @submit.prevent="createCity()">
     <div class="form-floating mb-3">
       <input v-model="editable.regionNumber" required type="text" maxlength="2" class="form-control" id="regionNumber"
-        placeholder="1,2,3...">
+        placeholder="1,2,3..." autocomplete="off">
       <label for="regionNumber">Region Number...</label>
     </div>
     <div>

@@ -2,7 +2,7 @@
   <form @submit.prevent="formArmy()">
     <div class="form-floating mb-3">
       <input v-model="editable.armyNumber" required type="text" maxlength="2" class="form-control" id="armyNumber"
-        placeholder="1,2,3...">
+        placeholder="1,2,3..." autocomplete="off">
       <label for="armyNumber">Army Number...</label>
     </div>
     <div class="form-floating">
