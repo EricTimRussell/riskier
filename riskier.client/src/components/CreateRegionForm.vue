@@ -5,16 +5,16 @@
         placeholder="1,2,3...">
       <label for="regionNumber">Region Number...</label>
     </div>
-    <div>
+    <div hidden>
       <label for="capital" class="form-label">Capital: {{ editable.capital }}</label>
       <input v-model="editable.capital" type="range" class="form-range" min="1" max="15" step="1" id="capital" disabled>
     </div>
-    <div class="my-3">
+    <div hidden class="my-3">
       <label for="industry" class="form-label">Industry: {{ editable.industry }}</label>
       <input v-model="editable.industry" type="range" class="form-range" min="1" max="15" step="1" id="industry"
         disabled>
     </div>
-    <div class="mb-3">
+    <div hidden class="mb-3">
       <label for="agriculture" class="form-label">Agriculture: {{ editable.agriculture }}</label>
       <input v-model="editable.agriculture" type="range" class="form-range" min="1" max="15" step="1" id="agriculture"
         disabled>

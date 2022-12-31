@@ -43,6 +43,12 @@
           <div class="modal-body">
             <CreateCityForm />
           </div>
+          <div class="modal-footer">
+            <h6>--Your Capital is 15 of each resource</h6>
+            <h6>--Captured Capital is 10 of each resource</h6>
+            <h6>--Medium City is 6 of each resource</h6>
+            <h6>--Small City is 4 of each resource</h6>
+          </div>
         </div>
       </div>
     </div>
