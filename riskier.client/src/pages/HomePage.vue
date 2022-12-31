@@ -37,6 +37,10 @@ import NavyUnitsCard from "../components/NavyUnitsCard.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import SupplyTruckCard from "../components/SupplyTruckCard.vue";
+import { accountService } from "../services/AccountService";
+import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
+import { regionTilesService } from "../services/RegionTilesService";
+import Pop from "../utils/Pop";
 
 export default {
   setup() {

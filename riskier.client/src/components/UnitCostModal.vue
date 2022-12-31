@@ -71,10 +71,6 @@
     </div>
     <h2 class="text-center py-2">Buildings</h2>
     <div>
-      <div class="bg-light">
-        <h5>Warehouse</h5>
-        <h6>1-Capital 3-Agriculture</h6>
-      </div>
       <div>
         <h5 class="pt-3">Factory</h5>
         <h6>2-Capital 2-Industry 1-Agriculture</h6>

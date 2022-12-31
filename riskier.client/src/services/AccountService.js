@@ -20,6 +20,11 @@ class AccountService {
     regionTilesService.getAllRegions()
   }
 
+  async deleteAllItems() {
+    const res = await api.delete('/account')
+    AppState.account = new Account(res.data)
+  }
+
 }
 
 export const accountService = new AccountService()

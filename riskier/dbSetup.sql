@@ -42,7 +42,6 @@ CREATE TABLE
         capital INT NOT NULL,
         industry INT NOT NULL,
         agriculture INT NOT NULL,
-        environment VARCHAR(255) NOT NULL,
         ownerId VARCHAR(255) NOT NULL,
         FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;

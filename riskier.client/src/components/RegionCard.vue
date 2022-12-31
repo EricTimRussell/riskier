@@ -11,8 +11,6 @@
           <h6>Industry {{ regions.industry }}</h6>
           <h6>Agricultured {{ regions.agriculture }}</h6>
         </div>
-        <h6 class="text-center"><strong>Environment</strong></h6>
-        <h6 class="text-center">{{ regions.environment }}</h6>
       </div>
       <div class="text-end">
         <button @click="removeRegion()" class=" btn mdi mdi-delete-forever fs-3 select no-shadow"
@@ -69,8 +67,8 @@ export default {
 }
 
 .card-size {
-  max-height: 44vh;
-  min-height: 44vh;
+  max-height: 39vh;
+  min-height: 39vh;
 }
 
 .no-shadow {

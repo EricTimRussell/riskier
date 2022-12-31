@@ -12,7 +12,7 @@
   </body>
   <RulesModal />
 
-  <!-- Create Region Modal -->
+  <!-- Claim Region Modal -->
   <section>
     <div class="modal fade" id="createRegion" tabindex="-1" aria-labelledby="createRegion" aria-hidden="true">
       <div class="modal-dialog">
@@ -24,6 +24,24 @@
           </div>
           <div class="modal-body">
             <CreateRegionForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Claim City Modal -->
+  <section>
+    <div class="modal fade" id="createCity" tabindex="-1" aria-labelledby="createCity" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="createCity">Create City</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
+              title="close modal"></button>
+          </div>
+          <div class="modal-body">
+            <CreateCityForm />
           </div>
         </div>
       </div>
@@ -72,7 +90,8 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title" id="unitOddsModal">All Unit Odds</h1>
+            <h1 class="modal-title" id="unitOddsModal">Unit Odds</h1>
+            <h6>*Attack Points(AP), Move Points(MP)</h6>
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
               aria-label="Close"></button>
           </div>
@@ -108,6 +127,7 @@
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import CreateArmyForm from "./components/CreateArmyForm.vue";
+import CreateCityForm from "./components/CreateCityForm.vue";
 import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
 import Navbar from "./components/Navbar.vue";
@@ -121,7 +141,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm }
+  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm }
 }
 </script>
 <style lang="scss">

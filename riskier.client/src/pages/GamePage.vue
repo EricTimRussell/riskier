@@ -24,7 +24,7 @@
         <div class="px-4">
           <MechInfantryCard />
         </div>
-        <div class="col-6 pl-7 pt-4">
+        <div class="col-6 pl-75 pt-4">
           <h6>MBT</h6>
         </div>
         <div class="col-6 pt-4 pl-55">
@@ -94,7 +94,7 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 elevation-5" v-if="account.id">
+        <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 pt-3 elevation-5" v-if="account.id">
           <h2>Armies & Divisions</h2>
           <div>
             <button class="mx-3 p-2 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
@@ -121,13 +121,17 @@
     </div>
     <div class="container-fluid" v-if="account.id">
       <div class="row justify-content-center bg-green elevation-5 mt-5">
-        <div class="col-12">
+        <div class="col-12 mb-1">
           <h2 class="text-center m-3">Owned Regions</h2>
         </div>
         <div class="col-12 d-flex justify-content-center mb-3">
-          <button type="submit" class="rounded pad text-shadow-dark p-2" data-bs-toggle="modal"
+          <button type="submit" class="rounded pad text-shadow-dark p-2 mx-3" data-bs-toggle="modal"
             data-bs-target="#createRegion" aria-label="Create Region">
             Claim Region
+          </button>
+          <button type="submit" class="rounded pad text-shadow-dark py-2 px-3 mx-3" data-bs-toggle="modal"
+            data-bs-target="#createCity" aria-label="Create City">
+            Claim City
           </button>
         </div>
       </div>
@@ -161,6 +165,7 @@ import NavyUnitsCard from "../components/NavyUnitsCard.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import SupplyTruckCard from "../components/SupplyTruckCard.vue";
+import { accountService } from "../services/AccountService";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
@@ -196,10 +201,18 @@ export default {
       getArmyByOwnerId()
     })
     return {
-      regions: computed(() => AppState.regions),
+      regions: computed(() => AppState.regions.sort((a, b) => a.regionNumber - b.regionNumber)),
       account: computed(() => AppState.account),
       divisions: computed(() => AppState.divisions),
       armies: computed(() => AppState.armies),
+
+      async deleteAllItems() {
+        try {
+          await accountService.deleteAllItems()
+        } catch (error) {
+          Pop.error(error, "Deleting all items")
+        }
+      }
     };
   },
   components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard }
@@ -220,12 +233,12 @@ body {
   letter-spacing: 1px;
 }
 
-.reset {
-  background-color: red;
-}
-
 .bg-green {
   background: linear-gradient(#606c38, #283618)
+}
+
+.pl-75 {
+  padding-left: 5.5rem;
 }
 
 .pl-7 {

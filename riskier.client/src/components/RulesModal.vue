@@ -8,40 +8,23 @@
             <h1 class="modal-title" id="rulesModal">Rule Book</h1>
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
               title="close modal"></button>
-            <!-- <div class="input-group length">
-              <input type="text" id="ruleBook" class="form-control" placeholder="Search..." aria-label="Search"
-                aria-describedby="basic-addon1">
-            </div> -->
           </div>
           <div class="modal-body no-pad mx-2" id="rules">
             <!-- SECTION Resources -->
             <div class="text-center">
               <h3>Resources</h3>
             </div>
-            <p class="bg-light">--Resources are determined by the roll of a D6 for each tile captured, except for the
-              tiles with cities on them. Each tile contains capital, industry, and agriculture and a D6 should be rolled
-              to determine the amount of each for every tile captured.</p>
+            <p class="bg-light">--Resources are determined at random for each tile captured, except for the
+              tiles with cities on them. Each tile contains capital, industry, and agriculture.</p>
             <p>
               --Cities are worth a pre-deterimed amount based on their size or importance. A players
               capital is worth 15 of each resource. A captured capital is worth 10 of each. A medium sized city is worth
               6 of each resources. A small city is worth 4 of each resource.</p>
             <p class="bg-light"> --City size can be determined by the number of buildings present on the board piece. 5
-              buildings is a
-              capital size. 4 is a medium city and 3 is a small city.
-              --Water tiles can be owned by players so long as all the land tiles around the water are controlled by 1
-              player. Water tiles can only produce Agriculture they cannot produce Capital or Industry. Water tiles are
-              worth 3 agriculture points per tile. Once all the land is controlled around the water tile(s) by one
-              player that player can immediately add those water tiles to their owned regions list.
-            </p>
-            <p>--Losing water tiles occures when another player takes a majority (more than 50%) of the land tiles
-              around
-              the water tiles.</p>
-            <p class="bg-light">--Players cannot own any of the water on the outside of the board. Only the physical
-              water tiles can be
-              owned.
+              buildings is a capital size. 4 is a medium city and 3 is a small city.
             </p>
             <!-- SECTION Supplies -->
-            <div class="text-center">
+            <!-- <div class="text-center">
               <h3>Supplies</h3>
             </div>
             <p class="bg-light">--Supplies are a citical component that players will need to manage to ensure their
@@ -57,27 +40,41 @@
             <p class="bg-light">--1 supply peg is enough for 1 battle. This includes any offensive or defensive
               operations. Any unit(s)
               involved in a battle use up 1 supply.</p>
-            <p>--Black pegs on the board represent supplies. One peg is considered one supply point.</p>
+            <p>--Black pegs on the board represent supplies. One peg is considered one supply point.</p> -->
             <!-- SECTION Peg Pieces & Main Board Pieces -->
             <div class="text-center">
               <h3>Peg Pieces & Main Board Pieces</h3>
             </div>
             <p class="bg-light">
               --There are 4 types of peg pieces used to track different elements of the game. The red peg tracks damage
-              to naval units and division/army unit pieces. Black pegs are supplies and are used to track the ammount of
-              supplies a unit has left. Blue and white pegs are to track the kinds of aircraft on an aircraft carrier.
-              Blue being fighter and white being CAS.
+              to naval units and division/army unit pieces. Blue and white pegs are to track the kinds of aircraft on an
+              aircraft carrier. Blue being fighter and white being CAS. And black pegs that are used on cruisers to
+              represent missiles during combat.
             </p>
             <p>--Land units on the main board are represented by pieces that roughly resemble NATO military map symbols.
               Each symbol represents a certain kind of unit. Guide to what these symbols mean are included with with the
               instructions of the game.
             </p>
-            <p class="bg-light">--Each of these main board pieces have peg holes on them to represent the amount of
+            <!-- <p class="bg-light">--Each of these main board pieces have peg holes on them to represent the amount of
               supplies that unit
               has
               left. If a unit runs out of supplies they cannot participate in offensive or defensive operations. If a
               unit is attacked that no longer has any supplies left they are forced to retreat and will need to follow
               the rules for retreating on the main board.
+            </p> -->
+            <!-- SECTION Attrition -->
+            <div class="text-center">
+              <h3>Attrition</h3>
+            </div>
+            <p class="bg-light">
+              --Attrition occurs when units are cut-off from a direct connection to a city. Units that are cut-off are
+              now subject to running out of supplies. Any unit involved in combat will lose 1 supply and that supply
+              loss will be tracked using the red pegs. Armies/Divisions have 4 total supplies where as individual units
+              only have 2 supplies as represented by the holes of the main board piece.
+            </p>
+            <p>
+              --If a unit/army/division runs out of supplies they can no longer attack or defends themselves. If they
+              are attacked with no supplies the player must follow the "retreat rules when a unit has no supplies".
             </p>
             <!-- SECTION Land Units -->
             <div class="text-center">
@@ -223,11 +220,9 @@
             <div class="text-center">
               <h3>Combat Rules</h3>
             </div>
-            <p class="bg-light"><strong> --Rules about initiating combat:</strong> The attacking players units that are
-              attacking must
-              all
-              have atleast 1 supply peg in order to participate in the battle. Only 1 offensive move per tile is allowed
-              per turn. This means that a player can only attack from a tile once per turn.
+            <p class="bg-light"><strong> --Rules about initiating combat:</strong> Only 1 offensive move per tile is
+              allowed per turn. This means that a player can only attack from a tile once per turn. Atleast 3 units need
+              to be used to iniate combat.
             </p>
             <p>--Land battles take place on a seperate board called the combat board.
             </p>
@@ -334,9 +329,9 @@
             </p>
             <p><strong>--Retreating when a unit has no supplies: </strong> In the event a unit or group of units have no
               supplies left to defend themselves from an attack they must all retreat. A dice roll for each unit
-              retreating will be used determine a successfull escape or not. See Unit odds for each units escape
-              chances. If a unit successfully escapes the player can choose which adjacent tile to place each unit. If
-              there are no safe tiles to retreat to then all units are destroyed.
+              retreating will be used determine a successfull escape or not. Using a D12 the defending player must roll
+              2 higher than the attacking player to escape. If a unit successfully escapes the player can choose which
+              adjacent tile to place each unit. If there are no safe tiles to retreat to then all units are destroyed.
             </p>
             <!-- SECTION Navy Combat Rules -->
             <div class="text-center">
@@ -358,9 +353,11 @@
               stealth item). During that same turn if that aircraft moves onto another tile and is still within AA range
               the AA gets to fire again. This can occur as many times as the aircraft moves within AA range.
             </p>
-            <p>--Cruisers carry 3 total missiles represented by 3 black pegs in the ship piece. They can fire 1 SS
-              missile per turn, but as many AA missiles as they want per turn. However a cruiser can only carry 3
-              missiles total. Cruisers cannot be resupplied by carriers during combat.
+            <p>--Cruisers carry 3 total missiles represented by 3 black pegs in the ship piece. They can fire 1 SS and
+              AA
+              missile per turn, but as many AA missiles as they want per turn when they are fired defensively. However a
+              cruiser can only carry 3 SS
+              missiles total.
             </p>
             <p class="bg-light">--Destroyers have heavy armor giving them a chance to absorb any incoming hits.
             </p>
@@ -478,25 +475,22 @@
               ships at a time. This is tracked on the unit construction sheet. The player must own the tile the naval
               yard is built from.
             </p>
-            <p>--Naval yards can store up to 6 total supply pegs.
-            </p>
-            <p class="bg-light">--Naval yards take 6 hits to destroy. This damage will be tracked using the peg holes
+            <!-- <p>--Naval yards can store up to 6 total supply pegs.
+            </p> -->
+            <!-- <p class="bg-light">--Naval yards take 6 hits to destroy. This damage will be tracked using the peg holes
               that represent the
               number of supplies stored at the naval yard. When a naval yard is damaged each hit reduces the number of
               supplies a naval yard can store by 1.
+            </p> -->
+            <p>--Naval yards can repair a max of 2 cruisers/destroyers or 1 carrier at one time.
             </p>
-            <p>--Naval yards can rearm or repair a max of 2 cruisers/destroyers and 1 carrier at one time. The peg holes
-              in the naval yard piece represents the amount of supplies stored there. It requires 1 supply to repair a
-              carrier/destroyer. It requires 1 supply to supply 1 missile to a cruiser, meaning it takes 3 supplies to
-              completely rearm a cruiser.
-            </p>
-            <p class="bg-light">--Factories can be built adjacent to any city and will produce 1 supply per turn.
+            <p class="bg-light">--Factories can be built adjacent to any city and are used to produce ground forces.
               Factories can be
               destroyed in one successfull hit.
             </p>
-            <p>--Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
+            <!-- <p>--Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
               Warehouses can be destroyed in one successfull hit.
-            </p>
+            </p> -->
             <!-- SECTION Army/Division Rules -->
             <div class="text-center">
               <h3>Army/Division Rules</h3>
@@ -505,12 +499,9 @@
               groups of 9 units
               and Divisions are groups of 6. Each unit piece has holes that represent each unit within the division or
               army. Division pieces have 10 peg holes and army pieces have 13 peg holes. The group of 4 peg holes
-              represent the supplies the army/division has total.
+              represent the supplies the army/division has total if their supply line is cut.
             </p>
-            <p>--All the units within these groups share supplies. If the unit is involved in a battle it only costs 1
-              supply peg making them more efficient than individual units.
-            </p>
-            <p class="bg-light">--Units contained within these groups will be tracked on paper or the companion app. If
+            <p>--Units contained within these groups will be tracked on paper or the companion app. If
               a unit is
               destroyed it will be erased from the resource sheet or removed on the app. And the player will place a red
               peg into one of the holes representing a destroyed unit.
@@ -520,7 +511,7 @@
             <p class="bg-light">--If more than half of a division or army group is destroyed, and the player does not
               have any extra
               units within range to immediately replace the lost units then the division or army is disbanded and
-              replaced with the remaining individual units. Each individual unit will be given 1 supply peg.
+              replaced with the remaining individual units.
             </p>
             <p>--Divisions and army groups can only move if all units within the group have not already moved. For
               example if a unit traveled 1 space to join the group the entire group cannot move until next turn.

@@ -7,6 +7,5 @@ export class Region {
     this.capital = data.capital
     this.industry = data.industry
     this.agriculture = data.agriculture
-    this.environment = data.environment
   }
 }
