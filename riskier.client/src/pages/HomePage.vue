@@ -12,14 +12,30 @@
           <h2>Quick Setup Instructions</h2>
           <p class="px-3">
             Every faction starts with a capital, 2 medium cities, and 3 small cities. Once you have chosen your starting
-            location you now own all the tiles around your capital and can choose 3 more tiles to expand to so long as
+            location you now own all the tiles around your capital and can choose 3 more tiles to expand too so long as
             they are adjacent to tiles you already own. You can now place your cities wherever you like within your
             controlled territory. Now press "Get Started" and scroll to the bottom and claim a city for each city and
             claim a region for each tile you own that does not have a city present.
           </p>
+          <p class="px-3">
+            Once your regions and cities have been claimed you now have resources to spend on units and buildings.
+            During the setup phase all your units and building build instantly and can be placed wherever you like so
+            long as it is within your owned territory.
+          </p>
+          <h3>Setup Tips</h3>
+          <ul class="px-3">
+            <li>Be sure to build what buildings you want first before building units.</li>
+            <li>Remember that your capital city is also an airfield</li>
+            <li>You will have to build your units first before forming an army or division</li>
+            <li>When placing your starting units think about how you want to distribute them in order to capture the
+              most regions as you can. Armies and divisions can capture unclaimed territory instantly, but are very
+              limited in number.</li>
+            <li>Be sure to refer to the rule book and unit odds to better understand strengths and weaknesses of each
+              unit type</li>
+          </ul>
         </div>
       </div>
-      <div class="col-12 sticky-bottom py-3 d-flex justify-content-center">
+      <div class="col-12 py-3 d-flex justify-content-center">
         <router-link v-if="account.id" :to="{ name: 'Game', params: { id: account.id } }">
           <button class="btn">Get Started</button>
         </router-link>
@@ -64,6 +80,9 @@ body {
   text-shadow: #000000 3px 3px 2px;
   color: whitesmoke;
   min-height: 80vh;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 button {
