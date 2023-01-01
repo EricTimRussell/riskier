@@ -14,21 +14,27 @@
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
             <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitCost" aria-label="Unit Cost" title="Unit Cost"></button>
+            <button class="mdi mdi-key mx-4 fs-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#key"
+              aria-label="Game Key" title="Game Key"></button>
           </div>
         </div>
         <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="account.id">
           <div>
-            <h2 v-if="account.totalCapital >= 0">Capital {{ account.totalCapital }}</h2>
-            <h2 v-else="account.totalCapital <= -1" class="text-danger">Capital {{ account.totalCapital }}</h2>
+            <span class="mdi mdi-currency-usd fs-3"></span>
+            <h3 v-if="account.totalCapital >= 0" class="">Capital {{ account.totalCapital }}</h3>
+            <h3 v-else="account.totalCapital <= -1" class="text-danger">Capital {{ account.totalCapital }}</h3>
           </div>
           <div>
-            <h2 v-if="account.totalIndustry >= 0" class="px-2">Industry {{ account.totalIndustry }}</h2>
-            <h2 v-else="account.totalIndustry <= -1" class="px-2 text-danger">Industry {{ account.totalIndustry }}</h2>
+            <span class="mdi mdi-factory fs-3"></span>
+            <h3 v-if="account.totalIndustry >= 0" class="px-2">Industry {{ account.totalIndustry }}</h3>
+            <h3 v-else="account.totalIndustry <= -1" class="px-2 text-danger">Industry
+              {{ account.totalIndustry }}</h3>
           </div>
           <div>
-            <h2 v-if="account.totalAgriculture >= 0">Agriculture {{ account.totalAgriculture }}</h2>
-            <h2 v-else="account.totalAgriculture <=-1" class="text-danger">Agriculture {{ account.totalAgriculture }}
-            </h2>
+            <span class="mdi mdi-barley fs-3"></span>
+            <h3 v-if="account.totalAgriculture >= 0">Agriculture {{ account.totalAgriculture }}</h3>
+            <h3 v-else="account.totalAgriculture <=-1" class="text-danger">Agriculture {{ account.totalAgriculture }}
+            </h3>
           </div>
         </div>
         <!-- <div class="col-12 text-center order-2" v-if="account.id">

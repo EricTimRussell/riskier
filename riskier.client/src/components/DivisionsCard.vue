@@ -38,7 +38,7 @@
             <div class="modal-body">
               <h6 class="text-center">*Make a selection for all fields</h6>
               <div class="form-floating">
-                <select v-model="editable.unitSlot1" class="form-select" id="unitSlot1"
+                <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -52,7 +52,7 @@
                 <label for="unitSlot1">Current Unit: {{ divisions.unitSlot1 }}</label>
               </div>
               <div class="form-floating my-3">
-                <select v-model="editable.unitSlot2" class="form-select" id="unitSlot2"
+                <select v-model="editable.unitSlot2" required class="form-select" id="unitSlot2"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -66,7 +66,7 @@
                 <label for="unitSlot2">Current Unit: {{ divisions.unitSlot2 }}</label>
               </div>
               <div class="form-floating">
-                <select v-model="editable.unitSlot3" class="form-select" id="unitSlot3"
+                <select v-model="editable.unitSlot3" required class="form-select" id="unitSlot3"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -80,7 +80,7 @@
                 <label for="unitSlot3">Current Unit: {{ divisions.unitSlot3 }}</label>
               </div>
               <div class="form-floating my-3">
-                <select v-model="editable.unitSlot4" class="form-select" id="unitSlot4"
+                <select v-model="editable.unitSlot4" required class="form-select" id="unitSlot4"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -94,7 +94,7 @@
                 <label for="unitSlot4">Current Unit: {{ divisions.unitSlot4 }}</label>
               </div>
               <div class="form-floating">
-                <select v-model="editable.unitSlot5" class="form-select" id="unitSlot5"
+                <select v-model="editable.unitSlot5" required class="form-select" id="unitSlot5"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -108,7 +108,7 @@
                 <label for="unitSlot5">Current Unit: {{ divisions.unitSlot5 }}</label>
               </div>
               <div class="form-floating my-3">
-                <select v-model="editable.unitSlot6" class="form-select" id="unitSlot6"
+                <select v-model="editable.unitSlot6" required class="form-select" id="unitSlot6"
                   aria-label="Select Unit for Slot">
                   <option value="EmptySlot">EmptySlot</option>
                   <option value="Infantry">Infantry</option>
@@ -160,7 +160,9 @@ export default {
       async editDivision() {
         try {
           await armiesDivisionsService.editDivision(editable.value, props.divisions.id)
-          Modal.getOrCreateInstance('#editDivision').hide()
+          window.location.reload()
+          // NOTE Temporary solution
+          // Modal.getOrCreateInstance('#editDivision').hide()
         } catch (error) {
           Pop.error(error, "Editing Division")
         }

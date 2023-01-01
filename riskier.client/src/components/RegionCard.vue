@@ -2,14 +2,14 @@
 
   <body>
 
-    <div class="card card-size bg-tan elevation-5" v-if="regions.ownerId == account.id">
-      <div class="card-body l-spacing">
+    <div class="card-size bg-tan elevation-5 p-1" v-if="regions.ownerId == account.id">
+      <div class="l-spacing">
         <h3 class="text-center">Region {{ regions.regionNumber }}</h3>
-        <h6 class="text-center"><strong>-Resources-</strong></h6>
-        <div class="text-center">
-          <h6>Capital {{ regions.capital }}</h6>
-          <h6>Industry {{ regions.industry }}</h6>
-          <h6>Agricultured {{ regions.agriculture }}</h6>
+        <h3 class="text-center">Value</h3>
+        <div class="text-center d-flex flex-column">
+          <span class="mdi mdi-currency-usd fs-3">{{ regions.capital }}</span>
+          <span class="mdi mdi-factory px-1 fs-3"> {{ regions.industry }}</span>
+          <span class="mdi mdi-barley fs-3">{{ regions.agriculture }}</span>
         </div>
       </div>
       <div class="text-end">
@@ -67,8 +67,11 @@ export default {
 }
 
 .card-size {
-  max-height: 39vh;
-  min-height: 39vh;
+  max-height: 31vh;
+  min-height: 31vh;
+  min-width: 17vh;
+  max-width: 17vh;
+  border-radius: 5px;
 }
 
 .no-shadow {

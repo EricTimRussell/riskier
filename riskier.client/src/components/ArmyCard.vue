@@ -199,7 +199,9 @@ export default {
       async editArmy() {
         try {
           await armiesDivisionsService.editArmy(editable.value, props.armies.id)
-          Modal.getOrCreateInstance('#editArmy').hide()
+          window.location.reload()
+          // NOTE temporary solution
+          // Modal.getOrCreateInstance('#editArmy').hide()
         } catch (error) {
           Pop.error(error, "Editing army")
         }

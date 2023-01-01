@@ -127,6 +127,24 @@
     </div>
   </section>
 
+  <!-- Game Key Modal -->
+  <section>
+    <div class="modal fade" id="key" tabindex="-1" aria-labelledby="keyModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="key">Game Key</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body no-pad">
+            <GameKey />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </template>
 
 <script>
@@ -136,6 +154,7 @@ import CreateArmyForm from "./components/CreateArmyForm.vue";
 import CreateCityForm from "./components/CreateCityForm.vue";
 import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
+import GameKey from "./components/GameKey.vue";
 import Navbar from "./components/Navbar.vue";
 import RulesModal from "./components/RulesModal.vue";
 import UnitCostModal from "./components/UnitCostModal.vue";
@@ -147,7 +166,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm }
+  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm, GameKey }
 }
 </script>
 <style lang="scss">
