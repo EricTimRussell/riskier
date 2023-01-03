@@ -190,8 +190,7 @@
               and land up to 6 ground units. The carrier game piece has 8 holes on the front of the ship and 3 in the
               middle. When the carrier is hit a red peg is placed into one of the 3 holes in the center of the ship to
               track damage. The 8 holes on the front represent the carriers cargo and aircraft. Blue pegs represent a
-              single fighter and white represent CAS. Black pegs can also be stored on carriers as well for extra
-              supplies however they occupy an aircraft spot. Carriers have 1 movement point, 4 hit points, and no
+              single fighter and white represent CAS. Carriers have 1 movement point, 4 hit points, and no
               offensive points, however they can deploy 2 aircraft per turn. Carriers point defense has a range of 1 on
               the mainboard and the combat board.
             </p>
@@ -204,8 +203,8 @@
               durable or nimble.
               They have the ability to deploy 3 surface-to-surface missiles and have infinite AA missiles. They
               have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points, 1
-              hit point, and 1 offensive point. On the combat board and the main board cruisers AA has a range of 1 and
-              their SS missiles have a range of 3. The cannon has a range of 1. A cruisers cannon cannot fire at land
+              hit point, and 1 offensive point. On the combat board cruisers AA has a range of 1 and
+              their SS missiles have a range of 4. The cannon has a range of 1. A cruisers cannon cannot fire at land
               targets.
             </p>
             <p><strong>--Destroyers</strong> are heavy combat vessels with large guns and heavy armor giving them the

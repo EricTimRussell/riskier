@@ -137,7 +137,7 @@
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body no-pad">
+          <div class="modal-body">
             <GameKey />
           </div>
         </div>

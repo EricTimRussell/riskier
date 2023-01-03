@@ -23,6 +23,11 @@ const routes = [
     path: '/game/:id',
     name: 'Game',
     component: loadPage('GamePage'),
+  },
+  {
+    path: '/rules',
+    name: 'Rules',
+    component: loadPage('RulesPage'),
   }
 ]
 export const router = createRouter({

@@ -8,7 +8,7 @@
         <h3 class="text-center">Value</h3>
         <div class="text-center d-flex flex-column">
           <span class="mdi mdi-currency-usd fs-3">{{ regions.capital }}</span>
-          <span class="mdi mdi-factory px-1 fs-3"> {{ regions.industry }}</span>
+          <span class="mdi mdi-factory px-1 fs-3">{{ regions.industry }}</span>
           <span class="mdi mdi-barley fs-3">{{ regions.agriculture }}</span>
         </div>
       </div>
