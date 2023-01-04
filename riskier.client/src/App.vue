@@ -109,7 +109,7 @@
 
   <!-- Unit Odds Modal -->
   <section>
-    <div class="modal fade" id="unitOdds" tabindex="-1" aria-labelledby="UnitOddsModal" aria-hidden="true">
+    <div class="modal fade no-pad" id="unitOdds" tabindex="-1" aria-labelledby="UnitOddsModal" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -118,7 +118,7 @@
             <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
               aria-label="Close"></button>
           </div>
-          <div class="modal-body no-pad">
+          <div class="modal-body">
             <UnitOddsRules />
           </div>
         </div>
@@ -201,7 +201,7 @@ body {
       rgba(0, 0, 0, 0.4)), url(../src/assets/img/TopoMap2.jpg);
   background-attachment: fixed;
   background-position: center right;
-  background-repeat: none;
+  padding-right: 0 !important
 }
 
 button {

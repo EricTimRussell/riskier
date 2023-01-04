@@ -1,12 +1,11 @@
 <template>
 
   <main>
-    <!-- ANCHOR add move, offensive, and range points -->
     <div class="text-center mb-4">
       <h2>Land Unit Odds</h2>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Infantry: Offense-2D6</h5>
+      <h5 class="text-danger">Infantry: Offense-2D6</h5>
       <h6>1AP, 1MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 5-8 (55.6%)</li>
@@ -16,7 +15,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Infantry: Deffense-2D6</h5>
+      <h5 class="text-primary">Infantry: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 5-9 (66.7%)</li>
         <li>Wetlands D: 7-12 (58.3%) </li>
@@ -26,7 +25,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Special Forces: Offense-2D6</h5>
+      <h5 class="text-danger">Special Forces: Offense-2D6</h5>
       <h6>1AP, 1MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 5-8, 11-12 (63.94%)</li>
@@ -36,7 +35,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Special Force: Deffense-2D6</h5>
+      <h5 class="text-primary">Special Force: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 5-9 (66.7%)</li>
         <li>Wetlands D: 7-12 (58.3%) </li>
@@ -46,7 +45,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Mech: Offense-2D6</h5>
+      <h5 class="text-danger">Mech: Offense-2D6</h5>
       <h6>1AP, 2MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 5-9 (66.7%)</li>
@@ -56,7 +55,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Mech: Deffense-2D6</h5>
+      <h5 class="text-primary">Mech: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 7-12 (58.3%)</li>
         <li>Wetlands D: 7-9 (41.7%)</li>
@@ -66,7 +65,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>IFV: Offense-2D6</h5>
+      <h5 class="text-danger">IFV: Offense-2D6</h5>
       <h6>1AP, 3MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 5-12 (77.8%)</li>
@@ -76,7 +75,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>IFV: Deffense-2D6</h5>
+      <h5 class="text-primary">IFV: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 7-10 (50%)</li>
         <li>Wetlands D: 7-8 (30.6%)</li>
@@ -86,7 +85,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>MBT: Offense-2D6</h5>
+      <h5 class="text-danger">MBT: Offense-2D6</h5>
       <h6>2AP, 2MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 2, 7-12 (61.1%)</li>
@@ -96,7 +95,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>MBT: Deffense-2D6</h5>
+      <h5 class="text-primary">MBT: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 7-10 (50%)</li>
         <li>Grassland/Desert D: 7-10 (50%)</li>
@@ -105,7 +104,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Artillery-D12</h5>
+      <h5 class="text-danger">Artillery-D12</h5>
       <h6>1AP, 1MP, Range of 3</h6>
       <ul>
         <li>Vs Infantry/Mech 1-4 (33%)</li>
@@ -114,7 +113,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Anti-Aircraft-D12</h5>
+      <h5 class="text-danger">Anti-Aircraft-D12</h5>
       <h6>1AP, 1MP, Range of 2</h6>
       <ul>
         <li>Vs Aircraft 1-7 (58%)</li>
@@ -122,7 +121,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>SS-Artillery-D12</h5>
+      <h5 class="text-danger">SS-Artillery-D12</h5>
       <h6>1AP, 1MP, Range of 4</h6>
       <ul>
         <li>Vs Infantry/Mech 1-4 (33%)</li>
@@ -135,7 +134,7 @@
       <h2>Air Unit Odds</h2>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Fighter Aircraft-D12</h5>
+      <h5 class="text-danger">Fighter Aircraft-D12</h5>
       <h6>1AP, 5MP, Range of 2</h6>
       <ul>
         <li>1-4 (33%) on all ground targets</li>
@@ -145,7 +144,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Close Air Support-D12</h5>
+      <h5 class="text-danger">Close Air Support-D12</h5>
       <h6>1AP, 3MP, Range of 1</h6>
       <ul>
         <li>Cannot Target Fighters</li>
@@ -155,7 +154,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Transport Aircraft-D12</h5>
+      <h5 class="text-danger">Transport Aircraft-D12</h5>
       <ul>
         <li>2 tile range on main board</li>
         <li>Evade 1-3 (25%)</li>
@@ -165,7 +164,7 @@
       <h2>Navy Unit Odds</h2>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Carrier-D12</h5>
+      <h5 class="text-danger">Carrier-D12</h5>
       <h6>0AP, 1MP, Range of 1</h6>
       <ul>
         <li>Point Defense 1 tile range</li>
@@ -174,7 +173,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5>Cruiser-D12</h5>
+      <h5 class="text-danger">Cruiser-D12</h5>
       <h6>1AP, 2MP</h6>
       <ul>
         <li>CB AA 2 tile range 1-7 (58%)</li>
@@ -188,7 +187,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5>Destroyer-D12</h5>
+      <h5 class="text-danger">Destroyer-D12</h5>
       <h6>2AP, 2MP, 1 tile range</h6>
       <ul>
         <li>Vs Cruiser 1-8 (66%)</li>
@@ -198,7 +197,7 @@
         <li>Armor deflection D12 1-4 (33%)</li>
       </ul>
     </div>
-    <div class="modal-footer text-end sticky-bottom no-border">
+    <div class="modal-footer text-end sticky-bottom no-border pb-5">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
     </div>
   </main>

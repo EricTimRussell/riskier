@@ -1,29 +1,45 @@
 <template>
 
   <body>
-    <div class="bg-tan l-spacing elevation-5 carrier-card rounded" v-if="carrierGroup.ownerId == account.id">
-      <div class="text-center">
-        <h2>Carrier {{ carrierGroup.carrierNumber }}</h2>
+    <div class="bg-tan l-spacing elevation-5 carrier-card rounded p-1" v-if="carrierGroup.ownerId == account.id">
+      <div>
+        <div class="text-center">
+          <h2>Carrier {{ carrierGroup.carrierNumber }}</h2>
+        </div>
       </div>
       <div>
-        <ul>
-          <h5>Aircraft Onboard</h5>
-          <li>{{ carrierGroup.unitSlot1 }}</li>
-          <li>{{ carrierGroup.unitSlot2 }}</li>
-          <li>{{ carrierGroup.unitSlot3 }}</li>
-          <li>{{ carrierGroup.unitSlot4 }}</li>
-          <li>{{ carrierGroup.unitSlot5 }}</li>
-          <li>{{ carrierGroup.unitSlot6 }}</li>
-          <li>{{ carrierGroup.unitSlot7 }}</li>
-          <li>{{ carrierGroup.unitSlot8 }}</li>
-          <h5 class="pt-3">Ground Units Onboard</h5>
-          <li v-if="carrierGroup.groundUnit1 != null">{{ carrierGroup.groundUnit1 }}</li>
-          <li v-if="carrierGroup.groundUnit2 != null">{{ carrierGroup.groundUnit2 }}</li>
-          <li v-if="carrierGroup.groundUnit3 != null">{{ carrierGroup.groundUnit3 }}</li>
-          <li v-if="carrierGroup.groundUnit4 != null">{{ carrierGroup.groundUnit4 }}</li>
-          <li v-if="carrierGroup.groundUnit5 != null">{{ carrierGroup.groundUnit5 }}</li>
-          <li v-if="carrierGroup.groundUnit6 != null">{{ carrierGroup.groundUnit6 }}</li>
-        </ul>
+        <div>
+          <h5 class="text-center">Aircraft Onboard</h5>
+          <div class="d-flex justify-content-evenly">
+            <h6>{{ carrierGroup.unitSlot1 }}</h6>
+            <h6>{{ carrierGroup.unitSlot2 }}</h6>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <h6>{{ carrierGroup.unitSlot3 }}</h6>
+            <h6>{{ carrierGroup.unitSlot4 }}</h6>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <h6>{{ carrierGroup.unitSlot5 }}</h6>
+            <h6>{{ carrierGroup.unitSlot6 }}</h6>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <h6>{{ carrierGroup.unitSlot7 }}</h6>
+            <h6>{{ carrierGroup.unitSlot8 }}</h6>
+          </div>
+          <h5 class="pt-3 text-center">Ground Units Onboard</h5>
+          <div class="d-flex justify-content-evenly">
+            <h6 v-if="carrierGroup.groundUnit1 != null">{{ carrierGroup.groundUnit1 }}</h6>
+            <h6 v-if="carrierGroup.groundUnit2 != null">{{ carrierGroup.groundUnit2 }}</h6>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <h6 v-if="carrierGroup.groundUnit4 != null">{{ carrierGroup.groundUnit4 }}</h6>
+            <h6 v-if="carrierGroup.groundUnit3 != null">{{ carrierGroup.groundUnit3 }}</h6>
+          </div>
+          <div class="d-flex justify-content-evenly">
+            <h6 v-if="carrierGroup.groundUnit6 != null">{{ carrierGroup.groundUnit6 }}</h6>
+            <h6 v-if="carrierGroup.groundUnit5 != null">{{ carrierGroup.groundUnit5 }}</h6>
+          </div>
+        </div>
       </div>
       <div class="d-flex justify-content-between">
         <button data-bs-toggle="modal" :data-bs-target="`#editCarrierGroup${carrierGroup.id}`"
@@ -261,8 +277,8 @@ export default {
 
 <style lang="scss" scoped>
 .carrier-card {
-  min-width: 35vh;
-  max-width: 35vh;
+  min-width: 38vh;
+  max-width: 38vh;
 }
 
 .select {

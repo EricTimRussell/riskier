@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 my-3 text-center bg-green py-3 elevation-5">
-          <h2>Ground Forces</h2>
+          <h2 class="mdi mdi-tank"> Ground Forces</h2>
         </div>
         <div class="col-6 pl-65">
           <h6>Infantry</h6>
@@ -51,7 +51,7 @@
       </div>
       <div class="row">
         <div class="col-12 mt-4 text-center bg-green elevation-5">
-          <h2 class="m-3">AirForce</h2>
+          <h2 class="m-3 mdi mdi-shield-airplane"> AirForce</h2>
         </div>
         <div class="col-6 pt-3 pl-65">
           <h6>Fighter</h6>
@@ -65,7 +65,7 @@
       </div>
       <div class="row">
         <div class="col-12 mt-4 text-center bg-green elevation-5">
-          <h2 class="m-3">Navy</h2>
+          <h2 class="m-3 mdi mdi-ferry"> Navy</h2>
         </div>
         <div class="col-6 pt-3 pl-7">
           <h6>Carrier</h6>
@@ -79,7 +79,7 @@
       </div>
       <div class="row">
         <div class="col-12 text-center mt-4 bg-green elevation-5">
-          <h2 class="m-3">Buildings</h2>
+          <h2 class="m-3 mdi mdi-warehouse"> Buildings</h2>
         </div>
         <div class="col-6 pt-3 pl-7">
           <h6>Airfield</h6>
@@ -95,7 +95,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 pt-3 elevation-5" v-if="account.id">
-          <h2>Armies & Divisions</h2>
+          <h2 class="mdi mdi-shield-star"> Armies & Divisions</h2>
           <div>
             <button class="mx-3 p-2 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
               aria-label="Form Division">Form
@@ -111,7 +111,7 @@
         </div>
       </div>
       <div class="row justify-content-center" v-if="armies.length > 0 || divisions.length > 0">
-        <div class="col-6 col-md-4 my-3" v-for="a in armies">
+        <div class="col-10 col-md-4 my-3" v-for="a in armies">
           <ArmyCard :armies="a" :key="a.id" />
         </div>
       </div>
@@ -122,7 +122,7 @@
     <div class="container-fuild">
       <div class="row">
         <div class="col-12 d-flex flex-column align-items-center bg-green  elevation-5 mt-4 pt-3">
-          <h2>Carriers</h2>
+          <h2 class="mdi mdi-airplane-takeoff"> Carriers</h2>
           <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal"
             data-bs-target="#formCarrierGroup" aria-label="Form Carrier Group">Add Carrier Group</button>
         </div>
@@ -134,7 +134,7 @@
     <div class="container-fluid" v-if="account.id">
       <div class="row justify-content-center bg-green elevation-5 mt-5">
         <div class="col-12 mb-1">
-          <h2 class="text-center m-3">Owned Regions</h2>
+          <h2 class="text-center m-3 mdi mdi-map-legend"> Owned Regions</h2>
         </div>
         <div class="col-12 d-flex justify-content-center mb-3">
           <button type="submit" class="rounded pad text-shadow-dark p-2 mx-3" data-bs-toggle="modal"

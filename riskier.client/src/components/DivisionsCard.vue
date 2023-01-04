@@ -2,19 +2,19 @@
 
   <body>
 
-    <div class="card bg-tan l-spacing elevation-5" v-if="divisions.ownerId == account.id">
+    <div class="bg-tan l-spacing elevation-5 rounded p-1" v-if="divisions.ownerId == account.id">
       <div class="text-center">
         <h2>Division {{ divisions.divisionNumber }}</h2>
       </div>
       <div>
-        <ul>
-          <li>{{ divisions.unitSlot1 }}</li>
-          <li>{{ divisions.unitSlot2 }}</li>
-          <li>{{ divisions.unitSlot3 }}</li>
-          <li>{{ divisions.unitSlot4 }}</li>
-          <li>{{ divisions.unitSlot5 }}</li>
-          <li>{{ divisions.unitSlot6 }}</li>
-        </ul>
+        <div class="text-center">
+          <h6>{{ divisions.unitSlot1 }}</h6>
+          <h6>{{ divisions.unitSlot2 }}</h6>
+          <h6>{{ divisions.unitSlot3 }}</h6>
+          <h6>{{ divisions.unitSlot4 }}</h6>
+          <h6>{{ divisions.unitSlot5 }}</h6>
+          <h6>{{ divisions.unitSlot6 }}</h6>
+        </div>
       </div>
       <div class="d-flex justify-content-between">
         <button data-bs-toggle="modal" :data-bs-target="`#editDivision${divisions.id}`" aria-label="Edit Division"

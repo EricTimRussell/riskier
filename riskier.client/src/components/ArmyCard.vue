@@ -2,22 +2,22 @@
 
   <body>
 
-    <div class="card bg-tan l-spacing elevation-5" v-if="armies.ownerId == account.id">
+    <div class="bg-tan l-spacing elevation-5 rounded p-1" v-if="armies.ownerId == account.id">
       <div class="text-center">
         <h2>Army {{ armies.armyNumber }}</h2>
       </div>
       <div>
-        <ul>
-          <li>{{ armies.unitSlot1 }}</li>
-          <li>{{ armies.unitSlot2 }}</li>
-          <li>{{ armies.unitSlot3 }}</li>
-          <li>{{ armies.unitSlot4 }}</li>
-          <li>{{ armies.unitSlot5 }}</li>
-          <li>{{ armies.unitSlot6 }}</li>
-          <li>{{ armies.unitSlot7 }}</li>
-          <li>{{ armies.unitSlot8 }}</li>
-          <li>{{ armies.unitSlot9 }}</li>
-        </ul>
+        <div class="text-center">
+          <h6>{{ armies.unitSlot1 }}</h6>
+          <h6>{{ armies.unitSlot2 }}</h6>
+          <h6>{{ armies.unitSlot3 }}</h6>
+          <h6>{{ armies.unitSlot4 }}</h6>
+          <h6>{{ armies.unitSlot5 }}</h6>
+          <h6>{{ armies.unitSlot6 }}</h6>
+          <h6>{{ armies.unitSlot7 }}</h6>
+          <h6>{{ armies.unitSlot8 }}</h6>
+          <h6>{{ armies.unitSlot9 }}</h6>
+        </div>
       </div>
       <div class="d-flex justify-content-between">
         <button data-bs-toggle="modal" :data-bs-target="`#editArmy${armies.id}`" aria-label="Edit Army"
