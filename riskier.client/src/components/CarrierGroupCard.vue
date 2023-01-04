@@ -61,7 +61,7 @@
                 title="close modal"></button>
             </div>
             <h5 class="text-center">Aircraft</h5>
-            <div class="form-floating">
+            <div class="form-floating my-3">
               <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
                 aria-label="Select Unit for Slot">
                 <option value="EmptySlot">EmptySlot</option>
@@ -79,7 +79,7 @@
               </select>
               <label for="unitSlot2">Current Unit: {{ carrierGroup.unitSlot2 }}</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating my-3">
               <select v-model="editable.unitSlot3" required class="form-select" id="unitSlot3"
                 aria-label="Select Unit for Slot">
                 <option value="EmptySlot">EmptySlot</option>
@@ -97,7 +97,7 @@
               </select>
               <label for="unitSlot4">Current Unit: {{ carrierGroup.unitSlot4 }}</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating my-3">
               <select v-model="editable.unitSlot5" required class="form-select" id="unitSlot5"
                 aria-label="Select Unit for Slot">
                 <option value="EmptySlot">EmptySlot</option>
@@ -115,7 +115,7 @@
               </select>
               <label for="unitSlot6">Current Unit: {{ carrierGroup.unitSlot6 }}</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating my-3">
               <select v-model="editable.unitSlot7" required class="form-select" id="unitSlot7"
                 aria-label="Select Unit for Slot">
                 <option value="EmptySlot">EmptySlot</option>
@@ -124,7 +124,7 @@
               </select>
               <label for="unitSlot7">Current Unit: {{ carrierGroup.unitSlot7 }}</label>
             </div>
-            <div class="form-floating">
+            <div class="form-floating mb-3">
               <select v-model="editable.unitSlot8" required class="form-select" id="unitSlot8"
                 aria-label="Select Unit for Slot">
                 <option value="EmptySlot">EmptySlot</option>

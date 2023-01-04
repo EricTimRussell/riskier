@@ -197,8 +197,8 @@ body {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 1px;
   background-color: #606C38;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)), url(../src/assets/img/TopoMap2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)), url(../src/assets/img/TopoMap2.jpg);
   background-attachment: fixed;
   background-position: center right;
   padding-right: 0 !important

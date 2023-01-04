@@ -2,15 +2,15 @@
 
   <body class="container-fluid">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center mb-2">
         <h1>Rule Book</h1>
       </div>
-      <div class="col-12">
+      <!-- <div class="col-12">
         <div class="input-group input-group-sm mb-3">
           <input type="text" class="form-control" aria-label="Sizing example input"
             aria-describedby="inputGroup-sizing-sm" placeholder="Seach...">
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-12 mx-2">
           <!-- SECTION Resources -->
@@ -89,12 +89,14 @@
             attack per turn. Range is the distance a unit can attack an enemy. A range of 1 means the unit can only
             attack tiles that are next to them.
           </p>
-          <p><strong>--Infantry</strong> are a more defensively balanced unit with limited offensive capabilities.
+          <p><span class="text-warning">--Infantry</span> are a more defensively balanced unit with limited
+            offensive
+            capabilities.
             They
             have the ability to occupy fortifications giving them a boost to defensive durability. Infantry have 1
             movement point, 1 offensive point, and a range of 1.
           </p>
-          <p><strong>--Special Forces</strong> are similar to infantry in that they are defensively
+          <p><span class="text-warning">--Special Forces</span> are similar to infantry in that they are defensively
             balanced, but are
             a
             fair bit more effective offensively. They also have the ability to occupy fortifications. Special forces
@@ -102,21 +104,24 @@
             carry laser designators giving artillery more accuracy and gaining access to destroyer artillery if
             applicable. SF units have 1 movement point, 1 offensive point, and a range of 1.
           </p>
-          <p><strong>--Mechanized Infantry (Mech)</strong> are a heavier more mobile version of infantry. They are
+          <p><span class="text-warning">--Mechanized Infantry (Mech)</span> are a heavier more mobile version of
+            infantry. They are
             balanced
             between offensive ability and defensive ability. Making these units slightly more effective at taking on
             heavier opponents. Mech units have 2 movement points, 1 offensive point, and a range of 1.
           </p>
-          <p><strong>--Infantry Fighting Vehicle (IFV)</strong> are essentially light tanks that are
+          <p><span class="text-warning">--Infantry Fighting Vehicle (IFV)</span> are essentially light tanks that
+            are
             effective at
             taking on infantry and Mechanized units. They are average at taking on other IFV's and are ineffective at
             taking on MBT's. IFV's have 3 movement points, 1 offensive point, and a range of 1.
           </p>
-          <p><strong>--Main Battle Tank (MBT)</strong> are the offensive work horse of any ground assault. They are
+          <p><span class="text-warning">--Main Battle Tank (MBT)</span> are the offensive work horse of any ground
+            assault. They are
             effective at taking on any ground enemy, but have very limited defensive capabilities. MBT's have 2
             movement points, 2 offensive points, and a range of 1.
           </p>
-          <p><strong>--Anti-aircraft</strong> is a players ground defense from aircraft. They can
+          <p><span class="text-warning">--Anti-aircraft</span> is a players ground defense from aircraft. They can
             fire 2 AA missiles
             at
             aircraft that are within range. They have no other offensive ability and do not have any defensive
@@ -124,20 +129,23 @@
             offensive point, and a range of 2 on the CB (Combat Board). On the main board any aircraft that attacks a
             tile with AA will have to survive 1 shot from the AA unit before it can attempt to destroy its target.
           </p>
-          <p><strong>--Artillery</strong> carry more ammo than missile artillery however they are fairly ineffective
+          <p><span class="text-warning">--Artillery</span> carry more ammo than missile artillery however they are
+            fairly ineffective
             unless they have special forces with a laser designator guiding their shots. Artillery have 1 movement
             point, 1 offensive point, and a range of 3 on the combat board. On the main board artillery can fire into
             adjacent tiles so long as there are no fortifications present on that tile. Artillery cannot fire into
             tiles with fortifications.
           </p>
-          <p><strong>--SS-Artillery</strong> is a very effective form of artillery but is limited on
+          <p><span class="text-warning">--SS-Artillery</span> is a very effective form of artillery but is limited
+            on
             its ammunition
             and
             the enemies ability to shoot down surface-to-surface missiles. They do not have any defensive
             ability. Missile artillery are not used on the combat board. They have a range of 2 tiles on the main
             board. SS-Artillery needs to be re-supplied after each shot.
           </p>
-          <p><strong>--Supply Truck</strong> moves supplies from warehouses to your units on the battlefield as well
+          <p><span class="text-warning">--Supply Truck</span> moves supplies from warehouses to your units on the
+            battlefield as well
             as
             to naval yards to supply your navy. Has no offensive or defensive ability and can move 1 tile per turn on
             the MB. Supply trucks are not used on the CB.
@@ -146,7 +154,7 @@
           <div class="text-center text-warning">
             <h3>Air Units</h3>
           </div>
-          <p><strong>--Fighter Aircraft</strong> provide more flexable AA cover for ground units with
+          <p><span class="text-warning">--Fighter Aircraft</span> provide more flexable AA cover for ground units with
             a limited
             ability
             to strike ground targets. Fighter aircraft have 4 movement points, 1 offensive point, and a range
@@ -161,12 +169,13 @@
             they want so long as
             they are within 3 tiles of an owned airfield.
           </p>
-          <p><strong>--Close Air Support (CAS)</strong> aircraft are very effective at destroying ground targets and
+          <p><span class="text-warning">--Close Air Support (CAS)</span> aircraft are very effective at destroying
+            ground targets and
             provide some air cover against other CAS aircraft. However, they cannot target fighter aircraft and only
             have a small chance to evade fighter attacks. CAS have 3 movement points, 2 offensive points, and a range
             of 1 on the combat board. CAS cannot attack on the main board.
           </p>
-          <p><strong>--Supply Aircraft</strong> can deliver supplies by air to ground units and
+          <p><span class="text-warning">--Supply Aircraft</span> can deliver supplies by air to ground units and
             transport units
             from airfield to airfield. They can also be used to deploy special
             forces units and infantry by air as paratroopers. They have no offensive or defensive ability. Supply
@@ -183,10 +192,10 @@
             capabilities, but have limited ammo. Destroyers are fast durable ships with heavy guns to destroy other
             ships as well as barrage land targets.
           </p>
-          <p>--Carriers take 3 turns to construct. Cruisers and destroyers take 2 turns to construct. The construction
-            times are tracked on the construction sheet.
+          <p>--Each ship has a specific construction time. Carriers take 3 turns to construct. Cruisers and destroyers
+            take 2 turns to construct. The construction times are tracked on the construction sheet.
           </p>
-          <p><strong>--Carriers</strong> have the ability to carry up to 8 fighter aircraft and CAS.
+          <p><span class="text-warning">--Carriers</span> have the ability to carry up to 8 fighter aircraft and CAS.
             They are durable
             ships and rely on their aircraft for offensive and defensive capabilities. Carriers have point defense
             systems that let them target incoming missiles and aircraft. Carriers also have the ability to transport
@@ -202,7 +211,7 @@
             are in the air can continue to fight until the battle is over then they are immediately moved to another
             airfield within range or are destroyed.
           </p>
-          <p><strong>--Cruisers</strong> are much more versatile than destroyers, but are not as
+          <p><span class="text-warning">--Cruisers</span> are much more versatile than destroyers, but are not as
             durable or nimble.
             They have the ability to deploy 3 surface-to-surface missiles and have infinite AA missiles. They
             have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points, 1
@@ -210,7 +219,8 @@
             their SS missiles have a range of 4. The cannon has a range of 1. A cruisers cannon cannot fire at land
             targets.
           </p>
-          <p><strong>--Destroyers</strong> are heavy combat vessels with large guns and heavy armor giving them the
+          <p><span class="text-warning">--Destroyers</span> are heavy combat vessels with large guns and heavy armor
+            giving them the
             ability to absorb hits. They are smaller and more nimble than most naval vessals and are great at
             destroying other naval vessels. They have no AA ability. Destroyers have 1 peg hole to keep track of
             damage. Destroyers have 2 movement points, 2 hit points, and 2 offensive points with a range of 1.
@@ -222,7 +232,7 @@
           <div class="text-center text-warning">
             <h3>Combat Rules</h3>
           </div>
-          <p><strong> --Rules about initiating combat:</strong> Only 1 offensive move per tile is
+          <p><span class="text-warning"> --Rules about initiating combat:</span> Only 1 offensive move per tile is
             allowed per turn. This means that a player can only attack from a tile once per turn. Atleast 3 units need
             to be used to iniate combat.
           </p>
@@ -275,7 +285,8 @@
             moves onto another tile and is still within AA range the AA gets to fire again. This can occur as many
             times as the aircraft moves within AA range.
           </p>
-          <p><strong>--Example:</strong> An IFV unit attacks an enemy unit on the space next to it. The attacking unit
+          <p><span class="text-warning">--Example:</span> An IFV unit attacks an enemy unit on the space next to it. The
+            attacking unit
             fails to destroy the defending unit. The attacking player still has 3 movement points left but cannot
             attack with that unit again during this turn. If the attacking unit was successfull they would move into
             the space they captured and this would count as 1 movement point. The player can still move the unit 2
@@ -286,7 +297,8 @@
             or are relieved by
             another unit.
           </p>
-          <p><strong> Example:</strong> A mechanized unit is attacking an infantry unit. They both roll successfull
+          <p><span class="text-warning"> Example:</span> A mechanized unit is attacking an infantry unit. They both roll
+            successfull
             hits and neither of them are destroyed, however the mech unit cannot attack again since it only has 1
             attack point. And since the mech unit was unsuccessfull at destroying the infantry the mech is now locked
             in combat with the infantry and cannot move even though it still has 2 movement points left. If during
@@ -329,7 +341,8 @@
             turn before they
             can claim it. Once claimed they can then roll for resources and draw a card from the item deck.
           </p>
-          <p><strong>--Retreating when a unit has no supplies: </strong> In the event a unit or group of units have no
+          <p><span class="text-warning">--Retreating when a unit has no supplies: </span> In the event a unit or group
+            of units have no
             supplies left to defend themselves from an attack they must all retreat. A dice roll for each unit
             retreating will be used determine a successfull escape or not. Using a D12 the defending player must roll
             2 higher than the attacking player to escape. If a unit successfully escapes the player can choose which
@@ -380,49 +393,53 @@
             players choose and place their cards face up they cannot remove or change them. Players should not know
             what items another player is going to use before they place them face up.
           </p>
-          <p><strong>--Exsplosive Reactive Armor:</strong> This can be used before a battle begins to increase MBT's
+          <p><span class="text-warning">--Exsplosive Reactive Armor:</span> This can be used before a battle begins to
+            increase MBT's
             odds of surving a hit. When an MBT takes a hit roll a D12 to determine if the reactive armor deflects the
             shot 1-5 is successful.
           </p>
-          <p><strong>--Laser Designator:</strong> This item can be used beofre a battle to increase
+          <p><span class="text-warning">--Laser Designator:</span> This item can be used beofre a battle to increase
             the odds of
             artillery hitting its target. Special forces units are required to use the laser designator item. Enemy
             units next to a special forces unit can be lased and give artillery a better chance of hitting their
             target so long as the artillery is within range. Lasing a target does not use up the special forces
             offensive point.
           </p>
-          <p><strong>--Cruise Missile:</strong> This item can be used during a players 3rd phase before or after a
+          <p><span class="text-warning">--Cruise Missile:</span> This item can be used during a players 3rd phase before
+            or after a
             battle. It cannot be used during a battle. Cruise missiles can be launched from any of the players
             aircraft or cruisers to hit targets as far away as 4 tiles on the MB. Cruise missile hits are determined
             by a D12 (1-10), and they can only be intercepted using the Point Defense item, carrier, or AA. If the
             cruise missile flies over a hostile tile with AA (not including cities) or a carrier the player that owns
             that tile should roll a D12 to try and intercept the missile.
           </p>
-          <p><strong>Point Defense:</strong> The point defense item can be used by a defending player
+          <p><span class="text-warning">Point Defense:</span> The point defense item can be used by a defending player
             before a battle
             to provide better AA and anti-missile protection. If used on an aircraft D12 1-9 is a hit. Point defense
             can only target 1 unit and is discarded after use regardless of outcome. Defending players can use as many
             point defense cards as they want but will need to declare how many cards they are going to deploy before
             the battle. Item cannot be used during naval battles.
           </p>
-          <p><strong>Aircraft Stealth:</strong> The stealth card can be applied before a battle. This will reverse
+          <p><span class="text-warning">Aircraft Stealth:</span> The stealth card can be applied before a battle. This
+            will reverse
             attack
             order of AA and aircraft meaning the aircraft will fire first and then the AA will fire second and also
             reduces the AA hit chance to D12 (1-6). If the AA is destroyed by an aircrafts first shot the AA does not
             get to fire.
           </p>
-          <p><strong>Surplus Fuel:</strong> This item can be used before a battle begins to upgrade
+          <p><span class="text-warning">Surplus Fuel:</span> This item can be used before a battle begins to upgrade
             mechanized units
             movement. When used mechanized units can now move 3 spaces on the battlefield but can still only attack
             once per turn.
           </p>
-          <p><strong>Paratroopers:</strong> This item card can be used before combat by the offensive player. The
+          <p><span class="text-warning">Paratroopers:</span> This item card can be used before combat by the offensive
+            player. The
             offensive player can place up to 3 infantry units behind the defending player during the combat board
             set-up phase. This requires the offensive player to have infantry or SF infantry present when the attack
             is initiated. If AA is present then each infantry unit being deployed as paratroopers will have to survive
             one AA attack roll. The AA only gets to shoot once at each paratrooper.
           </p>
-          <p><strong>Javelin Missiles</strong> : This item card equips infantry units (not SF) with
+          <p><span class="text-warning">Javelin Missiles</span> : This item card equips infantry units (not SF) with
             effective
             anti-tank
             weapons. A roll of can be added to all infantry attacks vs MBT's bringing the odds up to 64% chance to
