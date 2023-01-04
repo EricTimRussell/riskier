@@ -12,9 +12,10 @@ class ArmiesDivisionsService {
     AppState.divisions.push(new Division(res.data))
   }
 
-  async editDivision(formData, id) {
+  async editDivision(formData, id, ownerId) {
     const res = await api.put(`api/armiesDivisions/division/${id}`, formData)
     AppState.divisions = new Division(res.data)
+    this.getDivisionByOwnerId(ownerId)
   }
 
   async getDivisionByOwnerId(ownerId) {
@@ -34,9 +35,10 @@ class ArmiesDivisionsService {
     AppState.armies.push(new Army(res.data))
   }
 
-  async editArmy(formData, id) {
+  async editArmy(formData, id, ownerId) {
     const res = await api.put(`api/armiesDivisions/army/${id}`, formData)
     AppState.armies = new Army(res.data)
+    this.getArmyByOwnerId(ownerId)
   }
 
   async getArmyByOwnerId(ownerId) {

@@ -80,3 +80,27 @@ CREATE TABLE
         ownerId VARCHAR(255) NOT NULL,
         FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;
+
+CREATE TABLE
+    IF NOT EXISTS carriers(
+        id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+        updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        carrierNumber INT NOT NULL,
+        unitSlot1 VARCHAR(255),
+        unitSlot2 VARCHAR(255),
+        unitSlot3 VARCHAR(255),
+        unitSlot4 VARCHAR(255),
+        unitSlot5 VARCHAR(255),
+        unitSlot6 VARCHAR(255),
+        unitSlot7 VARCHAR(255),
+        unitSlot8 VARCHAR(255),
+        groundUnit1 VARCHAR(255),
+        groundUnit2 VARCHAR(255),
+        groundUnit3 VARCHAR(255),
+        groundUnit4 VARCHAR(255),
+        groundUnit5 VARCHAR(255),
+        groundUnit6 VARCHAR(255),
+        ownerId VARCHAR(255) NOT NULL,
+        FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
+    ) default charset utf8;

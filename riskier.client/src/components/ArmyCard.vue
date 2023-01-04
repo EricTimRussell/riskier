@@ -28,7 +28,7 @@
     </div>
 
 
-    <form @submit="editArmy()">
+    <form @submit.prevent="editArmy()">
       <div class="modal fade text-dark l-spacing" :id="`editArmy${armies.id}`" tabindex="-1" aria-labelledby="editArmy"
         aria-hidden="true">
         <div class="modal-dialog">
@@ -198,10 +198,8 @@ export default {
       editable,
       async editArmy() {
         try {
-          await armiesDivisionsService.editArmy(editable.value, props.armies.id)
-          window.location.reload()
-          // NOTE temporary solution
-          // Modal.getOrCreateInstance('#editArmy').hide()
+          Modal.getOrCreateInstance(document.getElementById(`editArmy${props.armies.id}`)).hide()
+          await armiesDivisionsService.editArmy(editable.value, props.armies.id, props.armies.ownerId)
         } catch (error) {
           Pop.error(error, "Editing army")
         }

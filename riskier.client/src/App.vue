@@ -10,7 +10,6 @@
     </main>
 
   </body>
-  <RulesModal />
 
   <!-- Claim Region Modal -->
   <section>
@@ -54,7 +53,7 @@
     </div>
   </section>
 
-  <!-- Form Division Modal -->
+  <!-- Create Division Modal -->
   <section>
     <div class="modal fade" id="formDivision" tabindex="-1" aria-labelledby="formDivision" aria-hidden="true">
       <div class="modal-dialog">
@@ -84,6 +83,24 @@
           </div>
           <div class="modal-body">
             <CreateArmyForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Carrier Group Modal -->
+  <section>
+    <div class="modal fade" id="formCarrierGroup" tabindex="-1" aria-labelledby="formCarrierGroup" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="formCarrierGroup">Form Carrier Group</h1>
+            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"
+              title="close modal"></button>
+          </div>
+          <div class="modal-body">
+            <CreateCarrierGroup />
           </div>
         </div>
       </div>
@@ -151,12 +168,12 @@
 import { computed } from 'vue'
 import { AppState } from './AppState'
 import CreateArmyForm from "./components/CreateArmyForm.vue";
+import CreateCarrierGroup from "./components/CreateCarrierGroup.vue";
 import CreateCityForm from "./components/CreateCityForm.vue";
 import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
 import GameKey from "./components/GameKey.vue";
 import Navbar from "./components/Navbar.vue";
-import RulesModal from "./components/RulesModal.vue";
 import UnitCostModal from "./components/UnitCostModal.vue";
 import UnitOddsRules from "./components/UnitOddsRules.vue";
 
@@ -166,7 +183,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, CreateRegionForm, RulesModal, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm, GameKey }
+  components: { Navbar, CreateRegionForm, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm, GameKey, CreateCarrierGroup }
 }
 </script>
 <style lang="scss">

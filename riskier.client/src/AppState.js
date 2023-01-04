@@ -7,5 +7,6 @@ export const AppState = reactive({
   account: {},
   regions: [],
   divisions: [],
-  armies: []
+  armies: [],
+  carrierGroups: []
 })

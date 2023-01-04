@@ -49,6 +49,8 @@ public class Startup
     services.AddTransient<ArmiesDivisionsService>();
     services.AddTransient<ArmiesDivisionsRepository>();
 
+    services.AddTransient<CarrierGroupRepository>();
+
   }
 
   private void ConfigureCors(IServiceCollection services)

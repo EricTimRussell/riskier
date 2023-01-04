@@ -119,6 +119,18 @@
         <h6>You currently have no armies or divisions.</h6>
       </div>
     </div>
+    <div class="container-fuild">
+      <div class="row">
+        <div class="col-12 d-flex flex-column align-items-center bg-green  elevation-5 mt-4 pt-3">
+          <h2>Carriers</h2>
+          <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal"
+            data-bs-target="#formCarrierGroup" aria-label="Form Carrier Group">Add Carrier Group</button>
+        </div>
+        <div class="col-12 d-flex justify-content-center my-3" v-if="carrierGroup.length > 0" v-for="c in carrierGroup">
+          <CarrierGroupCard :carrierGroup="c" :key="c.id" />
+        </div>
+      </div>
+    </div>
     <div class="container-fluid" v-if="account.id">
       <div class="row justify-content-center bg-green elevation-5 mt-5">
         <div class="col-12 mb-1">
@@ -169,6 +181,9 @@ import { accountService } from "../services/AccountService";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
+import { navyUnitsService } from "../services/NavyUnitsService";
+import CarrierGroupCard from "../components/CarrierGroupCard.vue";
+
 
 export default {
   setup() {
@@ -195,16 +210,25 @@ export default {
         Pop.error(error, "Getting Armies by ownerId")
       }
     }
+    async function getCarrierGroupByOwnerId() {
+      try {
+        await navyUnitsService.getCarrierGroupByOwnerId(route.params.id)
+      } catch (error) {
+        Pop.error(error, "Getting Carrier Group")
+      }
+    }
     onAuthLoaded(() => {
       getRegionByOwnerId()
       getDivisionByOwnerId()
       getArmyByOwnerId()
+      getCarrierGroupByOwnerId()
     })
     return {
       regions: computed(() => AppState.regions.sort((a, b) => a.regionNumber - b.regionNumber)),
       account: computed(() => AppState.account),
       divisions: computed(() => AppState.divisions),
       armies: computed(() => AppState.armies),
+      carrierGroup: computed(() => AppState.carrierGroups),
 
       async deleteAllItems() {
         try {
@@ -215,7 +239,7 @@ export default {
       }
     };
   },
-  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard }
+  components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard, CarrierGroupCard }
 }
 </script>
 

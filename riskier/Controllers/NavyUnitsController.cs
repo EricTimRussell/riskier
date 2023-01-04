@@ -15,7 +15,7 @@ public class NavyUnitsController : ControllerBase
   }
 
   // SECTION
-  #region Carrier Add/Remove
+  #region Carrier/CarrierGroup Add/Remove
   [HttpPost("carrier")]
   public async Task<ActionResult<string>> CreateCarrier()
   {
@@ -45,6 +45,77 @@ public class NavyUnitsController : ControllerBase
       return BadRequest(e.Message);
     }
   }
+
+  [HttpGet("carrierGroup/{ownerId}")]
+  public ActionResult<List<Carrier>> GetCarrierGroupsByOwnerId(string ownerId)
+  {
+    try
+    {
+      var carrierGroups = _nus.GetCarrierGroupsByOwnerId(ownerId);
+      return Ok(carrierGroups);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpPost("carrierGroup")]
+  public async Task<ActionResult<Carrier>> CreateCarrierGroup([FromBody] Carrier newCarrier)
+  {
+    try
+    {
+      var userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      if (userInfo == null || userInfo.Id == null)
+      {
+        throw new Exception("Bad user or authToken invalid");
+      }
+      newCarrier.OwnerId = userInfo?.Id;
+      Carrier createdCarrierGoup = _nus.CreateCarrierGroup(newCarrier);
+      createdCarrierGoup.Creator = userInfo;
+      return Ok(createdCarrierGoup);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpPut("carrierGroup/{carrierGroupId}")]
+  public async Task<ActionResult<Carrier>> UpdateCarrierGroup([FromBody] Carrier carrierGroup, int carrierGroupId)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      if (userInfo == null || userInfo.Id == null)
+      {
+        throw new Exception("Bad user or authToken invalid");
+      }
+      carrierGroup.Id = carrierGroupId;
+      Carrier newCarrierGroup = _nus.UpdateCarrierGroup(carrierGroup, userInfo?.Id);
+      return Ok(newCarrierGroup);
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
+  [HttpDelete("carrierGroup/{carrierGroupId}")]
+  public async Task<ActionResult<string>> DeleteCarrierGroup(int carrierGroupId)
+  {
+    try
+    {
+      Account userInfo = await _a0.GetUserInfoAsync<Account>(HttpContext);
+      _nus.DeleteCarrierGroup(carrierGroupId, userInfo.Id);
+      return Ok("Carrier Group deleted");
+    }
+    catch (Exception e)
+    {
+      return BadRequest(e.Message);
+    }
+  }
+
   #endregion
 
   // SECTION
