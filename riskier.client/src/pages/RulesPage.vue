@@ -218,9 +218,10 @@
             durable or nimble.
             They have the ability to deploy surface-to-surface missiles and AA missiles. They
             have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points, 1
-            hit point, and 1 offensive point. On the combat board cruisers AA has a range of 1 and
+            hit point, and 1 offensive point. On the combat board cruisers AA has a range of 2 and
             their SS missiles have a range of 4. The cannon has a range of 1. A cruisers cannon cannot fire at land
-            targets. Cruiser can provide SSArtillery support on the main board if a laser designator is being used.
+            targets. Cruiser can provide SSArtillery support on the main board if a laser designator is being used and
+            the cruiser is within 2 tiles on the main board of where the combat is taking place.
           </p>
           <p><span class="text-warning">--Destroyers</span> are heavy combat vessels with large guns and heavy armor
             giving them the

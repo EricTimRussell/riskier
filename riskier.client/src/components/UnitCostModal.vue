@@ -28,7 +28,7 @@
       </div>
       <div class="bg-light">
         <h5 class="pt-3">SS-Artillery</h5>
-        <h6>1-Capital 4-Industry</h6>
+        <h6>2-Capital 4-Industry</h6>
       </div>
       <div>
         <h5 class="pt-3">Anti-Aircraft</h5>

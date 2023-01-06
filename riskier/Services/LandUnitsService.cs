@@ -132,7 +132,7 @@ public class LandUnitsService
   internal void CreateSsArtillery(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 1;
+    owner.TotalCapital -= 2;
     owner.TotalIndustry -= 4;
     owner.TotalAgriculture -= 0;
     owner.SsArtillery++;
@@ -142,7 +142,7 @@ public class LandUnitsService
   internal void RemoveSsArtillery(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 1;
+    owner.TotalCapital += 2;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 0;
     owner.SsArtillery--;

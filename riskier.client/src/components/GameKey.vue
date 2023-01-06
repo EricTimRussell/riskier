@@ -8,8 +8,7 @@
       <div class="peg">
         <ul>
           <h2>Pegs</h2>
-          <li class="text-danger">Red Pegs Track Damage</li>
-          <li>Black Pegs Track Missiles on Cruisers</li>
+          <li class="text-danger">Red Pegs Track Damage to naval units and units suffering attrition.</li>
         </ul>
       </div>
       <div class="py-1">

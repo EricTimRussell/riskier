@@ -168,7 +168,7 @@
       <h6>0AP, 1MP, Range of 1</h6>
       <ul>
         <li>Point Defense 1 tile range</li>
-        <li>Vs Missiles 1-8 (66%)</li>
+        <li>Vs Missiles 1-9 (75%)</li>
         <li>Vs Aircraft 1-6 (50%)</li>
       </ul>
     </div>
@@ -178,6 +178,7 @@
       <ul>
         <li>CB AA 2 tile range 1-7 (58%)</li>
         <li>CB SS 4 tile range 1-8 (75%)</li>
+        <li>SS Vs land units follow SS-Artillery rules</li>
         <strong>
           <li>Cannon D12 1 tile range</li>
         </strong>
