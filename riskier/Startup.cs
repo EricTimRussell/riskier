@@ -38,7 +38,6 @@ public class Startup
     services.AddTransient<RegionTilesRepository>();
 
     services.AddTransient<LandUnitsService>();
-    services.AddTransient<LandUnitsRepository>();
 
     services.AddTransient<AirUnitsService>();
 

@@ -4,7 +4,7 @@
 
     <main class="container-fluid">
       <div class="row">
-        <div class="col-12 d-flex flex-column align-items-center">
+        <div class="col-12 d-flex flex-column align-items-center pt-3">
           <h1>Welcome to Riskier!</h1>
           <p class="px-3">&nbsp;&nbsp;&nbsp;Log in or create an account to get started. You do not need to use a real
             email to create an account. Use your account picture in the top left to navigate the website.</p>

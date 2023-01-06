@@ -2,12 +2,10 @@ namespace riskier.Services;
 
 public class LandUnitsService
 {
-  private readonly LandUnitsRepository _lupo;
   private readonly AccountsRepository _ar;
 
-  public LandUnitsService(LandUnitsRepository lupo, AccountsRepository ar)
+  public LandUnitsService(AccountsRepository ar)
   {
-    _lupo = lupo;
     _ar = ar;
   }
 

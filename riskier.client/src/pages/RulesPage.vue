@@ -2,7 +2,7 @@
 
   <body class="container-fluid">
     <div class="row">
-      <div class="col-12 text-center mb-2">
+      <div class="col-12 text-center mb-2 mt-3">
         <h1>Rule Book</h1>
       </div>
       <!-- <div class="col-12">
@@ -18,7 +18,7 @@
             <h3>Resources</h3>
           </div>
           <p>--Resources are determined at random for each tile captured, except for the
-            tiles with cities on them. Each tile contains capital, industry, and agriculture.</p>
+            tiles with cities on them. Each tile contains the resources capital, industry, and agriculture.</p>
           <p>
             --Cities are worth a pre-deterimed amount based on their size or importance. A players
             capital is worth 15 of each resource. A captured capital is worth 10 of each. A medium sized city is worth
@@ -26,45 +26,46 @@
           <p> --City size can be determined by the number of buildings present on the board piece. 5
             buildings is a capital size. 4 is a medium city and 3 is a small city.
           </p>
-          <!-- SECTION Supplies -->
-          <!-- <div class="text-center">
-              <h3>Supplies</h3>
-            </div>
-            <p>--Supplies are a citical component that players will need to manage to ensure their
-              armies are
-              prepared.</p>
-            <p>--Capital and medium sized cities produce 1 ammo per turn and can store ammo in warehouses when built in
-              adjacent tiles. If cities do not have a warehouse they do not produce anything.</p>
-            <p>--If the warehouses in a city are full the city will stop producing supplies until more
-              warehouses are
-              built or supplies are moved via supply trucks or transport aircraft.</p>
-            <p>--Supply trucks can be built to transport up to 3 supplies across the map. When supply trucks reach their
-              destination the supplies can be instantly transferred to the units on that tile.</p>
-            <p>--1 supply peg is enough for 1 battle. This includes any offensive or defensive
-              operations. Any unit(s)
-              involved in a battle use up 1 supply.</p>
-            <p>--Black pegs on the board represent supplies. One peg is considered one supply point.</p> -->
-          <!-- SECTION Peg Pieces & Main Board Pieces -->
+          <!-- SECTION Construction Sheet -->
           <div class="text-center text-warning">
-            <h3>Peg Pieces & Main Board Pieces</h3>
+            <h3>Construction Sheet</h3>
           </div>
           <p>
-            --There are 4 types of peg pieces used to track different elements of the game. The red peg tracks damage
-            to naval units and division/army unit pieces. Blue and white pegs are to track the kinds of aircraft on an
-            aircraft carrier. Blue being fighter and white being CAS. And black pegs that are used on cruisers to
-            represent missiles during combat.
+            --The construction sheet is used to track the construction of all units. All ground units take 1 turn to
+            construct. Naval units vary slightly with carriers taking 3 turns to construct and destroyer/cruisers taking
+            2 turns to construct. Naval construction is tracked on the bottom of the sheet using the naval construction
+            pieces. Naval yards are built on
+            land tiles adjacent to water tiles. The land tile region number will be recorded on the construction sheet
+            in the spot labeled "Region #". Each naval yard can produce up to 3 ships at one time. Ground units are
+            constructed at cities and can
+            produce a fixed amount per turn based on city size and number of factories present. A players capital can
+            produce 5 units per turn and a captured capital produces 4 units per turn. A medium sized city produces 3
+            units per turn. A small city produces 1 unit per turn. A cities production capacity can be increased by 1 by
+            building factories around. Cities have a limit of 5 units per turn no regardless of how many factories are
+            built around it. Track the construction of each unit by placing them on the construction sheet where the
+            region number matches what city you are building the unit in.
+          </p>
+          <!-- SECTION Main Board Pieces -->
+          <div class="text-center text-warning">
+            <h3>Main Board Pieces</h3>
+          </div>
+          <p>
+            --There is a red peg used to track damage to naval vessels as well as units who have been cutoff from their
+            supply line and are subject to attrition.
           </p>
           <p>--Land units on the main board are represented by pieces that roughly resemble NATO military map symbols.
-            Each symbol represents a certain kind of unit. Guide to what these symbols mean are included with with the
-            instructions of the game.
+            Each symbol represents a certain kind of unit. Guide to what these symbols mean can be found in the app by
+            clicking the <span class="mdi mdi-key"></span> button at the top of the page.
           </p>
-          <!-- <p>--Each of these main board pieces have peg holes on them to represent the amount of
-              supplies that unit
-              has
-              left. If a unit runs out of supplies they cannot participate in offensive or defensive operations. If a
-              unit is attacked that no longer has any supplies left they are forced to retreat and will need to follow
-              the rules for retreating on the main board.
-            </p> -->
+          <p>
+            --There is a grey pillbox or bunker type piece that represents fortifications. When fortifications are built
+            1 bunker piece is placed on the main board where they were built. This will provide 3 bunker pieces on the
+            combat board. Only one can be built per tile.
+          </p>
+          <p>
+            --Ground forces have their own main board pieces, but naval and airforce units do not have their own main
+            board pieces.
+          </p>
           <!-- SECTION Attrition -->
           <div class="text-center text-warning">
             <h3>Attrition</h3>
@@ -73,7 +74,7 @@
             --Attrition occurs when units are cut-off from a direct connection to a city. Units that are cut-off are
             now subject to running out of supplies. Any unit involved in combat will lose 1 supply and that supply
             loss will be tracked using the red pegs. Armies/Divisions have 4 total supplies where as individual units
-            only have 2 supplies as represented by the holes of the main board piece.
+            only have 2 supplies as represented by the holes of the main board pieces.
           </p>
           <p>
             --If a unit/army/division runs out of supplies they can no longer attack or defends themselves. If they
@@ -89,6 +90,9 @@
             attack per turn. Range is the distance a unit can attack an enemy. A range of 1 means the unit can only
             attack tiles that are next to them.
           </p>
+          <p>
+            --All land units can move 2 spaces on the main board if they are within their own territory.
+          </p>
           <p><span class="text-warning">--Infantry</span> are a more defensively balanced unit with limited
             offensive
             capabilities.
@@ -97,8 +101,7 @@
             movement point, 1 offensive point, and a range of 1.
           </p>
           <p><span class="text-warning">--Special Forces</span> are similar to infantry in that they are defensively
-            balanced, but are
-            a
+            balanced, but are a
             fair bit more effective offensively. They also have the ability to occupy fortifications. Special forces
             have access to certain operational events that no other unit has. Special forces have the ability to
             carry laser designators giving artillery more accuracy and gaining access to destroyer artillery if
@@ -213,11 +216,11 @@
           </p>
           <p><span class="text-warning">--Cruisers</span> are much more versatile than destroyers, but are not as
             durable or nimble.
-            They have the ability to deploy 3 surface-to-surface missiles and have infinite AA missiles. They
+            They have the ability to deploy surface-to-surface missiles and AA missiles. They
             have a small cannon that is mostly effective at htting other cruisers. Cruisers have 2 movement points, 1
             hit point, and 1 offensive point. On the combat board cruisers AA has a range of 1 and
             their SS missiles have a range of 4. The cannon has a range of 1. A cruisers cannon cannot fire at land
-            targets.
+            targets. Cruiser can provide SSArtillery support on the main board if a laser designator is being used.
           </p>
           <p><span class="text-warning">--Destroyers</span> are heavy combat vessels with large guns and heavy armor
             giving them the
@@ -467,10 +470,6 @@
           </p>
           <p>--Players capitals act as airfields. Players do not need to build an airfield by their capital.
           </p>
-          <p>--Capitals and medium cities produce 1 ammo per turn and can store ammo in warehouses
-            when built in
-            adjacent tiles.
-          </p>
           <p>--Airfields can only be built within the adjacent tiles of medium and large sized cities. Airfileds
             cannot
             be built next to small cities.
@@ -503,7 +502,9 @@
             </p> -->
           <p>--Naval yards can repair a max of 2 cruisers/destroyers or 1 carrier at one time.
           </p>
-          <p>--Factories can be built adjacent to any city and are used to produce ground forces.
+          <p>--Factories can be built adjacent to any city and are used to increase production of any city except
+            capitals. When they are built adjacent to cities they can now produce 1 more unit per turn. There is a max
+            of 5 units that can be built at any city.
             Factories can be
             destroyed in one successfull hit.
           </p>
