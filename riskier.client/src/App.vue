@@ -202,7 +202,7 @@ body {
   background-attachment: fixed;
   background-position: center right;
   background-repeat: no-repeat;
-  background-size: 112vh;
+  background-size: cover;
   padding-right: 0 !important
 }
 
