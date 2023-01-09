@@ -45,7 +45,7 @@
       </ul>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5 class="text-danger">Mech: Offense-2D6</h5>
+      <h5 class="text-danger">Mechanized: Offense-2D6</h5>
       <h6>1AP, 2MP, Range of 1</h6>
       <ul>
         <li>Vs Infantry: 5-9 (66.7%)</li>
@@ -55,7 +55,7 @@
       </ul>
     </div>
     <div class="d-flex flex-column align-items-center">
-      <h5 class="text-primary">Mech: Deffense-2D6</h5>
+      <h5 class="text-primary">Mechanized: Deffense-2D6</h5>
       <ul>
         <li>Urban D: 7-12 (58.3%)</li>
         <li>Wetlands D: 7-9 (41.7%)</li>
@@ -164,7 +164,7 @@
       <h2>Navy Unit Odds</h2>
     </div>
     <div class="bg-light d-flex flex-column align-items-center">
-      <h5 class="text-danger">Carrier-D12</h5>
+      <h5 class="text-danger">Aircraft Carrier-D12</h5>
       <h6>0AP, 1MP, Range of 1</h6>
       <ul>
         <li>Point Defense 1 tile range</li>

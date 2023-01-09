@@ -1,58 +1,79 @@
 <template>
 
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.airfield <= 0)" @click="removeAirfield()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Airfield</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.airfield }}</strong></h6>
     </div>
     <div>
       <button @click="addAirfield()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">2-<span class="mdi mdi-currency-usd text-warning"></span>1-<span
+        class="mdi mdi-barley text-success"></span></span>
+  </div>
+
+
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.navalYard <= 0)" @click="removeNavalYard()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Naval Yard</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.navalYard }}</strong></h6>
     </div>
     <div>
       <button @click="addNavalYard()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <div class="col-10 position-warehouse">
-    <h6>Warehouse</h6>
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">2-<span class="mdi mdi-currency-usd text-warning"></span>2-<span
+        class="mdi mdi-barley text-success"></span></span>
   </div>
-  <div class="col-4 position-factory">
-    <h6>Factory</h6>
-  </div>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+
+
+  <!-- <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.warehouse <= 0)" @click="removeWarehouse()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Warehouse</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.warehouse }}</strong></h6>
     </div>
     <div>
       <button @click="addWarehouse()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">1-<span class="mdi mdi-currency-usd"></span> 1-<span class="mdi mdi-factory px-1"></span>
+      3-<span class="mdi mdi-barley"></span></span>
+  </div> -->
+
+
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.factory <= 0)" @click="removeFactory()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Factory</h6>
       <h6 class="px-3 fs-4"><strong> {{ account.factory }} </strong></h6>
     </div>
     <div>
       <button @click="addFactory()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center mb-2">
+    <span class="fs-5">2-<span class="mdi mdi-currency-usd text-warning"></span> 2-<span
+        class="mdi mdi-factory px-1 text-secondary"></span>
+      1-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
 </template>

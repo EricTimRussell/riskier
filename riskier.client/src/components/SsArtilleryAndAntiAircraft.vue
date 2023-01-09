@@ -1,27 +1,39 @@
 <template>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.ssArtillery <= 0)" @click="removeSsArtillery()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Missile Artillery</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.ssArtillery }}</strong></h6>
     </div>
     <div>
       <button @click="addSsArtillery()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">2-<span class="mdi mdi-currency-usd text-warning"></span> 4-<span
+        class="mdi mdi-factory text-secondary"></span></span>
+  </div>
+
+
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.antiAircraft <= 0)" @click="removeAntiAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Anti-Aircraft</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.antiAircraft }}</strong></h6>
     </div>
     <div>
       <button @click="addAntiAircraft()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center mb-2">
+    <span class="fs-5">3-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
+        class="mdi mdi-factory text-secondary"></span></span>
   </div>
 </template>
 

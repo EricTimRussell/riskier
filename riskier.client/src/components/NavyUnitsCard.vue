@@ -1,40 +1,61 @@
 <template>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.carrier <= 0)" @click="removeCarrier()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Aircraft Carrier</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.carrier }}</strong></h6>
     </div>
     <div>
       <button @click="addCarrier()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">1-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
+        class="mdi mdi-factory px-1 text-secondary"></span>
+      3-<span class="mdi mdi-barley text-success"></span></span>
+  </div>
+
+
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.cruiser <= 0)" @click="removeCruiser()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Cruiser</h6>
       <h6 class="px-3 fs-4"><strong> {{ account.cruiser }} </strong></h6>
     </div>
     <div>
       <button @click="addCruiser()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-  <h6 class="col-6 pt-4 pl-5">Destroyer</h6>
-  <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
+  <div class="col-12 d-flex justify-content-center mb-5">
+    <span class="fs-5">1-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
+        class="mdi mdi-factory px-1 text-secondary"></span>
+      3-<span class="mdi mdi-barley text-success"></span></span>
+  </div>
+
+
+  <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.destroyer <= 0)" @click="removeDestroyer()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex flex-column align-items-center">
+      <h6 class="px-2">Destroyer</h6>
       <h6 class="px-3 fs-4"><strong>{{ account.destroyer }}</strong></h6>
     </div>
     <div>
       <button @click="addDestroyer()" type="button" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
+  </div>
+  <div class="col-12 d-flex justify-content-center mb-2">
+    <span class="fs-5">1-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
+        class="mdi mdi-factory px-1 text-secondary"></span>
+      3-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 </template>
 

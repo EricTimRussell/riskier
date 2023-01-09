@@ -21,18 +21,18 @@
         </div>
         <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="account.id">
           <div>
-            <span class="mdi mdi-currency-usd fs-3"></span>
+            <span class="mdi mdi-currency-usd fs-3 text-warning"></span>
             <h3 v-if="account.totalCapital >= 0" class="">Capital {{ account.totalCapital }}</h3>
             <h3 v-else="account.totalCapital <= -1" class="text-danger">Capital {{ account.totalCapital }}</h3>
           </div>
           <div>
-            <span class="mdi mdi-factory fs-3"></span>
+            <span class="mdi mdi-factory fs-3 text-secondary"></span>
             <h3 v-if="account.totalIndustry >= 0" class="px-2">Industry {{ account.totalIndustry }}</h3>
             <h3 v-else="account.totalIndustry <= -1" class="px-2 text-danger">Industry
               {{ account.totalIndustry }}</h3>
           </div>
           <div>
-            <span class="mdi mdi-barley fs-3"></span>
+            <span class="mdi mdi-barley fs-3 text-success"></span>
             <h3 v-if="account.totalAgriculture >= 0">Agriculture {{ account.totalAgriculture }}</h3>
             <h3 v-else="account.totalAgriculture <=-1" class="text-danger">Agriculture {{ account.totalAgriculture }}
             </h3>

@@ -201,6 +201,8 @@ body {
       rgba(0, 0, 0, 0.5)), url(../src/assets/img/TopoMap2.jpg);
   background-attachment: fixed;
   background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-right: 0 !important
 }
 

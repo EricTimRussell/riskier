@@ -1,9 +1,9 @@
 <template>
   <form @submit.prevent="formArmy()">
     <div class="form-floating mb-3">
-      <input v-model="editable.armyNumber" required type="text" maxlength="2" class="form-control" id="armyNumber"
-        placeholder="1,2,3..." autocomplete="off">
-      <label for="armyNumber">Army Number...</label>
+      <input v-model="editable.armyNumber" required type="number" maxlength="2" min="1" max="6" class="form-control"
+        id="armyNumber" placeholder="1-6" autocomplete="off">
+      <label for="armyNumber">Army Number(1-6)</label>
     </div>
     <div class="form-floating">
       <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"

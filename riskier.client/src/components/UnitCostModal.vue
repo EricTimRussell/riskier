@@ -11,15 +11,15 @@
         <h6>3-Capital 1-Industry 3-Agriculture</h6>
       </div>
       <div class="bg-light">
-        <h5 class="pt-3">Mech</h5>
+        <h5 class="pt-3">Mechanized Infantry</h5>
         <h6>2-Capital 2-Industry 3-Agriculture</h6>
       </div>
       <div>
-        <h5 class="pt-3">IFV</h5>
+        <h5 class="pt-3">Infantry Fighting Vehicle</h5>
         <h6>3-Capital 3-Industry 1-Agriculture</h6>
       </div>
       <div class="bg-light">
-        <h5 class="pt-3">MBT</h5>
+        <h5 class="pt-3">Main Battle Tank</h5>
         <h6>4-Capital 4-Industry 1-Agriculture</h6>
       </div>
       <div>
@@ -27,17 +27,17 @@
         <h6>1-Capital 3-Industry</h6>
       </div>
       <div class="bg-light">
-        <h5 class="pt-3">SS-Artillery</h5>
+        <h5 class="pt-3">Missile Artillery</h5>
         <h6>2-Capital 4-Industry</h6>
       </div>
       <div>
         <h5 class="pt-3">Anti-Aircraft</h5>
         <h6>3-Capital 1-Industry</h6>
       </div>
-      <div class="bg-light">
+      <!-- <div class="bg-light">
         <h5 class="pt-3">Supply Truck</h5>
         <h6>1-Capital 1-Agriculture</h6>
-      </div>
+      </div> -->
     </div>
     <h2 class="text-center py-2">Air Units</h2>
     <div>
@@ -57,7 +57,7 @@
     <h2 class="text-center py-2">Navy Units</h2>
     <div>
       <div class="bg-light">
-        <h5>Carrier</h5>
+        <h5>Aircraft Carrier</h5>
         <h6>6-Capital 6-Industry 6-Agriculture</h6>
       </div>
       <div>

@@ -1,9 +1,9 @@
 <template>
   <form @submit.prevent="formDivision()">
     <div class="form-floating mb-3">
-      <input v-model="editable.divisionNumber" required type="text" maxlength="2" class="form-control"
+      <input v-model="editable.divisionNumber" required type="number" maxlength="2" min="1" max="6" class="form-control"
         id="divisionNumber" placeholder="1,2,3..." autocomplete="off">
-      <label for="divisionNumber">Division Number...</label>
+      <label for="divisionNumber">Division Number(1-6)</label>
     </div>
     <div class="form-floating">
       <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
