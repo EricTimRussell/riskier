@@ -3,7 +3,7 @@
   <body>
     <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
       <div>
-        <button :disabled="(account.infantry == 0)" @click="removeInfantry()"
+        <button :disabled="(account.infantry <= 0)" @click="removeInfantry()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
       <div class="d-flex align-items-center">
@@ -15,7 +15,7 @@
     </div>
     <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
       <div>
-        <button :disabled="(account.specialForces == 0)" @click="removeSpecialForces()"
+        <button :disabled="(account.specialForces <= 0)" @click="removeSpecialForces()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
       <div class="d-flex align-items-center">

@@ -24,6 +24,10 @@ public class AirUnitsService
     owner.TotalCapital += 4;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 0;
+    if (owner.FighterAircraft <= 0)
+    {
+      return;
+    }
     owner.FighterAircraft--;
     owner = _ar.Edit(owner);
   }
@@ -44,6 +48,10 @@ public class AirUnitsService
     owner.TotalCapital += 4;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 0;
+    if (owner.CloseAirSupport <= 0)
+    {
+      return;
+    }
     owner.CloseAirSupport--;
     owner = _ar.Edit(owner);
   }
@@ -64,6 +72,10 @@ public class AirUnitsService
     owner.TotalCapital += 1;
     owner.TotalIndustry += 1;
     owner.TotalAgriculture += 0;
+    if (owner.TransportAircraft <= 0)
+    {
+      return;
+    }
     owner.TransportAircraft--;
     owner = _ar.Edit(owner);
   }

@@ -27,6 +27,10 @@ public class NavyUnitsService
     owner.TotalCapital += 6;
     owner.TotalIndustry += 6;
     owner.TotalAgriculture += 6;
+    if (owner.Carrier <= 0)
+    {
+      return;
+    }
     owner.Carrier--;
     owner = _ar.Edit(owner);
   }
@@ -47,6 +51,10 @@ public class NavyUnitsService
     owner.TotalCapital += 5;
     owner.TotalIndustry += 5;
     owner.TotalAgriculture += 2;
+    if (owner.Cruiser <= 0)
+    {
+      return;
+    }
     owner.Cruiser--;
     owner = _ar.Edit(owner);
   }
@@ -67,6 +75,10 @@ public class NavyUnitsService
     owner.TotalCapital += 5;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 2;
+    if (owner.Destroyer <= 0)
+    {
+      return;
+    }
     owner.Destroyer--;
     owner = _ar.Edit(owner);
   }

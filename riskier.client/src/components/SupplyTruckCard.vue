@@ -1,7 +1,7 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.supplyTruck == 0)" @click="removeSupplyTruck()"
+      <button :disabled="(account.supplyTruck <= 0)" @click="removeSupplyTruck()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">

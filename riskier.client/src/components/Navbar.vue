@@ -15,8 +15,8 @@
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
             <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitCost" aria-label="Unit Cost" title="Unit Cost"></button>
-            <button class="mdi mdi-key mx-4 fs-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#key"
-              aria-label="Game Key" title="Game Key"></button>
+            <!-- <button class="mdi mdi-key mx-4 fs-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#key"
+              aria-label="Game Key" title="Game Key"></button> -->
           </div>
         </div>
         <div class="col-12 d-flex justify-content-center text-center order-3 text-shadow" v-if="account.id">

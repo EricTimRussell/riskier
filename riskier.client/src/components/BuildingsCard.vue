@@ -2,7 +2,7 @@
 
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.airfield == 0)" @click="removeAirfield()"
+      <button :disabled="(account.airfield <= 0)" @click="removeAirfield()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -14,7 +14,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.navalYard == 0)" @click="removeNavalYard()"
+      <button :disabled="(account.navalYard <= 0)" @click="removeNavalYard()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -32,7 +32,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.warehouse == 0)" @click="removeWarehouse()"
+      <button :disabled="(account.warehouse <= 0)" @click="removeWarehouse()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -44,7 +44,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.factory == 0)" @click="removeFactory()"
+      <button :disabled="(account.factory <= 0)" @click="removeFactory()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">

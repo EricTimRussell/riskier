@@ -1,7 +1,7 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.ssArtillery == 0)" @click="removeSsArtillery()"
+      <button :disabled="(account.ssArtillery <= 0)" @click="removeSsArtillery()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -13,7 +13,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.antiAircraft == 0)" @click="removeAntiAircraft()"
+      <button :disabled="(account.antiAircraft <= 0)" @click="removeAntiAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">

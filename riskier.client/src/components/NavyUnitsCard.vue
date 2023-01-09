@@ -1,7 +1,7 @@
 <template>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.carrier == 0)" @click="removeCarrier()"
+      <button :disabled="(account.carrier <= 0)" @click="removeCarrier()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -13,7 +13,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.cruiser == 0)" @click="removeCruiser()"
+      <button :disabled="(account.cruiser <= 0)" @click="removeCruiser()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -26,7 +26,7 @@
   <h6 class="col-6 pt-4 pl-5">Destroyer</h6>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.destroyer == 0)" @click="removeDestroyer()"
+      <button :disabled="(account.destroyer <= 0)" @click="removeDestroyer()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">

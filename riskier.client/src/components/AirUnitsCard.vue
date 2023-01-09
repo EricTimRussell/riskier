@@ -2,7 +2,7 @@
 
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.fighterAircraft == 0)" @click="removeFighterAircraft()"
+      <button :disabled="(account.fighterAircraft <= 0)" @click="removeFighterAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -14,7 +14,7 @@
   </div>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.closeAirSupport == 0)" @click="removeCloseAirSupport()"
+      <button :disabled="(account.closeAirSupport <= 0)" @click="removeCloseAirSupport()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">
@@ -27,7 +27,7 @@
   <h6 class="col-6 pt-4 pl-5">Transport</h6>
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
-      <button :disabled="(account.transportAircraft == 0)" @click="removeTransportAircraft()"
+      <button :disabled="(account.transportAircraft <= 0)" @click="removeTransportAircraft()"
         class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
     </div>
     <div class="d-flex align-items-center">

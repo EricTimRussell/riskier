@@ -25,6 +25,10 @@ public class BuildingsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 0;
     owner.TotalAgriculture += 1;
+    if (owner.Airfield <= 0)
+    {
+      return;
+    }
     owner.Airfield--;
     owner = _ar.Edit(owner);
   }
@@ -45,6 +49,10 @@ public class BuildingsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 0;
     owner.TotalAgriculture += 2;
+    if (owner.NavalYard <= 0)
+    {
+      return;
+    }
     owner.NavalYard--;
     owner = _ar.Edit(owner);
   }
@@ -65,6 +73,10 @@ public class BuildingsService
     owner.TotalCapital += 1;
     owner.TotalIndustry += 0;
     owner.TotalAgriculture += 3;
+    if (owner.Warehouse <= 0)
+    {
+      return;
+    }
     owner.Warehouse--;
     owner = _ar.Edit(owner);
   }
@@ -85,6 +97,10 @@ public class BuildingsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 2;
     owner.TotalAgriculture += 1;
+    if (owner.Factory <= 0)
+    {
+      return;
+    }
     owner.Factory--;
     owner = _ar.Edit(owner);
   }

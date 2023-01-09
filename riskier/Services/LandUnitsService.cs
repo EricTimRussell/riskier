@@ -25,6 +25,10 @@ public class LandUnitsService
     owner.TotalCapital += 1;
     owner.TotalIndustry += 1;
     owner.TotalAgriculture += 3;
+    if (owner.Infantry <= 0)
+    {
+      return;
+    }
     owner.Infantry--;
     owner = _ar.Edit(owner);
   }
@@ -45,6 +49,10 @@ public class LandUnitsService
     owner.TotalCapital += 3;
     owner.TotalIndustry += 1;
     owner.TotalAgriculture += 3;
+    if (owner.SpecialForces <= 0)
+    {
+      return;
+    }
     owner.SpecialForces--;
     owner = _ar.Edit(owner);
   }
@@ -65,6 +73,10 @@ public class LandUnitsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 2;
     owner.TotalAgriculture += 3;
+    if (owner.Mech <= 0)
+    {
+      return;
+    }
     owner.Mech--;
     owner = _ar.Edit(owner);
   }
@@ -85,6 +97,10 @@ public class LandUnitsService
     owner.TotalCapital += 3;
     owner.TotalIndustry += 3;
     owner.TotalAgriculture += 1;
+    if (owner.Ifv <= 0)
+    {
+      return;
+    }
     owner.Ifv--;
     owner = _ar.Edit(owner);
   }
@@ -105,6 +121,10 @@ public class LandUnitsService
     owner.TotalCapital += 4;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 1;
+    if (owner.Mbt <= 0)
+    {
+      return;
+    }
     owner.Mbt--;
     owner = _ar.Edit(owner);
   }
@@ -125,6 +145,10 @@ public class LandUnitsService
     owner.TotalCapital += 1;
     owner.TotalIndustry += 3;
     owner.TotalAgriculture += 0;
+    if (owner.Artillery <= 0)
+    {
+      return;
+    }
     owner.Artillery--;
     owner = _ar.Edit(owner);
   }
@@ -145,6 +169,10 @@ public class LandUnitsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 4;
     owner.TotalAgriculture += 0;
+    if (owner.SsArtillery <= 0)
+    {
+      return;
+    }
     owner.SsArtillery--;
     owner = _ar.Edit(owner);
   }
@@ -165,6 +193,10 @@ public class LandUnitsService
     owner.TotalCapital += 3;
     owner.TotalIndustry += 1;
     owner.TotalAgriculture += 0;
+    if (owner.AntiAircraft <= 0)
+    {
+      return;
+    }
     owner.AntiAircraft--;
     owner = _ar.Edit(owner);
   }
@@ -185,6 +217,10 @@ public class LandUnitsService
     owner.TotalCapital += 1;
     owner.TotalIndustry += 0;
     owner.TotalAgriculture += 1;
+    if (owner.SupplyTruck <= 0)
+    {
+      return;
+    }
     owner.SupplyTruck--;
     owner = _ar.Edit(owner);
   }

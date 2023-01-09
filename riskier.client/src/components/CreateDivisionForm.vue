@@ -16,6 +16,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot1">Select Unit Type</label>
     </div>
@@ -30,6 +31,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot2">Select Unit Type</label>
     </div>
@@ -44,6 +46,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot3">Select Unit Type</label>
     </div>
@@ -58,6 +61,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot4">Select Unit Type</label>
     </div>
@@ -72,6 +76,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot5">Select Unit Type</label>
     </div>
@@ -86,6 +91,7 @@
         <option v-if="account.mbt >= 1" value="MBT">MBT</option>
         <option v-if="account.artillery >= 1" value="Artillery">Artillery</option>
         <option v-if="account.antiAircraft >= 1" value="Anti-Aircraft">Anti-Aircraft</option>
+        <option v-if="account.ssArtillery >= 1" value="SSArtillery">SSArtillery</option>
       </select>
       <label for="unitSlot6">Select Unit Type</label>
     </div>
