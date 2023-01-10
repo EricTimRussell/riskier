@@ -27,56 +27,55 @@
         </p>
         <!-- SECTION Construction Sheet -->
         <div class="text-center text-warning">
-          <h3>Construction Sheet</h3>
+          <h3>Construction</h3>
         </div>
         <p>
-          --The construction sheet is used to track the construction of all units. All ground units take 1 turn to
+          --The construction sheet is used to track the construction of buildings and naval units. All ground units take
+          1 turn to
           construct. Naval units vary slightly with carriers taking 3 turns to construct and destroyer/cruisers taking
           2 turns to construct. Naval construction is tracked on the bottom of the sheet using the naval construction
           pieces. Naval yards are built on
           land tiles adjacent to water tiles. The land tile region number will be recorded on the construction sheet
-          in the spot labeled "Region #". Each naval yard can produce up to 3 ships at one time. Ground units are
-          constructed at cities and can
-          produce a fixed amount per turn based on city size and number of factories present. A players capital can
-          produce 5 units per turn and a captured capital produces 4 units per turn. A medium sized city produces 3
-          units per turn. A small city produces 1 unit per turn. A cities production capacity can be increased by 1 by
-          building factories around. Cities have a limit of 5 units per turn no regardless of how many factories are
-          built around it. Track the construction of each unit by placing them on the construction sheet where the
-          region number matches what city you are building the unit in.
+          in the spot labeled "Region #". Each naval yard can produce up to 3 ships at one time.
+        <p>
+          --Each city has a set amount of production. A capital city is worth 2 production and every other city is worth
+          1 production. A single factory can be built on cities to increase their production by 1. The amount of
+          production a player has dictates how many units a player can produce at one time.
+        </p>
         </p>
         <!-- SECTION Main Board Pieces -->
         <div class="text-center text-warning">
           <h3>Main Board Pieces</h3>
         </div>
         <p>
-          --There is a red peg used to track damage to naval vessels as well as units who have been cutoff from their
-          supply line and are subject to attrition.
+          --There is a red peg used to track damage to naval vessels as well as divisions/armies who have been cutoff
+          from their supply line and are subject to attrition.
         </p>
-        <p>--Land units on the main board are represented by pieces that roughly resemble NATO military map symbols.
+        <!-- <p>--Land units on the main board are represented by pieces that roughly resemble NATO military map symbols.
           Each symbol represents a certain kind of unit. Guide to what these symbols mean can be found in the app by
           clicking the <span class="mdi mdi-key"></span> button at the top of the page.
-        </p>
+        </p> -->
         <p>
           --There is a grey pillbox or bunker type piece that represents fortifications. When fortifications are built
           1 bunker piece is placed on the main board where they were built. This will provide 3 bunker pieces on the
           combat board. Only one can be built per tile.
         </p>
-        <p>
+        <!-- <p>
           --Ground forces have their own main board pieces, but naval and airforce units do not have their own main
           board pieces.
-        </p>
+        </p> -->
         <!-- SECTION Attrition -->
         <div class="text-center text-warning">
           <h3>Attrition</h3>
         </div>
         <p>
           --Attrition occurs when units are cut-off from a direct connection to a city. Units that are cut-off are
-          now subject to running out of supplies. Any unit involved in combat will lose 1 supply and that supply
-          loss will be tracked using the red pegs. Armies/Divisions have 4 total supplies where as individual units
-          only have 2 supplies as represented by the holes of the main board pieces.
+          now subject to running out of supplies. Armies and divisions only have enough supplies for 4 battles before
+          they can no longer attack or defend themselves. Individual units only have 1 turn to re-establish their supply
+          line or they will be destroyed.
         </p>
         <p>
-          --If a unit/army/division runs out of supplies they can no longer attack or defends themselves. If they
+          --If an army/division runs out of supplies they can no longer attack or defends themselves. If they
           are attacked with no supplies the player must follow the "retreat rules when a unit has no supplies".
         </p>
         <!-- SECTION Land Units -->
@@ -340,8 +339,8 @@
           turn before they
           can claim it. Once claimed they can then roll for resources and draw a card from the item deck.
         </p>
-        <p><span class="text-warning">--Retreating when a unit has no supplies: </span> In the event a unit or group
-          of units have no
+        <p><span class="text-warning">--Retreating when a unit has no supplies: </span> In the event a army/division has
+          no
           supplies left to defend themselves from an attack they must all retreat. A dice roll for each unit
           retreating will be used determine a successfull escape or not. Using a D12 the defending player must roll
           2 higher than the attacking player to escape. If a unit successfully escapes the player can choose which
@@ -498,11 +497,8 @@
             </p> -->
         <p>--Naval yards can repair a max of 2 cruisers/destroyers or 1 carrier at one time.
         </p>
-        <p>--Factories can be built adjacent to any city and are used to increase production of any city except
-          capitals. When they are built adjacent to cities they can now produce 1 more unit per turn. There is a max
-          of 5 units that can be built at any city.
-          Factories can be
-          destroyed in one successfull hit.
+        <p>--Factories can be built on any city and are used to increase production of any city. When they are built
+          onto cities they increase your faction production by 1. Factories can be destroyed in one successfull hit.
         </p>
         <!-- <p>--Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
               Warehouses can be destroyed in one successfull hit.

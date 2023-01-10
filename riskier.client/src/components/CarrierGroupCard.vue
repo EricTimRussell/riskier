@@ -64,74 +64,82 @@
             <div class="form-floating my-3">
               <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot1" selected>{{ carrierGroup.unitSlot1 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot1">Current Unit: {{ carrierGroup.unitSlot1 }}</label>
+              <label for="unitSlot1">Selected Unit</label>
             </div>
             <div class="form-floating">
               <select v-model="editable.unitSlot2" required class="form-select" id="unitSlot2"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot2" selected>{{ carrierGroup.unitSlot2 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot2">Current Unit: {{ carrierGroup.unitSlot2 }}</label>
+              <label for="unitSlot2">Selected Unit</label>
             </div>
             <div class="form-floating my-3">
               <select v-model="editable.unitSlot3" required class="form-select" id="unitSlot3"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot3" selected>{{ carrierGroup.unitSlot3 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot3">Current Unit: {{ carrierGroup.unitSlot3 }}</label>
+              <label for="unitSlot3">Selected Unit</label>
             </div>
             <div class="form-floating">
               <select v-model="editable.unitSlot4" required class="form-select" id="unitSlot4"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot4" selected>{{ carrierGroup.unitSlot4 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot4">Current Unit: {{ carrierGroup.unitSlot4 }}</label>
+              <label for="unitSlot4">Selected Unit</label>
             </div>
             <div class="form-floating my-3">
               <select v-model="editable.unitSlot5" required class="form-select" id="unitSlot5"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot5" selected>{{ carrierGroup.unitSlot5 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot5">Current Unit: {{ carrierGroup.unitSlot5 }}</label>
+              <label for="unitSlot5">Selected Unit</label>
             </div>
             <div class="form-floating">
               <select v-model="editable.unitSlot6" required class="form-select" id="unitSlot6"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot6" selected>{{ carrierGroup.unitSlot6 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot6">Current Unit: {{ carrierGroup.unitSlot6 }}</label>
+              <label for="unitSlot6">Selected Unit</label>
             </div>
             <div class="form-floating my-3">
               <select v-model="editable.unitSlot7" required class="form-select" id="unitSlot7"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot7" selected>{{ carrierGroup.unitSlot7 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot7">Current Unit: {{ carrierGroup.unitSlot7 }}</label>
+              <label for="unitSlot7">Selected Unit</label>
             </div>
             <div class="form-floating mb-3">
               <select v-model="editable.unitSlot8" required class="form-select" id="unitSlot8"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.unitSlot8" selected>{{ carrierGroup.unitSlot8 }}</option>
                 <option value="EmptySlot">EmptySlot</option>
                 <option value="Fighter">Fighter</option>
                 <option value="CAS">CAS</option>
               </select>
-              <label for="unitSlot8">Current Unit: {{ carrierGroup.unitSlot8 }}</label>
+              <label for="unitSlot8">Selected Unit</label>
             </div>
             <div>
               <h5 class="text-center">Ground Units</h5>
@@ -139,6 +147,8 @@
             <div class="form-floating my-3">
               <select v-model="editable.groundUnit1" class="form-select" id="groundUnit1"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit1" selected>{{ carrierGroup.groundUnit1 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -147,11 +157,13 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit1">Current Unit: {{ carrierGroup.groundUnit1 }}</label>
+              <label for="groundUnit1">Selected Unit</label>
             </div>
-            <div class="form-floating my-3">
+            <div class="form-floating">
               <select v-model="editable.groundUnit2" class="form-select" id="groundUnit2"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit2" selected>{{ carrierGroup.groundUnit2 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -160,11 +172,13 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit2">Current Unit: {{ carrierGroup.groundUnit2 }}</label>
+              <label for="groundUnit2">Selected Unit</label>
             </div>
             <div class="form-floating my-3">
               <select v-model="editable.groundUnit3" class="form-select" id="groundUnit3"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit3" selected>{{ carrierGroup.groundUnit3 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -173,11 +187,13 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit3">Current Unit: {{ carrierGroup.groundUnit3 }}</label>
+              <label for="groundUnit3">Selected Unit</label>
             </div>
-            <div class="form-floating my-3">
+            <div class="form-floating">
               <select v-model="editable.groundUnit4" class="form-select" id="groundUnit4"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit4" selected>{{ carrierGroup.groundUnit4 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -186,11 +202,13 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit4">Current Unit: {{ carrierGroup.groundUnit4 }}</label>
+              <label for="groundUnit4">Selected Unit</label>
             </div>
             <div class="form-floating my-3">
               <select v-model="editable.groundUnit5" class="form-select" id="groundUnit5"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit5" selected>{{ carrierGroup.groundUnit5 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -199,11 +217,13 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit5">Current Unit: {{ carrierGroup.groundUnit5 }}</label>
+              <label for="groundUnit5">Selected Unit</label>
             </div>
-            <div class="form-floating my-3">
+            <div class="form-floating">
               <select v-model="editable.groundUnit6" class="form-select" id="groundUnit6"
                 aria-label="Select Unit for Slot">
+                <option :value="editable.groundUnit6" selected>{{ carrierGroup.groundUnit6 }}</option>
+                <option value="EmptySlot">EmptySlot</option>
                 <option value="Infantry">Infantry</option>
                 <option value="Special Forces">Special Forces</option>
                 <option value="Mech">Mech</option>
@@ -212,7 +232,7 @@
                 <option value="Artillery">Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
-              <label for="groundUnit6">Current Unit: {{ carrierGroup.groundUnit6 }}</label>
+              <label for="groundUnit6">Selected Unit</label>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -241,7 +261,7 @@ export default {
     carrierGroup: { Type: Carrier, required: true }
   },
   setup(props) {
-    const editable = ref({})
+    const editable = ref({ unitSlot1: `${props.carrierGroup.unitSlot1}`, unitSlot2: `${props.carrierGroup.unitSlot2}`, unitSlot3: `${props.carrierGroup.unitSlot3}`, unitSlot4: `${props.carrierGroup.unitSlot4}`, unitSlot5: `${props.carrierGroup.unitSlot5}`, unitSlot6: `${props.carrierGroup.unitSlot6}`, unitSlot7: `${props.carrierGroup.unitSlot7}`, unitSlot8: `${props.carrierGroup.unitSlot8}`, groundUnit1: `${props.carrierGroup.groundUnit1}`, groundUnit2: `${props.carrierGroup.groundUnit2}`, groundUnit3: `${props.carrierGroup.groundUnit3}`, groundUnit4: `${props.carrierGroup.groundUnit4}`, groundUnit5: `${props.carrierGroup.groundUnit5}`, groundUnit6: `${props.carrierGroup.groundUnit6}`, })
     return {
       editable,
       account: computed(() => AppState.account),

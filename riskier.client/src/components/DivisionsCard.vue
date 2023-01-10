@@ -36,7 +36,6 @@
                 title="close modal"></button>
             </div>
             <div class="modal-body">
-              <h6 class="text-center">*Make a selection for all fields</h6>
               <div class="form-floating">
                 <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
                   aria-label="Select Unit for Slot">
@@ -49,7 +48,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot1">Current Unit: {{ divisions.unitSlot1 }}</label>
+                <label for="unitSlot1">Selected Unit</label>
               </div>
               <div class="form-floating my-3">
                 <select v-model="editable.unitSlot2" required class="form-select" id="unitSlot2"
@@ -63,7 +62,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot2">Current Unit: {{ divisions.unitSlot2 }}</label>
+                <label for="unitSlot2">Selected Unit</label>
               </div>
               <div class="form-floating">
                 <select v-model="editable.unitSlot3" required class="form-select" id="unitSlot3"
@@ -77,7 +76,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot3">Current Unit: {{ divisions.unitSlot3 }}</label>
+                <label for="unitSlot3">Selected Unit</label>
               </div>
               <div class="form-floating my-3">
                 <select v-model="editable.unitSlot4" required class="form-select" id="unitSlot4"
@@ -91,7 +90,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot4">Current Unit: {{ divisions.unitSlot4 }}</label>
+                <label for="unitSlot4">Selected Unit</label>
               </div>
               <div class="form-floating">
                 <select v-model="editable.unitSlot5" required class="form-select" id="unitSlot5"
@@ -105,7 +104,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot5">Current Unit: {{ divisions.unitSlot5 }}</label>
+                <label for="unitSlot5">Selected Unit</label>
               </div>
               <div class="form-floating my-3">
                 <select v-model="editable.unitSlot6" required class="form-select" id="unitSlot6"
@@ -119,7 +118,7 @@
                   <option value="Artillery">Artillery</option>
                   <option value="Anti-Aircraft">Anti-Aircraft</option>
                 </select>
-                <label for="unitSlot6">Current Unit: {{ divisions.unitSlot6 }}</label>
+                <label for="unitSlot6">Selected Unit</label>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
@@ -142,7 +141,7 @@ import { computed } from "@vue/reactivity";
 import { AppState } from "../AppState";
 import CreateDivisionForm from "./CreateDivisionForm.vue";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
-import { ref, watchEffect } from "vue";
+import { ref } from "vue";
 import Pop from "../utils/Pop";
 import { Modal } from "bootstrap";
 
@@ -151,10 +150,7 @@ export default {
     divisions: { Type: Division, required: true }
   },
   setup(props) {
-    const editable = ref({})
-    watchEffect(() => {
-      editable.value = { ...AppState.divisions }
-    })
+    const editable = ref({ unitSlot1: `${props.divisions.unitSlot1}`, unitSlot2: `${props.divisions.unitSlot2}`, unitSlot3: `${props.divisions.unitSlot3}`, unitSlot4: `${props.divisions.unitSlot4}`, unitSlot5: `${props.divisions.unitSlot5}`, unitSlot6: `${props.divisions.unitSlot6}` })
     return {
       editable,
       async editDivision() {
