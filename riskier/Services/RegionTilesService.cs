@@ -55,6 +55,7 @@ public class RegionTilesService
     regionOwner.TotalCapital -= region.Capital;
     regionOwner.TotalIndustry -= region.Industry;
     regionOwner.TotalAgriculture -= region.Agriculture;
+    regionOwner.TotalProduction -= region.Production;
     regionOwner = _ar.Edit(regionOwner);
     _rtr.RemoveRegion(regionTileId);
   }
