@@ -8,6 +8,7 @@ export class Account {
     this.totalCapital = data.totalCapital
     this.totalIndustry = data.totalIndustry
     this.totalAgriculture = data.totalAgriculture
+    this.totalProduction = data.totalProduction
     this.infantry = data.infantry
     this.specialForces = data.specialForces
     this.mech = data.mech

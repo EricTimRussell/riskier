@@ -72,13 +72,16 @@
     </div>
     <div class="row">
       <div class="col-12 d-flex flex-column align-items-center bg-green  elevation-5 mt-4 pt-3">
-        <h2 class="mdi mdi-airplane-takeoff"> Carrier Groups</h2>
+        <h2 class="mdi mdi-airplane-takeoff"> Carriers</h2>
         <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal"
           data-bs-target="#formCarrierGroup" aria-label="Form Carrier Group">Add Carrier Group</button>
       </div>
       <div class="col-12 col-lg-4 d-flex justify-content-center my-3" v-if="carrierGroup.length > 0"
         v-for="c in carrierGroup">
         <CarrierGroupCard :carrierGroup="c" :key="c.id" />
+      </div>
+      <div class="text-center pt-3" v-else>
+        <h6>You currently have no Carriers</h6>
       </div>
     </div>
     <div v-if="account.id">

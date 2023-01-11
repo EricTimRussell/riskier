@@ -15,7 +15,8 @@ public class RegionTilesRepository : BaseRepository
       regionNumber,
       capital,
       industry,
-      agriculture
+      agriculture,
+      production
     )
     VALUES(
       @Id,
@@ -23,7 +24,8 @@ public class RegionTilesRepository : BaseRepository
       @RegionNumber,
       @Capital,
       @Industry,
-      @Agriculture
+      @Agriculture,
+      @Production
     );
     SELECT LAST_INSERT_ID()
     ;";

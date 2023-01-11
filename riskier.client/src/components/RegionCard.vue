@@ -67,8 +67,8 @@ export default {
 }
 
 .card-size {
-  max-height: 31vh;
-  min-height: 31vh;
+  max-height: 33vh;
+  min-height: 33vh;
   min-width: 20vh;
   max-width: 20vh;
   border-radius: 5px;

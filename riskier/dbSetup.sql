@@ -12,6 +12,7 @@ CREATE TABLE
         totalCapital INT NOT NULL,
         totalIndustry INT NOT NULL,
         totalAgriculture INT NOT NULL,
+        totalProduction INT,
         infantry INT,
         specialForces INT,
         MECH INT,
@@ -42,6 +43,7 @@ CREATE TABLE
         capital INT NOT NULL,
         industry INT NOT NULL,
         agriculture INT NOT NULL,
+        production INT,
         ownerId VARCHAR(255) NOT NULL,
         FOREIGN KEY (ownerId) REFERENCES riskierAccounts(id) ON DELETE CASCADE
     ) default charset utf8;

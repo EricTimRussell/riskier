@@ -87,6 +87,7 @@ public class BuildingsService
     owner.TotalCapital -= 2;
     owner.TotalIndustry -= 2;
     owner.TotalAgriculture -= 1;
+    owner.TotalProduction += 1;
     owner.Factory++;
     owner = _ar.Edit(owner);
   }
@@ -97,6 +98,7 @@ public class BuildingsService
     owner.TotalCapital += 2;
     owner.TotalIndustry += 2;
     owner.TotalAgriculture += 1;
+    owner.TotalProduction -= 1;
     if (owner.Factory <= 0)
     {
       return;

@@ -17,6 +17,10 @@
       <label for="agriculture" class="form-label">Agriculture: {{ editable.agriculture }}</label>
       <input v-model="editable.agriculture" type="range" class="form-range" min="1" max="15" step="1" id="agriculture">
     </div>
+    <div hidden>
+      <label for="production" class="form-label"></label>
+      <input v-model="editable.production" type="number" min="1" max="1" id="production">
+    </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
       <button type="submit" class="btn btn-success">Create</button>
@@ -33,7 +37,7 @@ import Pop from "../utils/Pop";
 
 export default {
   setup() {
-    const editable = ref({ capital: 3, industry: 3, agriculture: 3 })
+    const editable = ref({ capital: 4, industry: 4, agriculture: 4, production: 1 })
     return {
       editable,
       async createCity() {

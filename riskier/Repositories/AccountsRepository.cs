@@ -25,9 +25,9 @@ public class AccountsRepository
   {
     string sql = @"
             INSERT INTO riskierAccounts
-              (name, picture, email, id, teamName, totalCapital, totalIndustry, totalAgriculture)
+              (name, picture, email, id, teamName, totalCapital, totalIndustry, totalAgriculture, totalProduction)
             VALUES
-              (@Name, @Picture, @Email, @Id, @TeamName, @TotalCapital, @TotalIndustry, @TotalAgriculture)";
+              (@Name, @Picture, @Email, @Id, @TeamName, @TotalCapital, @TotalIndustry, @TotalAgriculture, @TotalProduction)";
     _db.Execute(sql, newAccount);
     return newAccount;
   }
@@ -42,6 +42,7 @@ public class AccountsRepository
               totalCapital = @TotalCapital,
               totalIndustry = @TotalIndustry,
               totalAgriculture = @TotalAgriculture,
+              totalProduction = @TotalProduction,
               infantry = @Infantry,
               specialForces = @SpecialForces,
               mech = @Mech,
