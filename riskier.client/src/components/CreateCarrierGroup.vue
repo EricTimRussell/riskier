@@ -12,8 +12,8 @@
       <select v-model="editable.unitSlot1" required class="form-select" id="unitSlot1"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot1">Select Unit Type</label>
     </div>
@@ -21,8 +21,8 @@
       <select v-model="editable.unitSlot2" required class="form-select" id="unitSlot2"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot2">Select Unit Type</label>
     </div>
@@ -30,8 +30,8 @@
       <select v-model="editable.unitSlot3" required class="form-select" id="unitSlot3"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot3">Select Unit Type</label>
     </div>
@@ -39,8 +39,8 @@
       <select v-model="editable.unitSlot4" required class="form-select" id="unitSlot4"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot4">Select Unit Type</label>
     </div>
@@ -48,8 +48,8 @@
       <select v-model="editable.unitSlot5" required class="form-select" id="unitSlot5"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot5">Select Unit Type</label>
     </div>
@@ -57,8 +57,8 @@
       <select v-model="editable.unitSlot6" required class="form-select" id="unitSlot6"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot6">Select Unit Type</label>
     </div>
@@ -66,8 +66,8 @@
       <select v-model="editable.unitSlot7" required class="form-select" id="unitSlot7"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot7">Select Unit Type</label>
     </div>
@@ -75,8 +75,8 @@
       <select v-model="editable.unitSlot8" required class="form-select" id="unitSlot8"
         aria-label="Select Unit for Slot">
         <option value="EmptySlot">EmptySlot</option>
-        <option value="Fighter">Fighter</option>
-        <option value="CAS">CAS</option>
+        <option value="Fighter">Fighter ( {{ account.fighterAircraft }} )</option>
+        <option value="CAS">CAS ( {{ account.closeAirSupport }} )</option>
       </select>
       <label for="unitSlot8">Select Unit Type</label>
     </div>

@@ -25,6 +25,9 @@
         <p> --City size can be determined by the number of buildings present on the board piece. 5
           buildings is a capital size. 4 is a medium city and 3 is a small city.
         </p>
+        <p>
+          --All cities have 1 production point.
+        </p>
         <!-- SECTION Construction Sheet -->
         <div class="text-center text-warning">
           <h3>Construction</h3>
@@ -38,9 +41,12 @@
           land tiles adjacent to water tiles. The land tile region number will be recorded on the construction sheet
           in the spot labeled "Region #". Each naval yard can produce up to 3 ships at one time.
         <p>
-          --Each city has a set amount of production. A capital city is worth 2 production and every other city is worth
-          1 production. A single factory can be built on cities to increase their production by 1. The amount of
-          production a player has dictates how many units a player can produce at one time.
+          --Each city is worth 1 production. A max of 2 Factories can be built onto capitals and 1 onto large cities and
+          medium
+          cities to
+          increase their production by 1 for each factory. Factories cannot be built on small cities. The amount of
+          production a player has dictates how many units a player can produce at one time. This does not include naval
+          units or buildings.
         </p>
         </p>
         <!-- SECTION Main Board Pieces -->
@@ -465,9 +471,7 @@
         </p>
         <p>--Players capitals act as airfields. Players do not need to build an airfield by their capital.
         </p>
-        <p>--Airfields can only be built within the adjacent tiles of medium and large sized cities. Airfileds
-          cannot
-          be built next to small cities.
+        <p>--Airfields can only be built within the adjacent tiles of cities.
         </p>
         <p>--Aircraft can only be built in cities with an adjacent airfield.
         </p>
@@ -498,7 +502,8 @@
         <p>--Naval yards can repair a max of 2 cruisers/destroyers or 1 carrier at one time.
         </p>
         <p>--Factories can be built on any city and are used to increase production of any city. When they are built
-          onto cities they increase your faction production by 1. Factories can be destroyed in one successfull hit.
+          onto cities they increase your faction production by 1. Capitals can have 2 factories. Large and medium cities
+          can have 1 factory. And small cities cannot have factories. Factories can be destroyed in one successfull hit.
         </p>
         <!-- <p>--Warehouse can be built adjacent to cities. Warehouse supplies to a maximum of 3 per warehouse.
               Warehouses can be destroyed in one successfull hit.

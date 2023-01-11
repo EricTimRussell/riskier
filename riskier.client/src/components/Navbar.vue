@@ -23,24 +23,23 @@
           <div>
             <span class="mdi mdi-currency-usd fs-3 text-warning"></span>
             <h3 v-if="account.totalCapital >= 0">{{ account.totalCapital }}</h3>
-            <h3 v-else="account.totalCapital <= -1" class="text-danger">Capital {{ account.totalCapital }}</h3>
+            <h3 v-else="account.totalCapital <= -1" class="text-danger">{{ account.totalCapital }}</h3>
           </div>
           <div>
             <span class="mdi mdi-factory fs-3 text-secondary"></span>
             <h3 v-if="account.totalIndustry >= 0" class="px-2">{{ account.totalIndustry }}</h3>
-            <h3 v-else="account.totalIndustry <= -1" class="px-2 text-danger">Industry
-              {{ account.totalIndustry }}</h3>
+            <h3 v-else="account.totalIndustry <= -1" class="px-2 text-danger">{{ account.totalIndustry }}</h3>
           </div>
           <div>
             <span class="mdi mdi-barley fs-3 text-success"></span>
             <h3 v-if="account.totalAgriculture >= 0">{{ account.totalAgriculture }}</h3>
-            <h3 v-else="account.totalAgriculture <=-1" class="text-danger">Agriculture {{ account.totalAgriculture }}
+            <h3 v-else="account.totalAgriculture <=-1" class="text-danger">{{ account.totalAgriculture }}
             </h3>
           </div>
           <div>
             <span class="mdi mdi-wrench fs-3 text-dark"></span>
             <h3 v-if="account.totalProduction >= 0">{{ account.totalProduction }}</h3>
-            <h3 v-else="account.totalProduction <=-1" class="text-danger">Production {{ account.totalProduction }}
+            <h3 v-else="account.totalProduction <=-1" class="text-danger">{{ account.totalProduction }}
             </h3>
           </div>
         </div>
