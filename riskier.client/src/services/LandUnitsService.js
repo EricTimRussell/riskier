@@ -24,6 +24,7 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  // Mech = Mechanized Infantry
   async addMech() {
     const res = await api.post('api/landunits/mech')
     accountService.getAccount()
@@ -34,6 +35,7 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  // IFV = Infantry Fighting Vehicle
   async addIfv() {
     const res = await api.post('api/landunits/ifv')
     accountService.getAccount()
@@ -44,6 +46,7 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  // MBT = Main Battle Tank
   async addMbt() {
     const res = await api.post('api/landunits/mbt')
     accountService.getAccount()
@@ -64,6 +67,7 @@ class LandUnitsService {
     accountService.getAccount()
   }
 
+  // SsArtillery also known as missile artillery on board game
   async addSsArtillery() {
     const res = await api.post('api/landunits/ssArtillery')
     accountService.getAccount()

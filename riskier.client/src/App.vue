@@ -154,7 +154,6 @@ import CreateCarrierGroup from "./components/CreateCarrierGroup.vue";
 import CreateCityForm from "./components/CreateCityForm.vue";
 import CreateDivisionForm from "./components/CreateDivisionForm.vue";
 import CreateRegionForm from "./components/CreateRegionForm.vue";
-import GameKey from "./components/GameKey.vue";
 import Navbar from "./components/Navbar.vue";
 import UnitCostModal from "./components/UnitCostModal.vue";
 import UnitOddsRules from "./components/UnitOddsRules.vue";
@@ -165,7 +164,7 @@ export default {
       appState: computed(() => AppState),
     };
   },
-  components: { Navbar, CreateRegionForm, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm, GameKey, CreateCarrierGroup }
+  components: { Navbar, CreateRegionForm, UnitOddsRules, UnitCostModal, CreateDivisionForm, CreateArmyForm, CreateCityForm, CreateCarrierGroup }
 }
 </script>
 <style lang="scss">
