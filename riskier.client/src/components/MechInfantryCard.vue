@@ -1,4 +1,6 @@
 <template>
+
+  <!-- SECTION Mechanized Infantry -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.mech <= 0)" @click="removeMech()"
@@ -18,7 +20,7 @@
       3-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Infantry Fighting Vehicle -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.ifv <= 0)" @click="removeIfv()"
@@ -37,6 +39,7 @@
         class="mdi mdi-factory px-1 text-secondary"></span>
       1-<span class="mdi mdi-barley text-success"></span></span>
   </div>
+
 </template>
 
 
@@ -50,6 +53,8 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
+      // Mech = Mechanized Infantry
       async addMech() {
         try {
           await landUnitsService.addMech()
@@ -57,6 +62,7 @@ export default {
           Pop.error(error, "Adding Mech")
         }
       },
+
       async removeMech() {
         try {
           await landUnitsService.removeMech()
@@ -64,6 +70,8 @@ export default {
           Pop.error(error, "Removing Mech")
         }
       },
+
+      // IFV = Infantry Fighting Vehicle
       async addIfv() {
         try {
           await landUnitsService.addIfv()
@@ -71,6 +79,7 @@ export default {
           Pop.error(error, "Adding Ifv")
         }
       },
+
       async removeIfv() {
         try {
           await landUnitsService.removeIfv()

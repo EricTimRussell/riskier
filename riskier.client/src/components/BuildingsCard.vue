@@ -1,5 +1,6 @@
 <template>
 
+  <!-- SECTION Airfield -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.airfield <= 0)" @click="removeAirfield()"
@@ -18,7 +19,7 @@
         class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Naval Yard -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.navalYard <= 0)" @click="removeNavalYard()"
@@ -37,7 +38,7 @@
         class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Warehouse currently not being used -->
   <!-- <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.warehouse <= 0)" @click="removeWarehouse()"
@@ -56,7 +57,7 @@
       3-<span class="mdi mdi-barley"></span></span>
   </div> -->
 
-
+  <!-- SECTION Factory -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.factory <= 0)" @click="removeFactory()"
@@ -89,6 +90,7 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
       async addAirfield() {
         try {
           await buildingsService.addAirfield()
@@ -96,6 +98,7 @@ export default {
           Pop.error(error, "Adding Airfield")
         }
       },
+
       async removeAirfield() {
         try {
           await buildingsService.removeAirfield()
@@ -103,6 +106,7 @@ export default {
           Pop.error(error, "Removing Airfield")
         }
       },
+
       async addNavalYard() {
         try {
           await buildingsService.addNavalYard()
@@ -110,6 +114,7 @@ export default {
           Pop.error(error, "Adding NavalYard")
         }
       },
+
       async removeNavalYard() {
         try {
           await buildingsService.removeNavalYard()
@@ -117,20 +122,24 @@ export default {
           Pop.error(error, "Removing NavalYard")
         }
       },
-      async addWarehouse() {
-        try {
-          await buildingsService.addWarehouse()
-        } catch (error) {
-          Pop.error(error, "Adding Warehouse")
-        }
-      },
-      async removeWarehouse() {
-        try {
-          await buildingsService.removeWarehouse()
-        } catch (error) {
-          Pop.error(error, "Removing Warehouse")
-        }
-      },
+
+      // Warehouses currently not being used in game
+      // async addWarehouse() {
+      //   try {
+      //     await buildingsService.addWarehouse()
+      //   } catch (error) {
+      //     Pop.error(error, "Adding Warehouse")
+      //   }
+      // },
+
+      // async removeWarehouse() {
+      //   try {
+      //     await buildingsService.removeWarehouse()
+      //   } catch (error) {
+      //     Pop.error(error, "Removing Warehouse")
+      //   }
+      // },
+
       async addFactory() {
         try {
           await buildingsService.addFactory()
@@ -138,6 +147,7 @@ export default {
           Pop.error(error, "Adding Factory")
         }
       },
+
       async removeFactory() {
         try {
           await buildingsService.removeFactory()

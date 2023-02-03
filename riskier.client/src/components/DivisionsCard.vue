@@ -24,7 +24,7 @@
       </div>
     </div>
 
-
+    <!-- SECTION edit division modal -->
     <form @submit.prevent="editDivision()">
       <div class="modal fade text-dark l-spacing" :id="`editDivision${divisions.id}`" tabindex="-1"
         aria-labelledby="editDivision" aria-hidden="true">
@@ -149,10 +149,16 @@ export default {
   props: {
     divisions: { Type: Division, required: true }
   },
+
   setup(props) {
+    // Ref autofills edit form when opened
     const editable = ref({ unitSlot1: `${props.divisions.unitSlot1}`, unitSlot2: `${props.divisions.unitSlot2}`, unitSlot3: `${props.divisions.unitSlot3}`, unitSlot4: `${props.divisions.unitSlot4}`, unitSlot5: `${props.divisions.unitSlot5}`, unitSlot6: `${props.divisions.unitSlot6}` })
+
     return {
       editable,
+
+      account: computed(() => AppState.account),
+
       async editDivision() {
         try {
           Modal.getOrCreateInstance(document.getElementById(`editDivision${props.divisions.id}`)).hide()
@@ -162,6 +168,7 @@ export default {
           Pop.error(error, "Editing Division")
         }
       },
+
       async deleteDivision() {
         try {
           if (await Pop.confirm("Delete Division?"))
@@ -170,9 +177,9 @@ export default {
           Pop.error(error, "Deleting Division")
         }
       },
-      account: computed(() => AppState.account)
     };
   },
+
   components: { CreateDivisionForm }
 }
 </script>

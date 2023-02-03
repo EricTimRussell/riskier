@@ -37,9 +37,12 @@ import Pop from "../utils/Pop";
 
 export default {
   setup() {
+    // ref sets default values for inputs
     const editable = ref({ capital: 4, industry: 4, agriculture: 4, production: 1 })
+
     return {
       editable,
+
       async createCity() {
         try {
           const formData = editable.value

@@ -35,9 +35,12 @@ import Pop from "../utils/Pop";
 
 export default {
   setup() {
+    // Ref creates random values for each input to ensure fair play and user quality of life
     const editable = ref({ capital: Math.floor(Math.random() * 6 + 1), industry: Math.floor(Math.random() * 6 + 1), agriculture: Math.floor(Math.random() * 6 + 1) })
+
     return {
       editable,
+
       async createRegion() {
         try {
           const formData = editable.value

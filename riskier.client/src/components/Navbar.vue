@@ -4,9 +4,13 @@
     <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5">
       <div class="row">
         <div class=" d-flex col-12 order-1 vh justify-content-evenly">
+
+          <!--SECTION login component and player avatar display  -->
           <div>
             <Login class="navbar-collapse" id="navbarText" />
           </div>
+
+          <!-- SECTION unit modal section and rule book router-link -->
           <div v-if="account.id" class="my-2">
             <router-link :to="{ name: 'Rules' }">
               <button class="mdi mdi-book-open-variant fs-3 rounded text-shadow-dark" title="Rule Book"></button>
@@ -15,10 +19,10 @@
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
             <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitCost" aria-label="Unit Cost" title="Unit Cost"></button>
-            <!-- <button class="mdi mdi-key mx-4 fs-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#key"
-              aria-label="Game Key" title="Game Key"></button> -->
           </div>
         </div>
+
+        <!-- SECTION players total resources and production display -->
         <div class="col-12 d-flex justify-content-evenly text-center order-3 text-shadow" v-if="account.id">
           <div>
             <span class="mdi mdi-currency-usd fs-3 text-warning"></span>
@@ -43,6 +47,8 @@
             </h3>
           </div>
         </div>
+
+        <!-- SECTION team name is currently disabled as it serves no purpose yet-->
         <!-- <div class="col-12 text-center order-2" v-if="account.id">
           <div class="dropdown-center dropdown text-shadow mt-3"><span class="dropdown-toggle fs-2" type="button"
               data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,22 +80,26 @@ import { accountService } from "../services/AccountService";
 import Pop from "../utils/Pop";
 import { ref } from "vue";
 import Login from './Login.vue'
+
 export default {
   setup() {
     const editable = ref({})
+
     return {
       editable,
+
       account: computed(() => AppState.account),
 
-      async changeTeamName() {
-        try {
-          const formData = editable.value
-          await accountService.changeTeamName(formData)
-          editable.value = {}
-        } catch (error) {
-          Pop.error(error, "Changing Team Name")
-        }
-      }
+      // Currently disabled serves no purpose
+      // async changeTeamName() {
+      //   try {
+      //     const formData = editable.value
+      //     await accountService.changeTeamName(formData)
+      //     editable.value = {}
+      //   } catch (error) {
+      //     Pop.error(error, "Changing Team Name")
+      //   }
+      // }
     }
   },
   components: { Login }

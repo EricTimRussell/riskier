@@ -10,7 +10,7 @@
             email to create an account. Use your account picture in the top left to navigate the website.</p>
           <h2>Quick Setup Instructions</h2>
           <p class="px-3">
-            Every faction starts with a capital, 2 medium cities, and 3 small cities. Once you have chosen your starting
+            Every player starts with a capital, 1 medium cities, and 2 small cities. Once you have chosen your starting
             location you now own all the tiles around your capital and can choose 3 more tiles to expand too so long as
             they are adjacent to tiles you already own. You can now place your cities wherever you like within your
             controlled territory. Now press "Get Started" and scroll to the bottom and claim a city for each city and

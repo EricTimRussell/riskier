@@ -1,4 +1,6 @@
 <template>
+
+  <!-- SECTION Aircraft Carrier -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.carrier <= 0)" @click="removeCarrier()"
@@ -18,7 +20,7 @@
       3-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Cruiser -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.cruiser <= 0)" @click="removeCruiser()"
@@ -38,7 +40,7 @@
       3-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Destroyer -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.destroyer <= 0)" @click="removeDestroyer()"
@@ -70,6 +72,8 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
+      // Carrier = Aircraft Carrier
       async addCarrier() {
         try {
           await navyUnitsService.addCarrier()
@@ -77,6 +81,7 @@ export default {
           Pop.error(error, "Adding Carrier")
         }
       },
+
       async removeCarrier() {
         try {
           await navyUnitsService.removeCarrier()
@@ -84,6 +89,7 @@ export default {
           Pop.error(error, "Removing Carrier")
         }
       },
+
       async addCruiser() {
         try {
           await navyUnitsService.addCruiser()
@@ -91,6 +97,7 @@ export default {
           Pop.error(error, "Adding Cruiser")
         }
       },
+
       async removeCruiser() {
         try {
           await navyUnitsService.removeCruiser()
@@ -98,6 +105,7 @@ export default {
           Pop.error(error, "Removing Cruiser")
         }
       },
+
       async addDestroyer() {
         try {
           await navyUnitsService.addDestroyer()
@@ -105,6 +113,7 @@ export default {
           Pop.error(error, "Adding Destroyer")
         }
       },
+
       async removeDestroyer() {
         try {
           await navyUnitsService.removeDestroyer()

@@ -27,7 +27,7 @@
       </div>
     </div>
 
-
+    <!-- SECTION Edit Army Modal -->
     <form @submit.prevent="editArmy()">
       <div class="modal fade text-dark l-spacing" :id="`editArmy${armies.id}`" tabindex="-1" aria-labelledby="editArmy"
         aria-hidden="true">
@@ -192,9 +192,12 @@ export default {
     armies: { Type: Army, required: true }
   },
   setup(props) {
+    // Ref autofills form with current unit
     const editable = ref({ unitSlot1: `${props.armies.unitSlot1}`, unitSlot2: `${props.armies.unitSlot2}`, unitSlot3: `${props.armies.unitSlot3}`, unitSlot4: `${props.armies.unitSlot4}`, unitSlot5: `${props.armies.unitSlot5}`, unitSlot6: `${props.armies.unitSlot6}`, unitSlot7: `${props.armies.unitSlot7}`, unitSlot8: `${props.armies.unitSlot8}`, unitSlot9: `${props.armies.unitSlot9}` })
+
     return {
       editable,
+
       async editArmy() {
         try {
           Modal.getOrCreateInstance(document.getElementById(`editArmy${props.armies.id}`)).hide()
@@ -203,6 +206,7 @@ export default {
           Pop.error(error, "Editing army")
         }
       },
+
       async deleteArmy() {
         try {
           if (await Pop.confirm("Delete Army?"))
@@ -211,6 +215,7 @@ export default {
           Pop.error(error, "Deleting army")
         }
       },
+
       account: computed(() => AppState.account)
     };
   },

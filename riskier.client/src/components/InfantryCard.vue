@@ -1,6 +1,8 @@
 <template>
 
   <body>
+
+    <!-- SECTION Infantry -->
     <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group"
       aria-label="Small button group">
       <div>
@@ -21,7 +23,7 @@
         3-<span class="mdi mdi-barley text-success"></span></span>
     </div>
 
-
+    <!-- SECTION SpecialForces -->
     <div class="col-12 btn-group btn-group-sm px-2 d-flex justify-content-center" role="group"
       aria-label="Small button group">
       <div>
@@ -56,6 +58,7 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
       async addInfantry() {
         try {
           await landUnitsService.addInfantry()
@@ -63,6 +66,7 @@ export default {
           Pop.error(error, "Adding Infantry")
         }
       },
+
       async removeInfantry() {
         try {
           await landUnitsService.removeInfantry()
@@ -70,6 +74,7 @@ export default {
           Pop.error(error, "Removing Infantry")
         }
       },
+
       async addSpecialForces() {
         try {
           await landUnitsService.addSpecialForces()
@@ -77,6 +82,7 @@ export default {
           Pop.error(error, "Adding SpecialForces")
         }
       },
+
       async removeSpecialForces() {
         try {
           await landUnitsService.removeSpecialForces()

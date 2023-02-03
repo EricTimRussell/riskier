@@ -144,24 +144,6 @@
     </div>
   </section>
 
-  <!-- Game Key Modal -->
-  <section>
-    <div class="modal fade" id="key" tabindex="-1" aria-labelledby="keyModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="key">Game Key</h1>
-            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <GameKey />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </template>
 
 <script>

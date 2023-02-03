@@ -1,5 +1,5 @@
 <template>
-
+  <!-- SECTION Fighter Aircraft -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.fighterAircraft <= 0)" @click="removeFighterAircraft()"
@@ -18,7 +18,7 @@
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
 
-
+  <!-- SECTION Close Air Support -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.closeAirSupport <= 0)" @click="removeCloseAirSupport()"
@@ -37,7 +37,7 @@
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
 
-
+  <!-- SECTION Transport aircraft -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.transportAircraft <= 0)" @click="removeTransportAircraft()"
@@ -76,6 +76,7 @@ export default {
           Pop.error(error, "Adding FighterAircraft")
         }
       },
+
       async removeFighterAircraft() {
         try {
           await airUnitsService.removeFighterAircraft()
@@ -83,6 +84,7 @@ export default {
           Pop.error(error, "Removing FighterAircraft")
         }
       },
+
       async addCloseAirSupport() {
         try {
           await airUnitsService.addCloseAirSupport()
@@ -90,6 +92,7 @@ export default {
           Pop.error(error, "Adding CloseAirSupport")
         }
       },
+
       async removeCloseAirSupport() {
         try {
           await airUnitsService.removeCloseAirSupport()
@@ -97,6 +100,7 @@ export default {
           Pop.error(error, "Removing CloseAirSupport")
         }
       },
+
       async addTransportAircraft() {
         try {
           await airUnitsService.addTransportAircraft()
@@ -104,6 +108,7 @@ export default {
           Pop.error(error, "Adding TransportAircraft")
         }
       },
+
       async removeTransportAircraft() {
         try {
           await airUnitsService.removeTransportAircraft()

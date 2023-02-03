@@ -188,8 +188,10 @@ export default {
   setup() {
     const editable = ref({})
     return {
-      account: computed(() => AppState.account),
       editable,
+
+      account: computed(() => AppState.account),
+
       async formArmy() {
         try {
           const formData = editable.value

@@ -1,4 +1,6 @@
 <template>
+
+  <!-- SECTION ssArtillery also known as Missile Artillery on the board game-->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.ssArtillery <= 0)" @click="removeSsArtillery()"
@@ -17,7 +19,7 @@
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
 
-
+  <!-- SECTION Anti-Aircraft -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.antiAircraft <= 0)" @click="removeAntiAircraft()"
@@ -35,6 +37,7 @@
     <span class="fs-5">3-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
+
 </template>
 
 
@@ -48,6 +51,8 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
+      // Also known as missile artillery
       async addSsArtillery() {
         try {
           await landUnitsService.addSsArtillery()
@@ -55,6 +60,7 @@ export default {
           Pop.error(error, "Adding SsArtillery")
         }
       },
+
       async removeSsArtillery() {
         try {
           await landUnitsService.removeSsArtillery()
@@ -62,6 +68,7 @@ export default {
           Pop.error(error, "Removing SsArtillery")
         }
       },
+
       async addAntiAircraft() {
         try {
           await landUnitsService.addAntiAircraft()
@@ -69,6 +76,7 @@ export default {
           Pop.error(error, "Adding AntiAircraft")
         }
       },
+
       async removeAntiAircraft() {
         try {
           await landUnitsService.removeAntiAircraft()

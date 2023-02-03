@@ -49,7 +49,7 @@
       </div>
     </div>
 
-
+    <!-- SECTION Edit Carrier Group Modal -->
     <form @submit.prevent="editCarrierGroup()">
       <div class="modal fade text-dark l-spacing" :id="`editCarrierGroup${carrierGroup.id}`" tabindex="-1"
         aria-labelledby="editCarrierGroup" aria-hidden="true">
@@ -246,11 +246,15 @@ export default {
   props: {
     carrierGroup: { Type: Carrier, required: true }
   },
+
   setup(props) {
+    // Ref autofills edit form when opened
     const editable = ref({ unitSlot1: `${props.carrierGroup.unitSlot1}`, unitSlot2: `${props.carrierGroup.unitSlot2}`, unitSlot3: `${props.carrierGroup.unitSlot3}`, unitSlot4: `${props.carrierGroup.unitSlot4}`, unitSlot5: `${props.carrierGroup.unitSlot5}`, unitSlot6: `${props.carrierGroup.unitSlot6}`, unitSlot7: `${props.carrierGroup.unitSlot7}`, unitSlot8: `${props.carrierGroup.unitSlot8}`, groundUnit1: `${props.carrierGroup.groundUnit1}`, groundUnit2: `${props.carrierGroup.groundUnit2}`, groundUnit3: `${props.carrierGroup.groundUnit3}`, groundUnit4: `${props.carrierGroup.groundUnit4}`, groundUnit5: `${props.carrierGroup.groundUnit5}`, groundUnit6: `${props.carrierGroup.groundUnit6}`, })
     return {
       editable,
+
       account: computed(() => AppState.account),
+
       async deleteCarrierGroup() {
         try {
           await navyUnitsService.deleteCarrierGroup()
@@ -258,6 +262,7 @@ export default {
           Pop.error(error, "Deleting Carrier Group")
         }
       },
+
       async editCarrierGroup() {
         try {
           const formData = editable.value
@@ -267,6 +272,7 @@ export default {
           Pop.error(error, "Editing Carrier Group")
         }
       },
+
       async deleteCarrierGroup() {
         try {
           if (await Pop.confirm("Delete Carrier Group?"))

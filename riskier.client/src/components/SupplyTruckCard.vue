@@ -1,4 +1,6 @@
 <template>
+
+  <!-- SECTION Supply Truck -->
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.supplyTruck <= 0)" @click="removeSupplyTruck()"
@@ -11,6 +13,8 @@
       <button @click="addSupplyTruck()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
+
+
 </template>
 
 
@@ -24,6 +28,7 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
       async addSupplyTruck() {
         try {
           await landUnitsService.addSupplyTruck()
@@ -31,6 +36,7 @@ export default {
           Pop.error(error, "Adding SupplyTruck")
         }
       },
+
       async removeSupplyTruck() {
         try {
           await landUnitsService.removeSupplyTruck()

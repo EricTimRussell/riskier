@@ -6,12 +6,16 @@
     </button>
     <div v-else>
       <div class="dropdown dropbottom my-2 my-lg-0">
+
+        <!-- SECTION User avatar -->
         <div type="button" class="border-0 selectable no-select" data-bs-toggle="dropdown" aria-expanded="false">
           <div v-if="account.picture || user.picture">
             <img :src="account.picture || user.picture" alt="account photo" :title="account.name" height="40"
               class="rounded" />
           </div>
         </div>
+
+        <!-- SECTION Nav elements and user logout -->
         <div class="dropdown-menu dropdown-menu-lg-left p-0" aria-labelledby="authDropdown">
           <div class="list-group">
             <router-link :to="{ name: 'Home' }">
@@ -39,14 +43,18 @@
 import { computed } from 'vue'
 import { AppState } from '../AppState'
 import { AuthService } from '../services/AuthService'
+
 export default {
   setup() {
     return {
       user: computed(() => AppState.user),
+
       account: computed(() => AppState.account),
+
       async login() {
         AuthService.loginWithPopup()
       },
+
       async logout() {
         AuthService.logout({ returnTo: window.location.origin })
       }

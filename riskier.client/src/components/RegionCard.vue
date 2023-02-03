@@ -33,9 +33,11 @@ export default {
   props: {
     regions: { type: Region, required: true },
   },
+
   setup(props) {
     return {
       account: computed(() => AppState.account),
+
       async removeRegion() {
         try {
           if (await Pop.confirm("Remove Region?"))

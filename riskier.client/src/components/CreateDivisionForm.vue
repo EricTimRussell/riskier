@@ -132,9 +132,12 @@ import { AppState } from "../AppState";
 export default {
   setup() {
     const editable = ref({})
+
     return {
-      account: computed(() => AppState.account),
       editable,
+
+      account: computed(() => AppState.account),
+
       async formDivision() {
         try {
           const formData = editable.value

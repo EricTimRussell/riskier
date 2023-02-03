@@ -1,4 +1,6 @@
 <template>
+
+  <!-- SECTION Main battle tank -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.mbt <= 0)" @click="removeMbt()"
@@ -18,7 +20,7 @@
       1-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
-
+  <!-- SECTION Artillery -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
       <button :disabled="(account.artillery <= 0)" @click="removeArtillery()"
@@ -36,6 +38,7 @@
     <span class="fs-5">1-<span class="mdi mdi-currency-usd text-warning"></span> 3-<span
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
+
 </template>
 
 
@@ -49,6 +52,8 @@ export default {
   setup() {
     return {
       account: computed(() => AppState.account),
+
+      // MBT = Main Battle Tank
       async addMbt() {
         try {
           await landUnitsService.addMbt()
@@ -56,6 +61,7 @@ export default {
           Pop.error(error, "Adding Mbt")
         }
       },
+
       async removeMbt() {
         try {
           await landUnitsService.removeMbt()
@@ -63,6 +69,7 @@ export default {
           Pop.error(error, "Removing Mbt")
         }
       },
+
       async addArtillery() {
         try {
           await landUnitsService.addArtillery()
@@ -70,6 +77,7 @@ export default {
           Pop.error(error, "Adding Artillery")
         }
       },
+
       async removeArtillery() {
         try {
           await landUnitsService.removeArtillery()
