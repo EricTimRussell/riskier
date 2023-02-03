@@ -16,7 +16,7 @@ public class ArmiesDivisionsController : ControllerBase
   }
 
   // SECTION
-  #region Division Functions
+  #region Divisions Functions
   [HttpPost("division")]
   public async Task<ActionResult<Division>> CreateDivision([FromBody] Division newDivision)
   {

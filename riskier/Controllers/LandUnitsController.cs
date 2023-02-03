@@ -81,7 +81,7 @@ public class LandUnitsController : ControllerBase
 
   #endregion
 
-  // SECTION
+  // SECTION Mech = Mechanized Infantry
   #region Add/Remove Mech
   [HttpPost("mech")]
   public async Task<ActionResult<string>> CreateMech()
@@ -114,7 +114,7 @@ public class LandUnitsController : ControllerBase
   }
   #endregion
 
-  // SECTION 
+  // SECTION IFV = Infantry Fighting Vehicle
   #region Add/Remove Ifv
   [HttpPost("ifv")]
   public async Task<ActionResult<string>> CreateIfv()
@@ -147,7 +147,7 @@ public class LandUnitsController : ControllerBase
   }
   #endregion
 
-  // SECTION
+  // SECTION MBT = Main Battle Tank
   #region Add/Remove Mbt
   [HttpPost("mbt")]
   public async Task<ActionResult<string>> CreateMbt()
@@ -213,7 +213,7 @@ public class LandUnitsController : ControllerBase
   }
   #endregion
 
-  // SECTION
+  // SECTION SsArtillery also known as missile artillery on board game
   #region Add/Remove SsArtillery
   [HttpPost("ssArtillery")]
   public async Task<ActionResult<string>> CreateSsArtillery()
