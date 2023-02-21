@@ -1,5 +1,4 @@
 <template>
-
   <body class="container-fluid">
     <div class="row">
       <div class="col-12 my-3 text-center bg-green py-3 elevation-5">
@@ -45,16 +44,18 @@
         <BuildingsCard />
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 d-flex flex-column align-items-center bg-green mt-4 pt-3 elevation-5" v-if="account.id">
+    <div class="row bg-green mt-4 pt-3 elevation-5">
+      <div class="col-12 d-flex justify-content-center" v-if="account.id">
         <h2 class="mdi mdi-shield-star"> Armies & Divisions</h2>
-        <div>
-          <button class="mx-3 p-2 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
-            aria-label="Form Division">Form
-            Division</button>
-          <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formArmy"
-            aria-label="Form Army">Form Army</button>
-        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
+          aria-label="Form Division">Form
+          Division</button>
+      </div>
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formArmy"
+          aria-label="Form Army">Form Army</button>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -111,7 +112,6 @@
       </div>
     </div>
   </body>
-
 </template>
 
 <script>
@@ -131,7 +131,6 @@ import NavyUnitsCard from "../components/NavyUnitsCard.vue";
 import RegionCard from "../components/RegionCard.vue";
 import SsArtilleryAndAntiAircraft from "../components/SsArtilleryAndAntiAircraft.vue";
 import SupplyTruckCard from "../components/SupplyTruckCard.vue";
-import { accountService } from "../services/AccountService";
 import { armiesDivisionsService } from "../services/ArmiesDivisionsService";
 import { regionTilesService } from "../services/RegionTilesService";
 import Pop from "../utils/Pop";
@@ -171,6 +170,7 @@ export default {
         Pop.error(error, "Getting Carrier Group")
       }
     }
+    // Run these functions when a users auth token has been verified
     onAuthLoaded(() => {
       getRegionByOwnerId()
       getDivisionByOwnerId()
@@ -184,13 +184,6 @@ export default {
       armies: computed(() => AppState.armies),
       carrierGroup: computed(() => AppState.carrierGroups),
 
-      async deleteAllItems() {
-        try {
-          await accountService.deleteAllItems()
-        } catch (error) {
-          Pop.error(error, "Deleting all items")
-        }
-      }
     };
   },
   components: { RegionCard, Navbar, InfantryCard, MechInfantryCard, MbtAndArtCard, SsArtilleryAndAntiAircraft, SupplyTruckCard, AirUnitsCard, BuildingsCard, NavyUnitsCard, DivisionsCard, ArmyCard, CarrierGroupCard }

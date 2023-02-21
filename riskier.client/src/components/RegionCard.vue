@@ -1,5 +1,4 @@
 <template>
-
   <body>
 
     <div class="card-size bg-tan elevation-5 p-1" v-if="regions.ownerId == account.id">
@@ -19,7 +18,6 @@
     </div>
 
   </body>
-
 </template>
 
 
@@ -69,8 +67,8 @@ export default {
 }
 
 .card-size {
-  max-height: 33vh;
-  min-height: 33vh;
+  max-height: 260px;
+  min-height: 260px;
   min-width: 20vh;
   max-width: 20vh;
   border-radius: 5px;

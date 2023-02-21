@@ -1,10 +1,8 @@
 <template>
-
-  <body>
+  <div>
 
     <!-- SECTION Infantry -->
-    <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group"
-      aria-label="Small button group">
+    <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
       <div>
         <button :disabled="(account.infantry <= 0)" @click="removeInfantry()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
@@ -43,8 +41,7 @@
           class="mdi mdi-factory px-1 text-secondary"></span>
         3-<span class="mdi mdi-barley text-success"></span></span>
     </div>
-  </body>
-
+  </div>
 </template>
 
 

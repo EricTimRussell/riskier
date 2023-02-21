@@ -1,5 +1,4 @@
 <template>
-
   <body>
     <header class="sticky-top">
       <Navbar />
@@ -143,7 +142,6 @@
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -178,8 +176,8 @@ body {
   font-family: Impact, 'Arial Narrow Bold', sans-serif;
   letter-spacing: 1px;
   background-color: #606C38;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)), url(../src/assets/img/TopoMap2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)), url(../src/assets/img/TopoMap2.jpg);
   background-attachment: fixed;
   background-position: center right;
   background-repeat: no-repeat;

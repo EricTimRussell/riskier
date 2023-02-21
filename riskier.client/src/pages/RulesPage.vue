@@ -1,5 +1,4 @@
 <template>
-
   <body class="container-fluid">
     <div class="row">
       <div class="col-12 text-center mb-2 mt-3">
@@ -64,7 +63,7 @@
         <p>
           --There is a grey pillbox or bunker type piece that represents fortifications. When fortifications are built
           1 bunker piece is placed on the main board where they were built. This will provide 3 bunker pieces on the
-          combat board. Only one can be built per tile.
+          combat board. Only one can be built per tile. Bunkers can be built during the build phase of a players turn.
         </p>
         <!-- <p>
           --Ground forces have their own main board pieces, but naval and airforce units do not have their own main
@@ -77,8 +76,8 @@
         <p>
           --Attrition occurs when units are cut-off from a direct connection to a city. Units that are cut-off are
           now subject to running out of supplies. Armies and divisions only have enough supplies for 4 battles before
-          they can no longer attack or defend themselves. Individual units only have 1 turn to re-establish their supply
-          line or they will be destroyed.
+          they can no longer attack or defend themselves. Individual units cannot defend of attack after 1 turn of being
+          cutoff. After 1 turn they must follow the "retreat rules when a unit has no supplies"
         </p>
         <p>
           --If an army/division runs out of supplies they can no longer attack or defends themselves. If they
@@ -95,7 +94,8 @@
           attack tiles that are next to them.
         </p>
         <p>
-          --All land units can move 2 spaces on the main board if they are within their own territory.
+          --All land units can move 2 spaces on the main board if they are within their own territory. Otherwise land
+          units can only move 1 space on the main board if they move into uncontrolled territory.
         </p>
         <p><span class="text-warning">--Infantry</span> are a more defensively balanced unit with limited
           offensive
@@ -189,9 +189,9 @@
         </div>
         <p>--There are 3 types of naval units, Aircraft carrier, Cruiser, and Destroyer. Each unit
           has peg holes in
-          them to track damage, ammunition, and aircraft. The carrier has up to 8 fighters/CAS and has a point
+          them to track damage. The carrier has up to 8 fighters/CAS and has a point
           defense system that can intercept missiles and aircraft. Cruisers carry AA and SS missiles with long range
-          capabilities, but have limited ammo. Destroyers are fast durable ships with heavy guns to destroy other
+          capabilities. Destroyers are fast durable ships with heavy guns to destroy other
           ships as well as barrage land targets.
         </p>
         <p>--Each ship has a specific construction time. Carriers take 3 turns to construct. Cruisers and destroyers
@@ -289,7 +289,12 @@
           moves onto another tile and is still within AA range the AA gets to fire again. This can occur as many
           times as the aircraft moves within AA range.
         </p>
-        <p><span class="text-warning">--Example:</span> An IFV unit attacks an enemy unit on the space next to it. The
+        <p>--Once a unit is locked into combat that unit cannot move until they destroy the enemy
+          or are relieved by
+          another unit.
+        </p>
+        <p><span class="text-warning">--Example of combat:</span> An IFV unit attacks an enemy unit on the space next to
+          it. The
           attacking unit
           fails to destroy the defending unit. The attacking player still has 3 movement points left but cannot
           attack with that unit again during this turn. If the attacking unit was successfull they would move into
@@ -297,11 +302,8 @@
           more space but cannot attack anymore. If the attacking unit were an MBT it can attack twice in one turn as
           well as move twice.
         </p>
-        <p>--Once a unit is locked into combat that unit cannot move until they destroy the enemy
-          or are relieved by
-          another unit.
-        </p>
-        <p><span class="text-warning"> Example:</span> A mechanized unit is attacking an infantry unit. They both roll
+        <p><span class="text-warning"> Example of combat:</span> A mechanized unit is attacking an infantry unit. They
+          both roll
           successfull
           hits and neither of them are destroyed, however the mech unit cannot attack again since it only has 1
           attack point. And since the mech unit was unsuccessfull at destroying the infantry the mech is now locked
@@ -372,12 +374,6 @@
           stealth item). During that same turn if that aircraft moves onto another tile and is still within AA range
           the AA gets to fire again. This can occur as many times as the aircraft moves within AA range.
         </p>
-        <p>--Cruisers carry 3 total missiles represented by 3 black pegs in the ship piece. They can fire 1 SS and
-          AA
-          missile per turn, but as many AA missiles as they want per turn when they are fired defensively. However a
-          cruiser can only carry 3 SS
-          missiles total.
-        </p>
         <p>--Destroyers have heavy armor giving them a chance to absorb any incoming hits.
         </p>
         <!-- SECTION Item Card Rules -->
@@ -412,7 +408,7 @@
         <p><span class="text-warning">--Cruise Missile:</span> This item can be used during a players 3rd phase before
           or after a
           battle. It cannot be used during a battle. Cruise missiles can be launched from any of the players
-          aircraft or cruisers to hit targets as far away as 4 tiles on the MB. Cruise missile hits are determined
+          cruisers to hit targets as far away as 4 tiles on the MB. Cruise missile hits are determined
           by a D12 (1-10), and they can only be intercepted using the Point Defense item, carrier, or AA. If the
           cruise missile flies over a hostile tile with AA (not including cities) or a carrier the player that owns
           that tile should roll a D12 to try and intercept the missile.
@@ -467,16 +463,17 @@
         <div class="text-center text-warning">
           <h3>Structure Rules</h3>
         </div>
-        <p>--Only one structure can occupy any one tile.
+        <p>--Only one structure can occupy any one tile, except for factories on capitals.
         </p>
         <p>--Players capitals act as airfields. Players do not need to build an airfield by their capital.
         </p>
         <p>--Airfields can only be built within the adjacent tiles of cities.
         </p>
-        <p>--Aircraft can only be built in cities with an adjacent airfield.
+        <p>--Aircraft can only be placed on airfields when built.
         </p>
         <p>--Airfields can also be used to transport units around the board from one airfield to another airfield.
-          Moving a unit via airfield uses that units 1 movement point and requires 1 available movement point.
+          Moving a unit via airfield uses that units 1 movement point and requires 1 available movement point as well as a
+          transport aircraft present at the airfield.
         </p>
         <p>--Fortifications can be built anywhere. One Fortification placed on the game board
           represents 3
@@ -501,7 +498,8 @@
             </p> -->
         <p>--Naval yards can repair a max of 2 cruisers/destroyers or 1 carrier at one time.
         </p>
-        <p>--Factories can be built on any city and are used to increase production of any city. When they are built
+        <p>--Factories can be built on any city except small cities and are used to increase production capacity. When
+          they are built
           onto cities they increase your faction production by 1. Capitals can have 2 factories. Large and medium cities
           can have 1 factory. And small cities cannot have factories. Factories can be destroyed in one successfull hit.
         </p>
@@ -520,8 +518,7 @@
         </p>
         <p>--Units contained within these groups will be tracked on paper or the companion app. If
           a unit is
-          destroyed it will be erased from the resource sheet or removed on the app. And the player will place a red
-          peg into one of the holes representing a destroyed unit.
+          destroyed it will be erased from the resource sheet or removed on the app.
         </p>
         <p>--Units that are not within a division or army can join these groups to replace destroyed units.
         </p>
@@ -541,7 +538,6 @@
       </div>
     </div>
   </body>
-
 </template>
 
 <script>
