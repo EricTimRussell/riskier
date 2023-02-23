@@ -5,7 +5,6 @@
     </header>
     <main>
       <router-view />
-
     </main>
 
   </body>
@@ -119,24 +118,6 @@
           </div>
           <div class="modal-body">
             <UnitOddsRules />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Unit Cost Modal -->
-  <section>
-    <div class="modal fade" id="unitCost" tabindex="-1" aria-labelledby="UnitCostModal" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title" id="unitCost">Unit Costs</h1>
-            <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" title="close modal"
-              aria-label="Close"></button>
-          </div>
-          <div class="modal-body no-pad">
-            <UnitCostModal />
           </div>
         </div>
       </div>

@@ -3,7 +3,7 @@
 
     <!-- SECTION Infantry -->
     <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
-      <div>
+      <div class="at-container">
         <button :disabled="(account.infantry <= 0)" @click="removeInfantry()"
           class="btn btn-outline-dark mdi mdi-minus fs-2"></button>
       </div>
@@ -54,6 +54,8 @@ import { AppState } from "../AppState";
 export default {
   setup() {
     return {
+      disabled: true,
+      hidden: false,
       account: computed(() => AppState.account),
 
       async addInfantry() {
@@ -86,10 +88,11 @@ export default {
         } catch (error) {
           Pop.error(error, "Removing SpecialForces")
         }
-      }
+      },
     }
   }
 }
+
 </script>
 
 <style lang="scss" scoped>

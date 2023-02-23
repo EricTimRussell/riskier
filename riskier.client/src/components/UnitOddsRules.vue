@@ -1,5 +1,4 @@
 <template>
-
   <main>
     <div class="text-center mb-4">
       <h2>Land Unit Odds</h2>
@@ -220,7 +219,7 @@
       </ul>
     </div>
 
-    <div class="modal-footer text-end sticky-bottom no-border pb-5">
+    <div class="modal-footer text-end sticky-bottom no-border pb-1">
       <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
     </div>
 

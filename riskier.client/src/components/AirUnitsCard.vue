@@ -55,7 +55,6 @@
     <span class="fs-5">1-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
-
 </template>
 
 

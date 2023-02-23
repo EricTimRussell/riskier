@@ -1,5 +1,4 @@
 <template>
-
   <body>
     <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5">
       <div class="row">
@@ -15,10 +14,11 @@
             <router-link :to="{ name: 'Rules' }">
               <button class="mdi mdi-book-open-variant fs-3 rounded text-shadow-dark" title="Rule Book"></button>
             </router-link>
-            <button class="mdi mdi-dice-multiple-outline fs-3 mx-4 rounded text-shadow-dark" data-bs-toggle="modal"
+            <router-link :to="{ name: 'Game', params: { id: account.id } }">
+              <button class="mdi mdi-controller fs-3 mx-4 rounded text-shadow-dark"></button>
+            </router-link>
+            <button class="mdi mdi-dice-multiple-outline fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
               data-bs-target="#unitOdds" aria-label="Unit Odds" title="Unit Odds"></button>
-            <button class="mdi mdi-currency-usd fs-3 rounded text-shadow-dark" data-bs-toggle="modal"
-              data-bs-target="#unitCost" aria-label="Unit Cost" title="Unit Cost"></button>
           </div>
         </div>
 
@@ -68,9 +68,6 @@
     </div>
 
   </body>
-
-
-
 </template>
 
 <script>
