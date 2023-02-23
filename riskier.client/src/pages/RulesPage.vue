@@ -32,13 +32,20 @@
           <h3>Construction</h3>
         </div>
         <p>
-          --The construction sheet is used to track the construction of buildings and naval units. All ground units take
+          --The construction sheet is used to track the construction of buildings and naval units. All ground units and
+          air units take
           1 turn to
           construct. Naval units vary slightly with carriers taking 3 turns to construct and destroyer/cruisers taking
           2 turns to construct. Naval construction is tracked on the bottom of the sheet using the naval construction
           pieces. Naval yards are built on
           land tiles adjacent to water tiles. The land tile region number will be recorded on the construction sheet
-          in the spot labeled "Region #". Each naval yard can produce up to 3 ships at one time.
+          in the spot labeled "Yard Region #". Each naval yard can produce up to 3 ships at one time.
+        </p>
+        <p>
+          --All buildings take 2 turns to construct and are placed on the construction sheet to track their construction
+          progress. The region you are constructing a building on will be written on the construction sheet labeled region
+          #.
+        </p>
         <p>
           --Each city is worth 1 production. A max of 2 Factories can be built onto capitals and 1 onto large cities and
           medium
@@ -46,7 +53,6 @@
           increase their production by 1 for each factory. Factories cannot be built on small cities. The amount of
           production a player has dictates how many units a player can produce at one time. This does not include naval
           units or buildings.
-        </p>
         </p>
         <!-- SECTION Main Board Pieces -->
         <div class="text-center text-warning">

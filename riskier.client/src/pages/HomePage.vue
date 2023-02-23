@@ -15,7 +15,7 @@
             data-bs-parent="#accordion1">
             <div class="accordion-body">
               <p class="px-3">&nbsp;&nbsp;&nbsp;Log in or create an account to get started. You do not need to use a real
-                email to create an account. Use your account picture in the top left to navigate the website.</p>
+                email to create an account. Use the buttons at the top of the page to navigate the website.</p>
             </div>
           </div>
         </div>
@@ -34,6 +34,9 @@
                 player purchases or loses units and buildings.</p>
               <p>Players can also track groups of units using the create army/division section as well as track naval
                 carrier groups.</p>
+              <p>Regions can be claimed by pressing the "Claim Region" button or "Claim City" button if their is a city
+                present on the tile. Claim region will automatically generate a random number of resurces for that region.
+                Claim city lets the player set the number of resources based on the size of the city.</p>
             </div>
           </div>
         </div>
