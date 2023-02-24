@@ -48,7 +48,7 @@ export default {
           const formData = editable.value
           await regionTilesService.createRegion(formData)
           Modal.getOrCreateInstance('#createCity').hide()
-          editable.value = {}
+          editable.value = ({ capital: 4, industry: 4, agriculture: 4, production: 1 })
         } catch (error) {
           Pop.error(error, "Creating City Region")
         }
@@ -59,6 +59,4 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
