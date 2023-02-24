@@ -3,7 +3,7 @@
 
     <main class="container-fluid px-5">
       <h1 class="text-center pt-3">Welcome to Riskier</h1>
-      <div class="accordion pt-3" id="accordion1">
+      <div class="accordion pt-3">
         <div class="accordion-item no-bg text-light">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -14,7 +14,7 @@
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
             data-bs-parent="#accordion1">
             <div class="accordion-body">
-              <p class="px-3">&nbsp;&nbsp;&nbsp;Log in or create an account to get started. You do not need to use a real
+              <p class="px-3">Log in or create an account to get started. You do not need to use a real
                 email to create an account. Use the buttons at the top of the page to navigate the website.</p>
               <p class="px-3">Initial Setup: Every faction starts with 10 regions. Each faction starts
                 with 1 capital, 1 medium city, and 2 small cities. Each player rolls a D12 and highest number to lowest
@@ -111,6 +111,11 @@ body {
 
 @media screen and (min-width: 768px) {
   p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  ul {
     margin-left: 20%;
     margin-right: 20%;
   }

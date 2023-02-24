@@ -1,6 +1,6 @@
 <template>
   <body>
-    <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5">
+    <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5 pt-2">
       <div class="row">
         <div class=" d-flex col-12 order-1 vh justify-content-evenly mb-3">
 
