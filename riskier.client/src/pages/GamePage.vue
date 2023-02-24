@@ -45,16 +45,16 @@
       </div>
     </div>
     <div class="row bg-green mt-4 pt-3 elevation-5">
-      <div class="col-12 d-flex justify-content-center" v-if="account.id">
+      <div class="col-12 d-flex justify-content-center mb-1" v-if="account.id">
         <h2 class="mdi mdi-shield-star"> Armies & Divisions</h2>
       </div>
-      <div class="col-12 col-md-6 d-flex justify-content-center">
-        <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
+      <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+        <button class="mx-3 py-2 px-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formDivision"
           aria-label="Form Division">Form
           Division</button>
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center">
-        <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formArmy"
+        <button class="mx-3 py-2 px-3 mb-3 rounded text-shadow-dark" data-bs-toggle="modal" data-bs-target="#formArmy"
           aria-label="Form Army">Form Army</button>
       </div>
     </div>
@@ -72,7 +72,7 @@
       <h6>You currently have no armies or divisions.</h6>
     </div>
     <div class="row">
-      <div class="col-12 d-flex flex-column align-items-center bg-green  elevation-5 mt-4 pt-3">
+      <div class="col-12 d-flex flex-column align-items-center bg-green elevation-5 mt-4 pt-3">
         <h2 class="mdi mdi-airplane-takeoff"> Carriers</h2>
         <button class="mx-3 py-2 px-3 my-3 rounded text-shadow-dark" data-bs-toggle="modal"
           data-bs-target="#formCarrierGroup" aria-label="Form Carrier Group">Add Carrier Group</button>
@@ -90,12 +90,14 @@
         <div class="col-12 mb-1">
           <h2 class="text-center m-3 mdi mdi-map-legend"> Owned Regions</h2>
         </div>
-        <div class="col-12 d-flex justify-content-center mb-3">
-          <button type="submit" class="rounded pad text-shadow-dark p-2 mx-3" data-bs-toggle="modal"
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-4">
+          <button type="submit" class="rounded text-shadow-dark p-2 mx-3" data-bs-toggle="modal"
             data-bs-target="#createRegion" aria-label="Create Region">
             Claim Region
           </button>
-          <button type="submit" class="rounded pad text-shadow-dark py-2 px-3 mx-3" data-bs-toggle="modal"
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center mb-3">
+          <button type="submit" class="rounded text-shadow-dark py-2 px-3 mx-3" data-bs-toggle="modal"
             data-bs-target="#createCity" aria-label="Create City">
             Claim City
           </button>
@@ -178,6 +180,7 @@ export default {
       getCarrierGroupByOwnerId()
     })
     return {
+      // Sort regions by lowest to highest #
       regions: computed(() => AppState.regions.sort((a, b) => a.regionNumber - b.regionNumber)),
       account: computed(() => AppState.account),
       divisions: computed(() => AppState.divisions),
@@ -206,6 +209,11 @@ body {
 
 .bg-green {
   background: linear-gradient(#606c38, #283618)
+}
+
+button:active {
+  box-shadow: none;
+  background: #515151
 }
 
 .row {

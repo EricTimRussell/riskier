@@ -130,6 +130,11 @@ button:disabled {
   background-color: #FFDA96;
 }
 
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
+}
+
 .pl-5 {
   padding-left: 2.5rem;
 }

@@ -1,5 +1,4 @@
 <template>
-
   <!-- SECTION Aircraft Carrier -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
@@ -134,6 +133,11 @@ button {
 
 button:disabled {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
 }
 
 .pl-5 {

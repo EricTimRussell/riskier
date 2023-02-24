@@ -103,4 +103,9 @@ button {
 button:disabled {
   background-color: #FFDA96;
 }
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
+}
 </style>

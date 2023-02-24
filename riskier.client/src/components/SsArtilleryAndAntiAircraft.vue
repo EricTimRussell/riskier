@@ -1,5 +1,4 @@
 <template>
-
   <!-- SECTION ssArtillery also known as Missile Artillery on the board game-->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
@@ -37,7 +36,6 @@
     <span class="fs-5">3-<span class="mdi mdi-currency-usd text-warning"></span> 1-<span
         class="mdi mdi-factory text-secondary"></span></span>
   </div>
-
 </template>
 
 
@@ -97,5 +95,10 @@ button {
 
 button:disabled {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
 }
 </style>

@@ -1,5 +1,4 @@
 <template>
-
   <!-- SECTION Mechanized Infantry -->
   <div class="col-12 btn-group btn-group-sm d-flex justify-content-center" role="group" aria-label="Small button group">
     <div>
@@ -39,7 +38,6 @@
         class="mdi mdi-factory px-1 text-secondary"></span>
       1-<span class="mdi mdi-barley text-success"></span></span>
   </div>
-
 </template>
 
 
@@ -100,5 +98,10 @@ button {
 
 button:disabled {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
 }
 </style>

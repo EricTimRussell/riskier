@@ -1,5 +1,4 @@
 <template>
-
   <!-- SECTION Supply Truck -->
   <div class="col-6 btn-group btn-group-sm px-2" role="group" aria-label="Small button group">
     <div>
@@ -13,8 +12,6 @@
       <button @click="addSupplyTruck()" class="btn btn-outline-dark mdi mdi-plus fs-2"></button>
     </div>
   </div>
-
-
 </template>
 
 
@@ -57,5 +54,10 @@ button {
 
 button:disabled {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
 }
 </style>

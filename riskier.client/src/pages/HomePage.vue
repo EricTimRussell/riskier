@@ -1,7 +1,7 @@
 <template>
   <body>
 
-    <main class="container-fluid">
+    <main class="container-fluid px-5">
       <h1 class="text-center pt-3">Welcome to Riskier</h1>
       <div class="accordion pt-3" id="accordion1">
         <div class="accordion-item no-bg text-light">
@@ -16,6 +16,12 @@
             <div class="accordion-body">
               <p class="px-3">&nbsp;&nbsp;&nbsp;Log in or create an account to get started. You do not need to use a real
                 email to create an account. Use the buttons at the top of the page to navigate the website.</p>
+              <p class="px-3">Initial Setup: Every faction starts with 10 regions. Each faction starts
+                with 1 capital, 1 medium city, and 2 small cities. Each player rolls a D12 and highest number to lowest
+                number chooses their factions starting location. Players must be atleast 4 tiles away from another players
+                capital. Each player owns all the regions around their capital plus 3 more regions 2 spaces from their
+                capital. Players can now purchase and place any units, navy, and buildings wihtin their territory
+                instantly.</p>
             </div>
           </div>
         </div>
@@ -56,7 +62,7 @@
                 <li class="py-1">You will have to build your units first before forming an army or division</li>
                 <li class="py-1">When placing your starting units think about how you want to distribute them in order to
                   capture the
-                  most regions as you can. Armies and divisions can capture unclaimed territory instantly, but are very
+                  most regions as you can. Armies and divisions can capture unclaimed territory instantly, but are
                   limited in number.</li>
                 <li class="py-1">Be sure to refer to the rule book and unit odds to better understand strengths and
                   weaknesses of each
@@ -68,7 +74,7 @@
       </div>
       <div class="col-12 py-3 d-flex justify-content-center">
         <router-link v-if="account.id" :to="{ name: 'Game', params: { id: account.id } }">
-          <button class="btn">Get Started</button>
+          <button class="rounded p-2 text-shadow-dark">Get Started</button>
         </router-link>
       </div>
     </main>
@@ -103,8 +109,27 @@ body {
   letter-spacing: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
 button {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: #515151
+}
+
+.text-shadow-dark {
+  color: #1d1d1d;
+  text-shadow: whitesmoke 2px 2px;
+  background: linear-gradient(#FFDA96, #dda15e);
+  letter-spacing: 1px;
 }
 
 .no-bg {

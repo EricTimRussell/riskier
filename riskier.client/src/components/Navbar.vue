@@ -2,7 +2,7 @@
   <body>
     <div class="navbar-expand-lg navbar-dark bg-green px-3 container-fluid border-b elevation-5">
       <div class="row">
-        <div class=" d-flex col-12 order-1 vh justify-content-evenly">
+        <div class=" d-flex col-12 order-1 vh justify-content-evenly mb-3">
 
           <!--SECTION login component and player avatar display  -->
           <div>
@@ -139,5 +139,10 @@ button {
 .pad {
   padding-top: .55rem;
   padding-bottom: .3rem;
+}
+
+button:active {
+  box-shadow: none;
+  background: #515151
 }
 </style>

@@ -59,6 +59,10 @@
           <h3>Main Board Pieces</h3>
         </div>
         <p>
+          --Each faction has flat circular pieces with numbers on them to track their regions. These are placed on the
+          tile once a region is captured.
+        </p>
+        <p>
           --There is a red peg used to track damage to naval vessels as well as divisions/armies who have been cutoff
           from their supply line and are subject to attrition.
         </p>
@@ -569,6 +573,13 @@ body {
   letter-spacing: 2px;
 }
 
+@media screen and (min-width: 768px) {
+  p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
 .row {
   margin-right: 0%;
 }
@@ -579,5 +590,10 @@ input {
 
 button {
   background-color: #FFDA96;
+}
+
+button:active {
+  box-shadow: none;
+  background: linear-gradient(#606c38, #283618)
 }
 </style>
