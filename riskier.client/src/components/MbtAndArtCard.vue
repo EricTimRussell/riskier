@@ -14,7 +14,7 @@
     </div>
   </div>
   <div class="col-12 d-flex justify-content-center mb-5">
-    <span class="fs-5">4-<span class="mdi mdi-currency-usd text-warning"></span> 4-<span
+    <span class="fs-5">3-<span class="mdi mdi-currency-usd text-warning"></span> 3-<span
         class="mdi mdi-factory px-1 text-secondary"></span>
       1-<span class="mdi mdi-barley text-success"></span></span>
   </div>

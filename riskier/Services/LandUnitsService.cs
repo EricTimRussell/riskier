@@ -61,7 +61,7 @@ public class LandUnitsService
   {
     var owner = _ar.GetById(userId);
     owner.TotalCapital -= 2;
-    owner.TotalIndustry -= 2;
+    owner.TotalIndustry -= 1;
     owner.TotalAgriculture -= 3;
     owner.Mech++;
     owner = _ar.Edit(owner);
@@ -71,7 +71,7 @@ public class LandUnitsService
   {
     var owner = _ar.GetById(userId);
     owner.TotalCapital += 2;
-    owner.TotalIndustry += 2;
+    owner.TotalIndustry += 1;
     owner.TotalAgriculture += 3;
     if (owner.Mech <= 0)
     {
@@ -84,8 +84,8 @@ public class LandUnitsService
   internal void CreateIfv(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 3;
-    owner.TotalIndustry -= 3;
+    owner.TotalCapital -= 2;
+    owner.TotalIndustry -= 2;
     owner.TotalAgriculture -= 1;
     owner.Ifv++;
     owner = _ar.Edit(owner);
@@ -94,8 +94,8 @@ public class LandUnitsService
   internal void RemoveIfv(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 3;
-    owner.TotalIndustry += 3;
+    owner.TotalCapital += 2;
+    owner.TotalIndustry += 2;
     owner.TotalAgriculture += 1;
     if (owner.Ifv <= 0)
     {
@@ -108,8 +108,8 @@ public class LandUnitsService
   internal void CreateMbt(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 4;
-    owner.TotalIndustry -= 4;
+    owner.TotalCapital -= 3;
+    owner.TotalIndustry -= 3;
     owner.TotalAgriculture -= 1;
     owner.Mbt++;
     owner = _ar.Edit(owner);
@@ -118,8 +118,8 @@ public class LandUnitsService
   internal void RemoveMbt(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 4;
-    owner.TotalIndustry += 4;
+    owner.TotalCapital += 3;
+    owner.TotalIndustry += 3;
     owner.TotalAgriculture += 1;
     if (owner.Mbt <= 0)
     {

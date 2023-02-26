@@ -1,5 +1,4 @@
 <template>
-
   <body>
 
     <div class="bg-tan l-spacing elevation-5 rounded p-1" v-if="armies.ownerId == account.id">
@@ -22,8 +21,7 @@
       <div class="d-flex justify-content-between">
         <button data-bs-toggle="modal" :data-bs-target="`#editArmy${armies.id}`" aria-label="Edit Army"
           class="btn no-shadow mdi mdi-cog fs-2"></button>
-        <button @click="deleteArmy()" class=" btn mdi mdi-delete-forever fs-2 select no-shadow"
-          title="Delete?"></button>
+        <button @click="deleteArmy()" class=" btn mdi mdi-delete-forever fs-2 select no-shadow" title="Delete?"></button>
       </div>
     </div>
 
@@ -48,6 +46,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot1">Selected Unit</label>
@@ -62,6 +61,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot2">Selected Unit</label>
@@ -76,6 +76,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot3">Selected Unit</label>
@@ -90,6 +91,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot4">Selected Unit</label>
@@ -104,6 +106,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot5">Selected Unit</label>
@@ -118,6 +121,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot6">Selected Unit</label>
@@ -132,6 +136,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot7">Selected Unit</label>
@@ -146,6 +151,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot8">Selected Unit</label>
@@ -160,6 +166,7 @@
                 <option value="IFV">IFV</option>
                 <option value="MBT">MBT</option>
                 <option value="Artillery">Artillery</option>
+                <option value="Missile Artillery">Missile Artillery</option>
                 <option value="Anti-Aircraft">Anti-Aircraft</option>
               </select>
               <label for="unitSlot9">Selected Unit</label>
@@ -173,8 +180,6 @@
       </div>
     </form>
   </body>
-
-
 </template>
 
 
@@ -206,7 +211,6 @@ export default {
           Pop.error(error, "Editing army")
         }
       },
-
       async deleteArmy() {
         try {
           if (await Pop.confirm("Delete Army?"))

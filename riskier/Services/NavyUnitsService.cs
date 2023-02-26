@@ -14,9 +14,9 @@ public class NavyUnitsService
   internal void CreateCarrier(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 6;
-    owner.TotalIndustry -= 6;
-    owner.TotalAgriculture -= 6;
+    owner.TotalCapital -= 5;
+    owner.TotalIndustry -= 3;
+    owner.TotalAgriculture -= 5;
     owner.Carrier++;
     owner = _ar.Edit(owner);
   }
@@ -24,9 +24,9 @@ public class NavyUnitsService
   internal void RemoveCarrier(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 6;
-    owner.TotalIndustry += 6;
-    owner.TotalAgriculture += 6;
+    owner.TotalCapital += 5;
+    owner.TotalIndustry += 3;
+    owner.TotalAgriculture += 5;
     if (owner.Carrier <= 0)
     {
       return;
@@ -38,8 +38,8 @@ public class NavyUnitsService
   internal void CreateCruiser(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 5;
-    owner.TotalIndustry -= 5;
+    owner.TotalCapital -= 3;
+    owner.TotalIndustry -= 4;
     owner.TotalAgriculture -= 2;
     owner.Cruiser++;
     owner = _ar.Edit(owner);
@@ -48,8 +48,8 @@ public class NavyUnitsService
   internal void RemoveCruiser(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 5;
-    owner.TotalIndustry += 5;
+    owner.TotalCapital += 3;
+    owner.TotalIndustry += 4;
     owner.TotalAgriculture += 2;
     if (owner.Cruiser <= 0)
     {
@@ -62,8 +62,8 @@ public class NavyUnitsService
   internal void CreateDestroyer(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital -= 5;
-    owner.TotalIndustry -= 4;
+    owner.TotalCapital -= 2;
+    owner.TotalIndustry -= 3;
     owner.TotalAgriculture -= 2;
     owner.Destroyer++;
     owner = _ar.Edit(owner);
@@ -72,8 +72,8 @@ public class NavyUnitsService
   internal void RemoveDestroyer(string userId)
   {
     var owner = _ar.GetById(userId);
-    owner.TotalCapital += 5;
-    owner.TotalIndustry += 4;
+    owner.TotalCapital += 2;
+    owner.TotalIndustry += 3;
     owner.TotalAgriculture += 2;
     if (owner.Destroyer <= 0)
     {

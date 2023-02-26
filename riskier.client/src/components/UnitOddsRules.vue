@@ -191,7 +191,7 @@
       <input type="checkbox" id="zoomCheck14">
       <label for="zoomCheck14">
         <h5 class="text-danger text-center">Fighter Aircraft-D12</h5>
-        <h6 class="text-center">1AP, 5MP, Range of 2</h6>
+        <h6 class="text-center">1AP, 5MP, Range of 1</h6>
         <ul>
           <li>1-4 (33%) on all ground targets</li>
           <li>Vs Figher 1-6 (50%)</li>
@@ -249,8 +249,8 @@
         <h5 class="text-danger text-center">Cruiser-D12</h5>
         <h6 class="text-center">1AP, 2MP</h6>
         <ul>
-          <li>CB AA 2 tile range 1-7 (58%)</li>
-          <li>CB SS 4 tile range 1-8 (75%)</li>
+          <li>CB AA 1 tile range 1-7 (58%)</li>
+          <li>CB SS 3 tile range 1-8 (75%)</li>
           <li>SS Vs land units follow SS-Artillery rules</li>
           <strong>
             <li>Cannon D12 1 tile range</li>

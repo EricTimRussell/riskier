@@ -14,9 +14,9 @@
     </div>
   </div>
   <div class="col-12 d-flex justify-content-center mb-5">
-    <span class="fs-5">6-<span class="mdi mdi-currency-usd text-warning"></span> 6-<span
+    <span class="fs-5">5-<span class="mdi mdi-currency-usd text-warning"></span> 3-<span
         class="mdi mdi-factory px-1 text-secondary"></span>
-      6-<span class="mdi mdi-barley text-success"></span></span>
+      5-<span class="mdi mdi-barley text-success"></span></span>
   </div>
 
   <!-- SECTION Cruiser -->
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="col-12 d-flex justify-content-center mb-5">
-    <span class="fs-5">5-<span class="mdi mdi-currency-usd text-warning"></span> 5-<span
+    <span class="fs-5">3-<span class="mdi mdi-currency-usd text-warning"></span> 4-<span
         class="mdi mdi-factory px-1 text-secondary"></span>
       2-<span class="mdi mdi-barley text-success"></span></span>
   </div>
@@ -54,7 +54,7 @@
     </div>
   </div>
   <div class="col-12 d-flex justify-content-center mb-2">
-    <span class="fs-5">5-<span class="mdi mdi-currency-usd text-warning"></span> 4-<span
+    <span class="fs-5">2-<span class="mdi mdi-currency-usd text-warning"></span> 3-<span
         class="mdi mdi-factory px-1 text-secondary"></span>
       2-<span class="mdi mdi-barley text-success"></span></span>
   </div>

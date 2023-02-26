@@ -84,6 +84,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit1">Select Unit Type</label>
@@ -97,6 +98,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit2">Select Unit Type</label>
@@ -110,6 +112,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit3">Select Unit Type</label>
@@ -123,6 +126,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit4">Select Unit Type</label>
@@ -136,6 +140,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit5">Select Unit Type</label>
@@ -149,6 +154,7 @@
         <option value="IFV">IFV</option>
         <option value="MBT">MBT</option>
         <option value="Artillery">Artillery</option>
+        <option value="Missile Artillery">Missile Artillery</option>
         <option value="Anti-Aircraft">Anti-Aircraft</option>
       </select>
       <label for="groundUnit6">Select Unit Type</label>
