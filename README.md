@@ -1,7 +1,7 @@
 # riskier
 
 Quick Summary:
-Riskier is my first iteration of a board game companion app designed to be used on mobile devices. Utilizing a VueJS front-end and Bootstrap. With a C# dotNet REST API with mySQL database. Allows users to track all their assets, groups, and resources to make their gameplay smoother and more fun. If you would like to check out the app I currently am hosting it here: https://riskier.onrender.com/
+Riskier is my first iteration of a board game companion app designed to be used on mobile devices. Utilizing a VueJS front-end and Bootstrap. With a C# dotNet REST API with mySQL database. Allows users to track all their assets, groups, and resources to make their gameplay smoother and more fun. If you would like to check out the app I currently am hosting it here: https://riskier.onrender.com/ NOTE: This version is a minimum viable product I created for testing and learning purposes.
 
 "Riskier" is the code name for a board I have been developing over the past year. I have been using tinkercad to design my own pieces and then use my 3d printer to build them. Riskier is a military conquest game where the objective is simply to capture the entire board. However, the number of variables a player needs to track can become overwhelming. This app alleviates that along with improving quality of life.  I built this app for players to use while playing the board game. 
 
